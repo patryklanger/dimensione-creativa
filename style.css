@@ -301,7 +301,7 @@ h1 {
   left: 50px;
   width: 60.1vw;
   height: 100vh;
-  background-image: url(/content/what_we_do_bg.svg);
+  background-image: url(content/what_we_do_bg.svg);
   background-size: contain;
   z-index: -1;
 }
@@ -812,7 +812,7 @@ h1 {
   left: 40.9vw;
   width: 59.1vw;
   height: 110vh;
-  background-image: url(/content/software_dev_bg.svg);
+  background-image: url(content/software_dev_bg.svg);
   background-size: contain;
 }
 
@@ -984,7 +984,7 @@ h1 {
   position: absolute;
   width: 46.79vw;
   height: 100%;
-  background-image: url(/content/about-us-bg.png);
+  background-image: url(content/about-us-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1098,7 +1098,7 @@ h1 {
 }
 
 .page--primary--technologies {
-  background-image: url(/content/technologies-bg.svg);
+  background-image: url(content/technologies-bg.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left top;
