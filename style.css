@@ -1494,6 +1494,10 @@ h1 {
           justify-content: center;
 }
 
+.button--write--to--us--mobile {
+  display: none;
+}
+
 .contact--form--form--grid {
   -ms-grid-row-align: center;
       align-self: center;
@@ -1802,7 +1806,7 @@ h1 {
   }
 }
 
-@media (max-aspect-ratio: 1 / 1) {
+@media (max-aspect-ratio: 1 / 1) and (max-width: 600px) {
   .right--container_main {
     display: none;
   }
@@ -2448,7 +2452,7 @@ h1 {
     left: min(min(3.60vh,6.40vw),24px);
     top: min(min(56.67vh,100.80vw),378px);
   }
-  #contact_us form,
+  .contact--form--right,
   .contact--form--yellowbox--left img,
   .marketing-sol-subpage_dots {
     display: none;
@@ -2541,6 +2545,23 @@ h1 {
     -webkit-transform: translateY(55%);
             transform: translateY(55%);
     left: min(min(1.06vh,1.89vw),7.1px);
+  }
+  .contact--form--bg {
+    position: absolute;
+    top: min(min(16.64vh,29.60vw),111px);
+  }
+  .button--write--to--us--mobile {
+    display: block;
+    position: absolute;
+    top: min(min(83.96vh,149.33vw),560px);
+    color: white;
+    background: #127bca;
+    -webkit-box-shadow: 2px 3px 9px -1px #0d82ca;
+            box-shadow: 2px 3px 9px -1px #0d82ca;
+    width: min(min(22.94vh,40.80vw),153px);
+    height: min(min(6.30vh,11.20vw),42px);
+    border-radius: min(min(1.50vh,2.67vw),10px);
+    font-size: min(min(2.10vh,3.73vw),14px);
   }
 }
 
