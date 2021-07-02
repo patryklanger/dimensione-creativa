@@ -8,6 +8,10 @@ let isScrolling = false;
 
 let marketingSolutionsArray = [0, 100, 200, 300];
 let softwareDevelopmentArray = [0, 100, 200, 300, 400];
+let mobileTechCurrentSlide = 0;
+
+const nextArrow = document.querySelector('.next_arrow');
+const previousArrow = document.querySelector('.previous_arrow');
 
 const historyState = {
   marketing: marketingSolutionsArray,
@@ -16,7 +20,7 @@ const historyState = {
 };
 
 history.replaceState(historyState, '', '/');
-
+const technologies = document.querySelector('.technologies--grid');
 const nextSectionButtonArr = document.querySelectorAll('.scroll--down');
 const whatWeDoButton = document.querySelector('.button--to_what_we_do');
 const whatWeDoSection = document.getElementById('what-we-do');
@@ -48,6 +52,16 @@ const sdMobileTile = document.querySelector('.sd--tile--title_mobile');
 const sdEshopTile = document.querySelector('.sd--tile--title_eshop');
 const sdWebsitesTile = document.querySelector('.sd--tile--title_websites');
 const sdSoftwareTile = document.querySelector('.sd--tile--title_software');
+
+console.log(nextArrow);
+
+nextArrow.addEventListener('click', () => {
+  nextSlideTech();
+});
+
+previousArrow.addEventListener('click', () => {
+  previousSlideTech();
+});
 
 designButton.addEventListener('click', () => {
   marketingSlideSetValues(2);
@@ -129,6 +143,26 @@ const softwareSlideFromArr = (arr) => {
 const pushToHistoryMarketingTile = (array, subpage) => {
   historyState.marketing = array;
   history.pushState(historyState, '', subpage);
+};
+
+previousArrow.classList.add('hidden');
+
+const nextSlideTech = () => {
+  if (mobileTechCurrentSlide == 0) previousArrow.classList.remove('hidden');
+  mobileTechCurrentSlide++;
+  technologies.style.transform = `translateX(-${
+    mobileTechCurrentSlide * 100
+  }vw)`;
+  if (mobileTechCurrentSlide == 4) nextArrow.classList.add('hidden');
+};
+
+const previousSlideTech = () => {
+  if (mobileTechCurrentSlide == 4) nextArrow.classList.remove('hidden');
+  mobileTechCurrentSlide--;
+  technologies.style.transform = `translateX(-${
+    mobileTechCurrentSlide * 100
+  }vw)`;
+  if (mobileTechCurrentSlide == 0) previousArrow.classList.add('hidden');
 };
 
 const marketingSlideSetValues = (slideNo, update = true) => {
@@ -219,6 +253,11 @@ const checkIfMain = () => {
     marketingSlideSetValues(0);
   } else if (softwareDevelopmentArray[0] != 0) {
     softwareDevelopmentSlideSetValues(0);
+  } else if (mobileTechCurrentSlide != 0) {
+    mobileTechCurrentSlide = 0;
+    previousArrow.classList.add('hidden');
+    nextArrow.classList.remove('hidden');
+    technologies.style.transform = `translateX(0)`;
   }
 };
 
