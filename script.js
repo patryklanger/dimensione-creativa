@@ -53,7 +53,12 @@ const sdEshopTile = document.querySelector('.sd--tile--title_eshop');
 const sdWebsitesTile = document.querySelector('.sd--tile--title_websites');
 const sdSoftwareTile = document.querySelector('.sd--tile--title_software');
 
-console.log(nextArrow);
+document
+  .querySelector('.button--write--to--us--mobile')
+  .addEventListener('click', () => {
+    console.log('im here');
+    window.location = '/contact.html';
+  });
 
 nextArrow.addEventListener('click', () => {
   nextSlideTech();

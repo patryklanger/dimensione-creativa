@@ -1742,6 +1742,164 @@ h1 {
   outline: none;
 }
 
+.form--container--mobile {
+  position: relative;
+  width: min(min(49.03vh,87.20vw),327px);
+  background: #fff;
+  border-radius: min(min(1.50vh,2.67vw),10px);
+  margin: 0 auto;
+  margin-top: min(min(15.89vh,28.27vw),106px);
+  padding: min(min(4.80vh,8.53vw),32px) min(min(6.90vh,12.27vw),46px);
+  color: #000;
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: min(min(1.50vh,2.67vw),10px);
+  line-height: min(min(3.60vh,6.40vw),24px);
+}
+
+.form--container--mobile h1 {
+  font-size: min(min(4.20vh,7.47vw),28px);
+  line-height: min(min(5.10vh,9.07vw),34px);
+  margin-bottom: min(min(4.35vh,7.73vw),29px);
+}
+
+.contact--form--form--fields--mobile input {
+  margin-top: min(min(0.60vh,1.07vw),4px);
+  margin-bottom: min(min(1.95vh,3.47vw),13px);
+  border: none;
+  border-bottom: 1px solid #979797;
+  width: 100%;
+}
+
+.contact--form--form--fields--mobile input:last-of-type {
+  margin-bottom: min(min(5.70vh,10.13vw),38px);
+}
+
+.contact--form--form--fields--mobile input::-webkit-input-placeholder {
+  color: #979797;
+  opacity: 0.5;
+}
+
+.contact--form--form--fields--mobile input:-ms-input-placeholder {
+  color: #979797;
+  opacity: 0.5;
+}
+
+.contact--form--form--fields--mobile input::-ms-input-placeholder {
+  color: #979797;
+  opacity: 0.5;
+}
+
+.contact--form--form--fields--mobile input::placeholder {
+  color: #979797;
+  opacity: 0.5;
+}
+
+.contact--form--help-cat--mobile {
+  opacity: 0.5;
+  font-size: min(min(2.40vh,4.27vw),16px);
+  line-height: min(min(3.60vh,6.40vw),24px);
+  margin-bottom: min(min(2.55vh,4.53vw),17px);
+  font-weight: bold;
+}
+
+.contact--form--radio-element--mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: min(min(6.30vh,11.20vw),42px);
+}
+
+.contact--form--radio-element--mobile:last-of-type {
+  margin-bottom: min(min(4.50vh,8.00vw),30px);
+}
+
+.contact--form--radio-element--mobile input {
+  border: 1px solid #c4c4c4;
+  height: min(min(4.20vh,7.47vw),28px);
+  width: min(min(4.20vh,7.47vw),28px);
+}
+
+.contact--form--radio-element--mobile label {
+  font-size: min(min(2.10vh,3.73vw),14px);
+  line-height: min(min(3.60vh,6.40vw),24px);
+  margin-left: min(min(1.95vh,3.47vw),13px);
+  font-weight: normal;
+  color: #000;
+  opacity: 0.5;
+}
+
+#contact--form--message {
+  border: 1px solid #979797;
+  resize: none;
+  font-family: Poppins;
+  -ms-grid-row: 9;
+      grid-row-start: 9;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  padding: min(min(0.75vh,1.33vw),5px) min(min(2.10vh,3.73vw),14px) min(min(0.75vh,1.33vw),5px) min(min(2.10vh,3.73vw),14px);
+  border-radius: min(min(1.50vh,2.67vw),10px);
+  width: 100%;
+}
+
+#contact--form--message::-webkit-input-placeholder {
+  font-size: min(min(2.10vh,3.73vw),14px);
+  line-height: min(min(3.60vh,6.40vw),24px);
+}
+
+#contact--form--message:-ms-input-placeholder {
+  font-size: min(min(2.10vh,3.73vw),14px);
+  line-height: min(min(3.60vh,6.40vw),24px);
+}
+
+#contact--form--message::-ms-input-placeholder {
+  font-size: min(min(2.10vh,3.73vw),14px);
+  line-height: min(min(3.60vh,6.40vw),24px);
+}
+
+#contact--form--message::placeholder {
+  font-size: min(min(2.10vh,3.73vw),14px);
+  line-height: min(min(3.60vh,6.40vw),24px);
+}
+
+.contact--us--mobile--form {
+  height: unset;
+  margin-bottom: min(min(5.70vh,10.13vw),38px);
+}
+
+.not--sticky {
+  position: absolute;
+}
+
+.form--submit--button--mobile--div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: min(min(5.70vh,10.13vw),38px);
+}
+
+.form--submit--button--mobile {
+  width: min(min(22.64vh,40.27vw),151px);
+  height: min(min(6.30vh,11.20vw),42px);
+  border-radius: min(min(1.50vh,2.67vw),10px);
+  font-size: min(min(2.10vh,3.73vw),14px);
+}
+
+.form--container--mobile img {
+  height: min(min(17.77vh,31.60vw),118.5px);
+  position: absolute;
+  top: 0;
+  right: 3px;
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+}
+
 @media (max-aspect-ratio: 1439 / 900) {
   .page--primary--grid {
     position: absolute;
@@ -1807,7 +1965,21 @@ h1 {
 }
 
 @media (max-aspect-ratio: 1 / 1) and (max-width: 600px) {
-  .right--container_main {
+  .right--container_main,
+  .marketing--first--div,
+  .marketing--fourth--div,
+  .marketing--fifth--div,
+  .marketing--sol--subpage_image,
+  .marketing--sol--subpage_image_design,
+  .marketing--sol--subpage_image_uxui,
+  .sd--subpage_image,
+  .subpage--button .page--indicator,
+  .sd--subpages .scroll--down,
+  .left--container_about_us,
+  .software--development--title--secondary,
+  .software--development--image,
+  .software--development--bg,
+  .subcategory--title img {
     display: none;
   }
   .left--container_main {
@@ -1966,11 +2138,6 @@ h1 {
     aspect-ratio: 0;
     margin-top: min(min(7.50vh,13.33vw),50px);
   }
-  .marketing--first--div,
-  .marketing--fourth--div,
-  .marketing--fifth--div {
-    display: none;
-  }
   .subcategory--title {
     margin: 0;
     padding: 0;
@@ -1991,9 +2158,6 @@ h1 {
     font-size: min(min(2.40vh,4.27vw),16px);
     line-height: min(min(3.60vh,6.40vw),24px);
     font-weight: 200;
-  }
-  .subcategory--title img {
-    display: none;
   }
   .subcategory--title p,
   .sd--tile--title {
@@ -2026,12 +2190,6 @@ h1 {
   }
   .subcategory--title_design p {
     border-color: #009f72;
-  }
-  .marketing--sol--subpage_image,
-  .marketing--sol--subpage_image_design,
-  .marketing--sol--subpage_image_uxui,
-  .sd--subpage_image {
-    display: none;
   }
   .marketing--sol--subpage_title {
     position: relative;
@@ -2110,9 +2268,6 @@ h1 {
     margin: 0;
     font-size: min(min(2.40vh,4.27vw),16px);
   }
-  .subpage--button .page--indicator {
-    display: none;
-  }
   .marketing--sol--subpage_main_content {
     padding-left: min(min(8.40vh,14.93vw),56px);
     padding-right: min(min(8.40vh,14.93vw),56px);
@@ -2161,12 +2316,6 @@ h1 {
     width: 45%;
     bottom: min(min(3.00vh,5.33vw),20px);
   }
-  .software--development--bg {
-    display: none;
-  }
-  .software--development--image {
-    display: none;
-  }
   .page--primary--software_development {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2181,9 +2330,6 @@ h1 {
   }
   .software--development--title::after {
     background: none;
-  }
-  .software--development--title--secondary {
-    display: none;
   }
   .software--development--title--primary {
     margin: 0 auto;
@@ -2222,16 +2368,10 @@ h1 {
   .sd--tile--title_software p {
     border-color: #0061fe;
   }
-  .sd--subpages .scroll--down {
-    display: none;
-  }
   .scroll--down--software_aboutus {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
-  }
-  .left--container_about_us {
-    display: none;
   }
   .right--container_about_us {
     display: -webkit-box;
@@ -2566,12 +2706,8 @@ h1 {
 }
 
 @media (min-aspect-ratio: 278 / 584), (max-width: 320px) {
-  .first--page--marketing .scroll--down {
-    display: none;
-  }
-  #about-us .scroll--down {
-    display: none;
-  }
+  .first--page--marketing .scroll--down,
+  #about-us .scroll--down,
   .page--primary--technologies .scroll--down {
     display: none;
   }

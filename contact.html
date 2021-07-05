@@ -1,0 +1,118 @@
+<html lang="en">
+  <head>
+    <meta chatser="utf-8" />
+    <title>Jaźwiec art</title>
+    <meta name="description" content="Strona główna" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header--container not--sticky">
+      <div class="header--button">
+        <div class="menu--button--line first_line"></div>
+        <div class="menu--button--line second_line"></div>
+        <div class="menu--button--line third_line"></div>
+      </div>
+      <div class="header--contact_us">
+        <a href="/index.html">Main page</a>
+      </div>
+    </div>
+
+    <section
+      id="contact_us"
+      class="child contact--us--mobile--form"
+      data-adress="#contact_us"
+    >
+      <form>
+        <div class="form--container--mobile">
+          <img src="content/cloudplant.svg" />
+          <h1>Form</h1>
+          <div class="contact--form--form--fields--mobile">
+            <p class="contact--form--company-par--mobile">The Company</p>
+            <input
+              type="text"
+              class="contact--form--company--input--mobile"
+              placeholder="Alibaba"
+              required
+            />
+            <p class="contact--form--name-par--mobile">Name</p>
+            <input
+              type="text"
+              class="contact--form--name--input--mobile"
+              placeholder="John Doe"
+              required
+            />
+            <p class="contact--form--phone-par--mobile">Phone</p>
+            <input
+              type="text"
+              class="contact--form--phone--input--mobile"
+              placeholder="+49 232 12 44 221"
+              required
+            />
+            <p class="contact--form--mail-par--mobile">Mail</p>
+            <input
+              type="email"
+              class="contact--form--mail--input--mobile"
+              placeholder="John@doe.com"
+              required
+            />
+          </div>
+          <p class="contact--form--help-cat--mobile">How can we help?</p>
+          <div class="contact--form--radio--mobile">
+            <div class="contact--form--radio-element--mobile">
+              <input
+                type="radio"
+                id="marketing"
+                name="help--category"
+                value="Marketing"
+                required
+              />
+              <label for="marketing">Marketing</label>
+            </div>
+            <div class="contact--form--radio-element--mobile">
+              <input
+                type="radio"
+                id="soft--dev"
+                name="help--category"
+                value="Software development"
+                required
+              />
+              <label for="soft--dev">Software development</label>
+            </div>
+            <div class="contact--form--radio-element--mobile">
+              <input
+                type="radio"
+                id="other"
+                name="help--category"
+                value="Other"
+                required
+              />
+              <label for="other">Other</label>
+            </div>
+          </div>
+
+          <p class="contact--form--text--box--title--mobile">Message</p>
+          <textarea
+            id="contact--form--message"
+            name="message"
+            rows="4"
+            cols="50"
+            placeholder="Write your message..."
+          ></textarea>
+        </div>
+        <div class="form--submit--button--mobile--div">
+          <button
+            class="
+              round--button
+              button--yellow button_send-message
+              form--submit--button--mobile
+            "
+            type="submit"
+          >
+            SEND MESSAGE
+          </button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
