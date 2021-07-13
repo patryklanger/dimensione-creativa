@@ -15,6 +15,8 @@
       </div>
       <div class="header--contact_us">
         <a href="#contact_us">Contact us</a>
+        <img class="linkedin--link" src='content/linkedin.png'/>
+
       </div>
     </div>
     <div class="menu--container">
@@ -36,7 +38,7 @@
           <div class="left--container_main">
             <div class="left--container_main_content">
               <h1 class="welcome--page__title">
-                Versatile and creative Brand Approach
+                Versatile and <br/>creative Brand <br/>Approach
               </h1>
               <p class="main_description main_description_mainpage">
                 We are a full service digital agency that builds immesive user
@@ -392,7 +394,7 @@
             <img src="content/mobile-subpage-image.png" />
           </div>
           <div class="marketing-sol-subpage_dots">
-            <img src="content/marketing-dots.svg" />
+            <img src="content/sd--style.png" />
           </div>
           <button
             class="subpage--button subpage--button_eshops"
@@ -437,7 +439,7 @@
             <img src="content/eshop-subpage-image.png" />
           </div>
           <div class="marketing-sol-subpage_dots">
-            <img src="content/marketing-dots.svg" />
+            <img src="content/sd--style.png" />
           </div>
           <button
             class="subpage--button subpage--button_webistes"
@@ -482,7 +484,7 @@
             <img src="content/websites-subpage-image.png" />
           </div>
           <div class="marketing-sol-subpage_dots">
-            <img src="content/marketing-dots.svg" />
+            <img src="content/sd--style.png" />
           </div>
           <button
             class="subpage--button subpage--button_software"
@@ -540,7 +542,7 @@
             <img src="content/dedicated-subpage-image.png" />
           </div>
           <div class="marketing-sol-subpage_dots">
-            <img src="content/marketing-dots.svg" />
+            <img src="content/sd--style.png" />
           </div>
           <div class="scroll--down scroll--down--software scroll--down--software_aboutus">
             <img src="content/scroll_down.svg" />ABOUT US
@@ -742,7 +744,10 @@
                   to you within 24 hours.</p>
                   <img src="content/touch--phone.png"/>
               </div>
+              <div class="contact--linkedin"><p>We invite to</p><img class="linkedin--link" src="content/linkedin--blue.png"/></div>
+              <div class="contact--cursor"><img src='content/cursor_contact.png'/></div>
             </div>
+          
               <div class="contact--form--yellowbox--right">
                 <ul>
                   <li>
@@ -768,7 +773,7 @@
               </div>
             </div>
             <div class="contact--form--right">
-              <form>
+              <form class="contact--form--actual">
               <div class="contact--form--form--grid">
                 <div class="contact--form--form--fields">
                   <p class="contact--form--company-par">The Company</p>
@@ -776,7 +781,7 @@
                   <p class="contact--form--name-par">Name</p>
                   <input type="text" class="contact--form--name--input" placeholder="John Doe" required>
                   <p class="contact--form--phone-par">Phone</p>
-                  <input type="text" class="contact--form--phone--input" placeholder="+49 232 12 44 221" required>
+                  <input type="tel" pattern="+[0-9]{2-3}[0-9]{7-12}" class="contact--form--phone--input" placeholder="+49 232 12 44 221" required>
                   <p class="contact--form--mail-par">Mail</p>
                   <input type="email" class="contact--form--mail--input" placeholder="John@doe.com" required>
                 </div>
@@ -798,7 +803,7 @@
 
               <p class="contact--form--text--box--title">Message</p>
               <textarea id="contact--form--message" name="message" rows="4" cols="50" placeholder="Write your message..."></textarea>
-              <button class="round--button button--yellow button_send-message animate--button" type="submit">
+              <button class="round--button button--yellow button_send-message" type="submit">
                 SEND MESSAGE
               </button>
               </div>
@@ -807,15 +812,26 @@
         </div>
         <button class="round--button button--write--to--us--mobile">write to us</button>
       </div>
+      <div class="thank--you--modal--center">
+      <div class="thank--you--modal">
+        <img src="content/thank_you_image.png"/>
+        <div class="thank--you--message">
+          <h1>Thank you for your message</h1>
+          <p>The message was sent to the appropriate department. We will contact you as soon as possible.</p>
+          <button class="round--button round--button--blue"><p>Back to site</p></button>
+          <div class="thank--you--linkedin"><p>We invite to</p><img class="linkedin--link" src="content/linkedin--blue.png"/></div>
+        </div>
+      </div>
+    </div>
       </section>
       </div>
 
     </div>
-    <script src="/ja-wiec/script.js" type="text/javascript"></script>
-    <script src="/ja-wiec/animation.js" type="text/javascript"></script>
+    <script src="ja-wiec/script.js" type="text/javascript"></script>
+    <script src="ja-wiec/animation.js" type="text/javascript"></script>
 
-		<script src='/ja-wiec/effects/js/anime.min.js' type="text/javascript"></script>
-    <script src='/ja-wiec/effects/js/particles.js' type="text/javascript"></script>
+		<script src='ja-wiec/effects/js/anime.min.js' type="text/javascript"></script>
+    <script src='ja-wiec/effects/js/particles.js' type="text/javascript"></script>
     <script>
       const bttn = document.querySelectorAll('.animate--button');
 

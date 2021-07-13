@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+.subpage--button_uxui p {
+  font-size: min(min(4.44vh,2.78vw),40px) !important;
+}
+
 html,
 body {
   width: 100vw;
@@ -19,6 +23,121 @@ body {
   font-family: Poppins, Helvetica, sans-serif;
   font-style: normal;
   background: #00000a;
+}
+
+.thank--you--modal--center {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+}
+
+.thank--you--modal {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: min(min(144.22vh,90.14vw),1298px);
+  height: min(min(71.78vh,44.86vw),646px);
+  background: #ffd726;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: min(min(5.00vh,3.13vw),45px) min(min(11.22vh,7.01vw),101px) min(min(5.00vh,3.13vw),45px) min(min(4.00vh,2.50vw),36px);
+}
+
+.thank--you--modal img {
+  width: min(min(61.78vh,38.61vw),556px);
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.thank--you--message {
+  margin-left: min(min(10.33vh,6.46vw),93px);
+  padding-top: min(min(6.44vh,4.03vw),58px);
+}
+
+.thank--you--message h1 {
+  font-size: min(min(7.11vh,4.44vw),64px);
+  line-height: min(min(8.44vh,5.28vw),76px);
+}
+
+.thank--you--message p {
+  margin-top: min(min(2.67vh,1.67vw),24px);
+  padding-right: min(min(10.00vh,6.25vw),90px);
+  font-size: min(min(2.00vh,1.25vw),18px);
+  line-height: min(min(3.00vh,1.88vw),27px);
+  font-weight: 400;
+}
+
+.thank--you--message button {
+  margin-top: min(min(4.22vh,2.64vw),38px);
+  height: min(min(5.33vh,3.33vw),48px);
+  width: min(min(23.22vh,14.51vw),209px);
+  border-radius: min(min(1.11vh,0.69vw),10px);
+  -webkit-box-shadow: min(min(0.22vh,0.14vw),2px) min(min(0.33vh,0.21vw),3px) min(min(1.00vh,0.63vw),9px) min(min(-0.11vh,-0.07vw),-1px) rgba(255, 215, 38, 0.45);
+          box-shadow: min(min(0.22vh,0.14vw),2px) min(min(0.33vh,0.21vw),3px) min(min(1.00vh,0.63vw),9px) min(min(-0.11vh,-0.07vw),-1px) rgba(255, 215, 38, 0.45);
+  background: #311bbf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.thank--you--message button p {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0;
+  font-size: min(min(1.78vh,1.11vw),16px);
+}
+
+.thank--you--modal_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.thank--you--linkedin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: min(min(3.78vh,2.36vw),34px);
+}
+
+.thank--you--linkedin p {
+  margin: 0;
+  padding: 0;
+}
+
+.thank--you--linkedin img {
+  width: min(min(2.44vh,1.53vw),22px);
+  height: min(min(2.44vh,1.53vw),22px);
+  margin-left: min(min(0.96vh,0.60vw),8.6px);
 }
 
 .scroll--manager {
@@ -51,10 +170,6 @@ body {
   z-index: 99;
   -webkit-transform: translateX(-110%);
           transform: translateX(-110%);
-  -webkit-transition: -webkit-transform ease-in 0.5s;
-  transition: -webkit-transform ease-in 0.5s;
-  transition: transform ease-in 0.5s;
-  transition: transform ease-in 0.5s, -webkit-transform ease-in 0.5s;
 }
 
 .active {
@@ -217,6 +332,13 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact--form--form--grid > .particles {
+  width: min(min(22.44vh, 14.03vw), 202px);
 }
 
 .hidden {
@@ -224,8 +346,11 @@ h1 {
 }
 
 .header--contact_us {
-  position: absolute;
-  display: inline;
+  position: relative;
+  justify-self: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   right: 0px;
   z-index: 98;
 }
@@ -499,6 +624,11 @@ h1 {
 
 .scroll--down img {
   margin-right: 16px;
+}
+
+.header--contact_us img {
+  -webkit-transform: translate(min(min(0.56vh,0.35vw),5px), max(max(-0.56vh,-0.35vw),-5px));
+          transform: translate(min(min(0.56vh,0.35vw),5px), max(max(-0.56vh,-0.35vw),-5px));
 }
 
 .left--container_what_we_do {
@@ -1800,6 +1930,7 @@ h1 {
 }
 
 .contact--form--yellowbox--left {
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1810,6 +1941,43 @@ h1 {
       grid-template-rows: min(min(12.78vh,7.99vw),115px) 11px min(min(6.00vh,3.75vw),54px) min(min(42.22vh,26.39vw),380px);
   -ms-grid-columns: min(6.44vh,4.03vw) min(min(44.89vh,28.06vw),404px) auto;
       grid-template-columns: min(6.44vh,4.03vw) min(min(44.89vh,28.06vw),404px) auto;
+}
+
+.linkedin--link {
+  cursor: pointer;
+}
+
+.contact--cursor {
+  position: absolute;
+  top: min(19.11vh,11.94vw);
+  left: min(41.17vh,25.73vw);
+}
+
+.contact--cursor img {
+  width: min(min(7.40vh,4.63vw),66.6px);
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.contact--linkedin {
+  position: absolute;
+  bottom: min(min(3.67vh,2.29vw),33px);
+  left: min(6.44vh,4.03vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact--linkedin p {
+  font-size: min(min(2.00vh,1.25vw),18px);
+  font-weight: 600;
+}
+
+.contact--linkedin img {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  margin-left: min(min(0.97vh,0.60vw),8.7px);
+  width: min(min(2.44vh,1.53vw),22px) !important;
 }
 
 .contact--form--yellowbox--left h1 {
@@ -2480,6 +2648,7 @@ h1 {
   .software--development--title--secondary,
   .software--development--image,
   .software--development--bg,
+  .contact--cursor,
   .subcategory--title img {
     display: none;
   }
@@ -2511,6 +2680,9 @@ h1 {
               transform: translateX(-10px);
     }
   }
+  .contact--linkedin {
+    display: none;
+  }
   .left--container_main {
     width: 100vw;
     padding-right: 7.43vw;
@@ -2526,8 +2698,8 @@ h1 {
     cursor: pointer;
   }
   .technologies--grid {
-    -webkit-transition-delay: unset;
-            transition-delay: unset;
+    -webkit-transition-delay: unset !important;
+            transition-delay: unset !important;
   }
   .header--container {
     width: 100vw;
