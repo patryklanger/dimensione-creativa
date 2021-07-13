@@ -908,6 +908,11 @@ h1 {
   grid-row-start: 2;
   width: fit-content;
   height: fit-content;
+  transform: translateX(-50vw);
+  transition: transform ease-in-out 0.5s;
+}
+.active > .software--development--title {
+  transform: translateX(0);
 }
 .software--development--image {
   position: relative;
@@ -1204,22 +1209,33 @@ h1 {
 }
 
 .technologies--title {
-  width: 100%;
+  width: fit-content;
+  position: relative;
   display: flex;
   justify-content: center;
-  width: 100%;
   font-family: Poppins;
   font-weight: 600;
   margin-bottom: #{'min(min(4.67vh,2.92vw),42px)'};
-  font-size: #{'min(min(3.33vw,5.33vh),48px)'};
+  font-size: #{'min(min(4.44vh,2.78vw),40px)'};
   line-height: #{'min(min(7.11vh,4.44vw),64px)'};
   letter-spacing: -#{'min(min(0.17vh,0.10vw),1,5px)'};
   transform: translateY(30vh);
   transition: transform ease-in-out 0.5s;
 }
+.technologies--title img {
+  transform: translateX(50vw);
+  transition: transform ease-in-out 0.5s;
+  position: absolute;
+  bottom: 0;
+  left: #{'min(min(71.11vh,44.44vw),640px)'};
+}
 .active--technologies > .technologies--title {
   transform: translateX(0);
   animation-delay: 0.5s;
+}
+.active--technologies > .technologies--title img {
+  transform: translateX(0);
+  transition-delay: 1s;
 }
 .active--technologies > .technologies--grid {
   transition-delay: 0.5s;

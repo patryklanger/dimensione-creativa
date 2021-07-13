@@ -1273,6 +1273,17 @@ h1 {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  -webkit-transform: translateX(-50vw);
+          transform: translateX(-50vw);
+  -webkit-transition: -webkit-transform ease-in-out 0.5s;
+  transition: -webkit-transform ease-in-out 0.5s;
+  transition: transform ease-in-out 0.5s;
+  transition: transform ease-in-out 0.5s, -webkit-transform ease-in-out 0.5s;
+}
+
+.active > .software--development--title {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .software--development--image {
@@ -1647,18 +1658,20 @@ h1 {
 }
 
 .technologies--title {
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
   font-family: Poppins;
   font-weight: 600;
   margin-bottom: min(min(4.67vh,2.92vw),42px);
-  font-size: min(min(3.33vw,5.33vh),48px);
+  font-size: min(min(4.44vh,2.78vw),40px);
   line-height: min(min(7.11vh,4.44vw),64px);
   letter-spacing: -min(min(0.17vh,0.10vw),1,5px);
   -webkit-transform: translateY(30vh);
@@ -1669,11 +1682,30 @@ h1 {
   transition: transform ease-in-out 0.5s, -webkit-transform ease-in-out 0.5s;
 }
 
+.technologies--title img {
+  -webkit-transform: translateX(50vw);
+          transform: translateX(50vw);
+  -webkit-transition: -webkit-transform ease-in-out 0.5s;
+  transition: -webkit-transform ease-in-out 0.5s;
+  transition: transform ease-in-out 0.5s;
+  transition: transform ease-in-out 0.5s, -webkit-transform ease-in-out 0.5s;
+  position: absolute;
+  bottom: 0;
+  left: min(min(71.11vh,44.44vw),640px);
+}
+
 .active--technologies > .technologies--title {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
+}
+
+.active--technologies > .technologies--title img {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }
 
 .active--technologies > .technologies--grid {

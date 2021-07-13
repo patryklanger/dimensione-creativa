@@ -36,6 +36,9 @@ const marketingTile = document.querySelector('.link--tile--left');
 const marketingSoulutionsSection = document.getElementById(
   'marketing-solutions'
 );
+const softwareDevAnim = document.querySelector(
+  '.page--primary--software_development'
+);
 const rightContainerWhatWeDo = document.querySelector(
   '.right--container_what_we_do_grid'
 );
@@ -312,6 +315,7 @@ const deactivateAllAnimations = () => {
   menuLinks.forEach((e) => {
     e.classList.remove('activelink');
   });
+  softwareDevSection.classList.remove('active');
 };
 // Listen for scroll events
 scrollManager.addEventListener(
@@ -360,6 +364,7 @@ scrollManager.addEventListener(
         history.pushState(historyState, '', '#software-development');
         deactivateAllAnimations();
         menuLinks[3].classList.add('activelink');
+        softwareDevAnim.classList.add('active');
       } else if (
         scrollManager.scrollTop > 4 * viewHeight - 10 &&
         scrollManager.scrollTop < 5 * viewHeight - 10 &&
