@@ -20,6 +20,11 @@ const historyState = {
 };
 
 history.replaceState(historyState, '', '/');
+const technologiesAnimation = document.querySelector(
+  '.center--container--technologies'
+);
+const mainPageLeft = document.querySelector('.left--container_main_content');
+const whatWeDoAnimation = document.querySelector('.left--container_what_we_do');
 const technologies = document.querySelector('.technologies--grid');
 const nextSectionButtonArr = document.querySelectorAll('.scroll--down');
 const whatWeDoButton = document.querySelector('.button--to_what_we_do');
@@ -30,9 +35,15 @@ const marketingTile = document.querySelector('.link--tile--left');
 const marketingSoulutionsSection = document.getElementById(
   'marketing-solutions'
 );
+const rightContainerWhatWeDo = document.querySelector(
+  '.right--container_what_we_do_grid'
+);
 const backButtonMarketing = document.querySelectorAll(
   '.back--button_marketing'
 );
+const menu = document.querySelector('.menu--container');
+const header = document.querySelector('.header--container');
+const menuButton = document.querySelector('.header--button');
 const backButtonSoftware = document.querySelectorAll('.back--button_sd');
 const marketingSubpages = document.querySelectorAll('.marketing--subpages');
 const softwareDevelopmentSubpages = document.querySelectorAll('.sd--subpages');
@@ -40,6 +51,7 @@ const softwareDevelopmentSubpages = document.querySelectorAll('.sd--subpages');
 const strategyDivClicker = document.querySelector(
   '.subcategory--title_strategy'
 );
+const menuLinks = document.querySelectorAll('.menu-link');
 const designDivClicker = document.querySelector('.subcategory--title_design');
 const designButton = document.querySelector('.subpage--button_design');
 const uxuiDivClicker = document.querySelector('.subcategory--title_uxui');
@@ -52,7 +64,12 @@ const sdMobileTile = document.querySelector('.sd--tile--title_mobile');
 const sdEshopTile = document.querySelector('.sd--tile--title_eshop');
 const sdWebsitesTile = document.querySelector('.sd--tile--title_websites');
 const sdSoftwareTile = document.querySelector('.sd--tile--title_software');
-
+menuButton.addEventListener('click', () => {
+  menu.classList.toggle('active');
+  header.classList.toggle('menu--active');
+});
+const sections = document.querySelectorAll('.child');
+menuLinks[0].classList.add('activelink');
 document
   .querySelector('.button--write--to--us--mobile')
   .addEventListener('click', () => {
@@ -63,6 +80,14 @@ document
 nextArrow.addEventListener('click', () => {
   nextSlideTech();
 });
+for (let [index, val] of menuLinks.entries()) {
+  val.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    header.classList.toggle('menu--active');
+    sections[index].scrollIntoView({ behavior: 'smooth' });
+  });
+}
+console.log(rightContainerWhatWeDo);
 
 previousArrow.addEventListener('click', () => {
   previousSlideTech();
@@ -113,8 +138,10 @@ softwareTile.addEventListener('click', () => {
 });
 
 whatWeDoButton.addEventListener('click', () => {
-  history.pushState(historyState, '', '#what-we-do');
-  whatWeDoSection.scrollIntoView({ behavior: 'smooth' });
+  setTimeout(() => {
+    history.pushState(historyState, '', '#what-we-do');
+    whatWeDoSection.scrollIntoView({ behavior: 'smooth' });
+  }, 500);
 });
 
 nextSectionButtonArr.forEach((button) => {
@@ -265,9 +292,19 @@ const checkIfMain = () => {
     technologies.style.transform = `translateX(0)`;
   }
 };
+setTimeout(() => mainPageLeft.classList.add('active'), 1000);
+mainPageLeft.classList.add('active');
 
 scrollManager.addEventListener('scroll', checkIfMain);
-
+const deactivateAllAnimations = () => {
+  whatWeDoAnimation.classList.remove('active');
+  if (mainPageLeft.classList.contains('active'))
+    mainPageLeft.classList.remove('active');
+  technologiesAnimation.classList.remove('active--technologies');
+  menuLinks.forEach((e) => {
+    e.classList.remove('activelink');
+  });
+};
 // Listen for scroll events
 scrollManager.addEventListener(
   'scroll',
@@ -284,6 +321,9 @@ scrollManager.addEventListener(
       ) {
         historyState.currentPage = '#main-page';
         history.pushState(historyState, '', '/');
+        deactivateAllAnimations();
+        mainPageLeft.classList.add('active');
+        menuLinks[0].classList.add('activelink');
       } else if (
         scrollManager.scrollTop > viewHeight - 10 &&
         scrollManager.scrollTop < 2 * viewHeight - 10 &&
@@ -291,6 +331,9 @@ scrollManager.addEventListener(
       ) {
         historyState.currentPage = '#what-we-do';
         history.pushState(historyState, '', '#what-we-do');
+        deactivateAllAnimations();
+        whatWeDoAnimation.classList.add('active');
+        menuLinks[1].classList.add('activelink');
       } else if (
         scrollManager.scrollTop > 2 * viewHeight - 10 &&
         scrollManager.scrollTop < 3 * viewHeight - 10 &&
@@ -298,6 +341,8 @@ scrollManager.addEventListener(
       ) {
         historyState.currentPage = '#marketing-solutions';
         history.pushState(historyState, '', '#marketing-solutions');
+        deactivateAllAnimations();
+        menuLinks[2].classList.add('activelink');
       } else if (
         scrollManager.scrollTop > 3 * viewHeight - 10 &&
         scrollManager.scrollTop < 4 * viewHeight - 10 &&
@@ -305,6 +350,8 @@ scrollManager.addEventListener(
       ) {
         historyState.currentPage = '#software-development';
         history.pushState(historyState, '', '#software-development');
+        deactivateAllAnimations();
+        menuLinks[3].classList.add('activelink');
       } else if (
         scrollManager.scrollTop > 4 * viewHeight - 10 &&
         scrollManager.scrollTop < 5 * viewHeight - 10 &&
@@ -312,6 +359,8 @@ scrollManager.addEventListener(
       ) {
         historyState.currentPage = '#about-us';
         history.pushState(historyState, '', '#about-us');
+        deactivateAllAnimations();
+        menuLinks[4].classList.add('activelink');
       } else if (
         scrollManager.scrollTop > 5 * viewHeight - 10 &&
         scrollManager.scrollTop < 6 * viewHeight - 10 &&
@@ -319,6 +368,9 @@ scrollManager.addEventListener(
       ) {
         historyState.currentPage = '#technologies';
         history.pushState(historyState, '', '#technologies');
+        deactivateAllAnimations();
+        menuLinks[5].classList.add('activelink');
+        technologiesAnimation.classList.add('active--technologies');
       } else if (
         scrollManager.scrollTop > 6 * viewHeight - 10 &&
         scrollManager.scrollTop < 7 * viewHeight - 10 &&
@@ -326,6 +378,8 @@ scrollManager.addEventListener(
       ) {
         historyState.currentPage = '#contact_us';
         history.pushState(historyState, '', '#contact_us');
+        deactivateAllAnimations();
+        menuLinks[6].classList.add('activelink');
       }
     }, 66);
   },

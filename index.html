@@ -17,6 +17,19 @@
         <a href="#contact_us">Contact us</a>
       </div>
     </div>
+    <div class="menu--container">
+      
+      <ul>
+        <li><div class="menu-link"><p>home</p></div></li>
+        <li><div class="menu-link"><p>what we do</p></div></li>
+        <li><div class="menu-link"><p>about us</p></div></li>
+        <li><div class="menu-link"><p>technologies</p></div></li>
+        <li><div class="menu-link"><p>blog</p></div></li>
+        <li><div class="menu-link"><p>contact</p></div></li>
+      </ul>
+
+
+    </div>
     <div class="scroll--manager">
       <section id="main-page" class="child">
         <div class="page--primary">
@@ -25,19 +38,21 @@
               <h1 class="welcome--page__title">
                 Versatile and creative Brand Approach
               </h1>
-              <p class="main_description">
+              <p class="main_description main_description_mainpage">
                 We are a full service digital agency that builds immesive user
                 experience
               </p>
+              <div class="button_animate_me">
               <button
-                class="round--button button--yellow button--to_what_we_do"
+                class="round--button button--yellow button--to_what_we_do animate--button"
               >
                 What we do
-              </button>
-            </div>
+              </button></div>
           </div>
+
+        </div>
           <div class="right--container_main">
-            <img src="content/main-page-graphic.svg" />
+            <img src="content/main-page-graphic.png" />
           </div>
 
           <div class="scroll--down">
@@ -49,8 +64,8 @@
       data-adress="#what-we-do">
         <div class="page--primary">
           <div class="left--container_what_we_do">
-            <h1>What we do</h1>
-            <p class="main_description" style="width: 25.05vw">
+            <h1 class="what_we_do_h1">What we do</h1>
+            <p class="main_description  main_description_what_we_do" style="width: 25.05vw">
               A full range of marketing services. Planning and implementation.
             </p>
           </div>
@@ -64,14 +79,14 @@
               <div class="link--tile link--tile--left">
                 <p class="tile--title tile--title--upper">Marketing</p>
                 <div class="tile--image">
-                  <img src="content/Saly-6.svg" style="width: 17vw" />
+                  <img src="content/Saly-6.png" style="width: 17vw" />
                 </div>
                 <p class="tile--title tile--title--lower">Solutions</p>
               </div>
               <div class="link--tile link--tile--right">
                 <p class="tile--title tile--title--upper">SOFTWARE</p>
                 <div class="tile--image">
-                  <img src="content/Saly-38.svg" />
+                  <img src="content/Saly-38.png" />
                 </div>
                 <p class="tile--title tile--title--lower">DEVELOPMENT</p>
               </div>
@@ -90,9 +105,7 @@
         >
           <div class="page--primary--grid">
             <div class="markering--title-div"><p>Marketing solutions</p></div>
-            <div class="marketing--block marketing--first--div">
-              <img src="content/marketing1.png" />
-            </div>
+            
 
             <div class="marketing--block marketing--second--div">
               <div class="subcategory--title subcategory--title_strategy">
@@ -103,6 +116,9 @@
                 Outlining the style and directions of activities. Choice of
                 communication channels
               </div>
+            </div>
+            <div class="marketing--block marketing--first--div">
+              <img src="content/marketing1.png" />
             </div>
 
             <div class="marketing--block marketing--third--div">
@@ -119,19 +135,20 @@
               <img src="content/marketing2.png" />
             </div>
 
-            <div class="marketing--block marketing--fifth--div">
-              <img src="content/marketing3.png" />
-            </div>
+            
 
             <div class="marketing--block marketing--sixth--div">
               <div class="subcategory--title subcategory--title_uxui">
                 <img src="content/uxandui-shape.svg" />
-                <p>UX & UI</p>
+                <p>PRODUCT DESIGN</p>
               </div>
               <div class="main--description main--description--marketing">
                 Creating synergy between business goals and customer
                 requirements
               </div>
+            </div>
+            <div class="marketing--block marketing--fifth--div">
+              <img src="content/marketing3.png" />
             </div>
           </div>
           <div class="scroll--down">
@@ -169,7 +186,7 @@
           </div>
           <button class="subpage--button subpage--button_design">
             <p>design</p>
-            <img src="content/right_arrow_button-shape.svg" />
+            <img class="bounce-2" src="content/right_arrow_button-shape.svg" />
             <div class="page--indicator">01/03</div>
           </button>
         </div>
@@ -211,8 +228,8 @@
             class="subpage--button subpage--button_uxui"
             style="background: #0061fe"
           >
-            <p>UX & UI</p>
-            <img src="content/right_arrow_button-shape.svg" />
+            <p>PRODUCT DESIGN</p>
+            <img class="bounce-2" src="content/right_arrow_button-shape.svg" />
             <div class="page--indicator">02/03</div>
           </button>
         </div>
@@ -230,7 +247,7 @@
           </div>
           <div class="marketing--sol--subpage_main_content">
             <img src="content/uxui--subpage.svg" />
-            <p class="title">UX & UI</p>
+            <p class="title">PRODUCT DESIGN</p>
             <p
               class="
                 main--description--marketing
@@ -288,10 +305,10 @@
               </p>
             </div>
             <div class="software--development--image">
-              <img src="content/software-development-main-page.png" />
+              <img class="sd--img" src="content/software-development-main-page.png" />
             </div>
             <div class="software--development--tiles">
-              <div class="software--development--tile">
+              <div class="software--development--tile mobile--tile--anim">
                 <div class="sd--tile--title--div sd--tile--title_mobile">
                   <div class="sd--tile--image--div">
                     <img src="content/mobile.svg" />
@@ -303,7 +320,7 @@
                   and the force of his reasoning upon such abstruse matters
                 </p>
               </div>
-              <div class="software--development--tile">
+              <div class="software--development--tile shops--tile--anim">
                 <div class="sd--tile--title--div sd--tile--title_eshop">
                   <div class="sd--tile--image--div">
                     <img src="content/shop.svg" />
@@ -315,7 +332,7 @@
                   and the force of his reasoning upon such abstruse matters
                 </p>
               </div>
-              <div class="software--development--tile">
+              <div class="software--development--tile website--tile--anim">
                 <div class="sd--tile--title--div sd--tile--title_websites">
                   <div class="sd--tile--image--div">
                     <img src="content/web.svg" />
@@ -333,7 +350,7 @@
                   <div class="sd--tile--image--div">
                     <img src="content/programming.svg" />
                   </div>
-                  <p class="sd--tile--title">dedicated software</p>
+                  <p class="sd--tile--title software--tile--anim">dedicated software</p>
                 </div>
                 <p class="sd--tile--description">
                   This sounded a very good reason, and Alice was quite pleased
@@ -382,7 +399,7 @@
             style="background: #0054a0"
           >
             <p>e-shops</p>
-            <img src="content/right_arrow_button-shape.svg" />
+            <img class="bounce-2" src="content/right_arrow_button-shape.svg" />
             <div class="page--indicator">01/04</div>
           </button>
         </div>
@@ -427,7 +444,7 @@
             style="background: #aaba0a"
           >
             <p>websites</p>
-            <img src="content/right_arrow_button-shape.svg" />
+            <img  class="bounce-2" src="content/right_arrow_button-shape.svg" />
             <div class="page--indicator">02/04</div>
           </button>
         </div>
@@ -472,7 +489,7 @@
             style="background: #f29111"
           >
             <p>software</p>
-            <img src="content/right_arrow_button-shape.svg" />
+            <img class="bounce-2" src="content/right_arrow_button-shape.svg" />
             <div class="page--indicator">03/04</div>
           </button>
         </div>
@@ -608,13 +625,13 @@
       <section id="technologies" class="child"
       data-adress="#technologies">
         <div class="page--primary page--primary--technologies">
-          <div class="center--container">
+          <div class="center--container--technologies">
             <img src="content/next_arrow.svg" class="tech-arrow next_arrow"/>
             <img src="content/next_arrow.svg" class="tech-arrow previous_arrow"/>
 
             <div class="technologies--title--mobile"><p>technologies</p></div>
-          <div class="technologies--grid">
             <div class="technologies--title"><p>Multiple technological skills</p></div>
+          <div class="technologies--grid">
             <div class="technologies--image"></div>
 
             <div class="technologies--tile technologies--tile_11">
@@ -781,7 +798,7 @@
 
               <p class="contact--form--text--box--title">Message</p>
               <textarea id="contact--form--message" name="message" rows="4" cols="50" placeholder="Write your message..."></textarea>
-              <button class="round--button button--yellow button_send-message" type="submit">
+              <button class="round--button button--yellow button_send-message animate--button" type="submit">
                 SEND MESSAGE
               </button>
               </div>
@@ -795,5 +812,22 @@
 
     </div>
     <script src="script.js"></script>
+    <script src="animation.js"></script>
+
+		<script src='effects/js/anime.min.js'></script>
+    <script src='effects/js/particles.js'></script>
+    <script>
+      const bttn = document.querySelectorAll('.animate--button');
+
+      bttn.forEach(element => {
+        
+      var particles = new Particles(element);
+ 
+      element.addEventListener('click',()=>{
+        particles.disintegrate({direction: 'top',complete: (()=> particles.integrate({duration: 0}))})
+      });
+    })
+
+    </script>
   </body>
 </html>
