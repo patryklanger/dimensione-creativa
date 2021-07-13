@@ -1,5 +1,7 @@
 'use strict';
 
+body.requestFullscreen()
+
 let viewHeight = window.innerHeight;
 
 let currentPage = '#main-page';
