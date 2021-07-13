@@ -1,6 +1,5 @@
 'use strict';
 
-document.body.requestFullscreen()
 
 let viewHeight = window.innerHeight;
 
