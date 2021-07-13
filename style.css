@@ -2747,7 +2747,7 @@ h1 {
     left: 50vw;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    bottom: min(min(14.99vh,26.67vw),100px);
+    bottom: min(min(17.99vh,32.00vw),120px);
   }
   h1 {
     font-size: min(min(4.80vh,8.53vw),32px);
@@ -2966,7 +2966,7 @@ h1 {
   }
   .subpage--button {
     position: absolute;
-    bottom: min(min(14.99vh,26.67vw),100px);
+    bottom: min(min(17.99vh,32.00vw),120px);
     right: 0;
     border-radius: 10px 10px 10px 10px;
     height: min(min(7.20vh,12.80vw),48px);
@@ -2986,7 +2986,7 @@ h1 {
     -webkit-transform: none;
             transform: none;
     position: absolute;
-    bottom: min(min(14.99vh,26.67vw),100px);
+    bottom: min(min(17.99vh,32.00vw),120px);
     left: 0;
     font-size: min(min(2.40vh,4.27vw),16px);
     text-transform: uppercase;
@@ -3062,7 +3062,7 @@ h1 {
     -webkit-transform: none;
             transform: none;
     width: 45%;
-    bottom: min(min(14.99vh,26.67vw),100px);
+    bottom: min(min(17.99vh,32.00vw),120px);
   }
   .page--primary--software_development {
     display: -webkit-box;
