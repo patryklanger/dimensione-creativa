@@ -2684,6 +2684,12 @@ h1 {
   .subcategory--title img {
     display: none;
   }
+  .sd--tile--title_software:hover > .software--tile--anim,
+  .sd--tile--title_websites:hover > .sd--tile--title,
+  .sd--tile--title_eshop:hover > .sd--tile--title,
+  .sd--tile--title_mobile:hover > .sd--tile--title {
+    color: unset;
+  }
   @-webkit-keyframes bounce-2 {
     0% {
       -webkit-transform: translateX(-10px);
