@@ -2966,9 +2966,9 @@ h1 {
   }
   .subpage--button {
     position: absolute;
-    bottom: 0;
+    bottom: min(min(14.99vh,26.67vw),100px);
     right: 0;
-    border-radius: 10px 0 0 0;
+    border-radius: 10px 10px 10px 10px;
     height: min(min(7.20vh,12.80vw),48px);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2979,13 +2979,14 @@ h1 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 45%;
+    width: 40%;
+    margin-right: 5%;
   }
   .back--button {
     -webkit-transform: none;
             transform: none;
     position: absolute;
-    bottom: 0;
+    bottom: min(min(14.99vh,26.67vw),100px);
     left: 0;
     font-size: min(min(2.40vh,4.27vw),16px);
     text-transform: uppercase;
@@ -3061,7 +3062,7 @@ h1 {
     -webkit-transform: none;
             transform: none;
     width: 45%;
-    bottom: min(min(3.00vh,5.33vw),20px);
+    bottom: min(min(14.99vh,26.67vw),100px);
   }
   .page--primary--software_development {
     display: -webkit-box;
