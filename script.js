@@ -9,7 +9,7 @@ let isScrolling = false;
 let marketingSolutionsArray = [0, 100, 200, 300];
 let softwareDevelopmentArray = [0, 100, 200, 300, 400];
 let mobileTechCurrentSlide = 0;
-
+const modalExitButton = document.querySelector('.round--button--blue');
 const nextArrow = document.querySelector('.next_arrow');
 const previousArrow = document.querySelector('.previous_arrow');
 
@@ -23,6 +23,7 @@ history.replaceState(historyState, '', '/');
 const technologiesAnimation = document.querySelector(
   '.center--container--technologies'
 );
+const radioForm = document.getElementsByName('help--category');
 const mainPageLeft = document.querySelector('.left--container_main_content');
 const whatWeDoAnimation = document.querySelector('.left--container_what_we_do');
 const technologies = document.querySelector('.technologies--grid');
@@ -47,7 +48,7 @@ const menuButton = document.querySelector('.header--button');
 const backButtonSoftware = document.querySelectorAll('.back--button_sd');
 const marketingSubpages = document.querySelectorAll('.marketing--subpages');
 const softwareDevelopmentSubpages = document.querySelectorAll('.sd--subpages');
-
+const contactForm = document.querySelector('.contact--form--actual');
 const strategyDivClicker = document.querySelector(
   '.subcategory--title_strategy'
 );
@@ -87,12 +88,19 @@ for (let [index, val] of menuLinks.entries()) {
     sections[index].scrollIntoView({ behavior: 'smooth' });
   });
 }
+setTimeout(() => {
+  menu.style.transition = 'transform ease-in 0.5s';
+}, 250);
 console.log(rightContainerWhatWeDo);
 
 previousArrow.addEventListener('click', () => {
   previousSlideTech();
 });
+modalExitButton.addEventListener('click', () => {
+  const modal = document.querySelector('.thank--you--modal--center');
 
+  modal.classList.remove('thank--you--modal_active');
+});
 designButton.addEventListener('click', () => {
   marketingSlideSetValues(2);
 });
@@ -379,7 +387,7 @@ scrollManager.addEventListener(
         historyState.currentPage = '#contact_us';
         history.pushState(historyState, '', '#contact_us');
         deactivateAllAnimations();
-        menuLinks[6].classList.add('activelink');
+        // menuLinks[6].classList.add('activelink');
       }
     }, 66);
   },
@@ -400,3 +408,59 @@ window.onpopstate = function (e) {
 if (history.scrollRestoration) {
   history.scrollRestoration = 'manual';
 }
+
+contactForm.addEventListener('submit', (e) => {
+  const modal = document.querySelector('.thank--you--modal--center');
+  let formRadio = '';
+  for (var i = 0, length = radioForm.length; i < length; i++) {
+    if (radioForm[i].checked) {
+      // do whatever you want with the checked radio
+      formRadio = radioForm[i].value;
+      // only one radio can be logically checked, don't check the rest
+    }
+  }
+  e.preventDefault();
+  const body = {
+    company: document.querySelector('.contact--form--company--input').value,
+    name: document.querySelector('.contact--form--name--input').value,
+    phone: document.querySelector('.contact--form--phone--input').value,
+    mail: document.querySelector('.contact--form--mail--input').value,
+    helpCategory: formRadio,
+    message: document.getElementById('contact--form--message').value,
+  };
+  console.log(body);
+  const mailBody = {
+    type: body.helpCategory,
+    name: body.name,
+    company: body.company,
+    phoneNumber: body.phone,
+    eMail: body.mail,
+    message: body.message,
+  };
+  const send_button = document.querySelector('.button_send-message');
+  var particles = new Particles(send_button);
+  particles.disintegrate({
+    direction: 'top',
+    complete: () => particles.integrate({ duration: 0 }),
+  });
+
+  setTimeout(() => {
+    document.querySelector('.contact--form--company--input').value = '';
+    document.querySelector('.contact--form--name--input').value = '';
+    document.querySelector('.contact--form--phone--input').value = '';
+    document.querySelector('.contact--form--mail--input').value = '';
+    document.getElementById('contact--form--message').value = '';
+    modal.classList.add('thank--you--modal_active');
+    for (var i = 0, length = radioForm.length; i < length; i++) {
+      if (radioForm[i].checked) {
+        // do whatever you want with the checked radio
+        radioForm[i].checked = false;
+        // only one radio can be logically checked, don't check the rest
+      }
+    }
+  }, 1000);
+  const xhttp = new XMLHttpRequest();
+  xhttp.open('POST', 'https://formsubmit.co/ajax/patryklanger@icloud.com');
+  xhttp.setRequestHeader('Content-Type', 'application/json');
+  xhttp.send(JSON.stringify(mailBody));
+});
