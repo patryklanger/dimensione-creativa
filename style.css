@@ -108,8 +108,8 @@ body {
 
 .activelink::before {
   position: absolute;
-  top: min(min(4.44vh,2.78vw),40px);
-  right: min(min(11.11vh,6.94vw),100px);
+  top: 40%;
+  right: 10%;
   content: '';
   width: min(min(40.93vh,72.80vw),273px);
   height: min(min(1.65vh,2.93vw),11px);
