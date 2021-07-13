@@ -78,8 +78,7 @@ menuLinks[0].classList.add('activelink');
 document
   .querySelector('.button--write--to--us--mobile')
   .addEventListener('click', () => {
-    console.log('im here');
-    window.location = '/contact.html';
+    window.location = '/ja-wiec/contact.html';
   });
 
 nextArrow.addEventListener('click', () => {
