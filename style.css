@@ -2901,7 +2901,7 @@ h1 {
   .about--us--description p {
     width: min(min(40.33vh,71.73vw),269px);
     margin: 0 auto;
-    margin-top: min(min(1.65vh,2.93vw),11px);
+    margin-top: min(min(0.82vh,1.47vw),5.5px);
     font-size: min(min(2.40vh,4.27vw),16px);
     line-height: min(min(3.60vh,6.40vw),24px);
     font-weight: 200;
@@ -3041,7 +3041,7 @@ h1 {
   .subpage--description {
     width: min(min(40.33vh,71.73vw),269px) !important;
     margin: 0 auto;
-    margin-top: min(min(7.50vh,13.33vw),50px) !important;
+    margin-top: min(min(3.75vh,6.67vw),25px) !important;
     font-size: min(min(1.80vh,3.20vw),12px) !important;
     line-height: min(min(2.70vh,4.80vw),18px) !important;
     font-weight: 200;
@@ -3050,7 +3050,7 @@ h1 {
     position: relative;
     width: min(min(40.33vh,71.73vw),269px) !important;
     margin: 0 auto;
-    margin-top: min(min(7.50vh,13.33vw),50px) !important;
+    margin-top: min(min(1.50vh,2.67vw),10px) !important;
     font-size: min(min(1.80vh,3.20vw),12px) !important;
     line-height: min(min(2.70vh,4.80vw),18px) !important;
     font-weight: 200;
