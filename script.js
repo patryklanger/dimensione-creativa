@@ -315,7 +315,7 @@ const deactivateAllAnimations = () => {
   menuLinks.forEach((e) => {
     e.classList.remove('activelink');
   });
-  softwareDevSection.classList.remove('active');
+  softwareDevAnim.classList.remove('active');
 };
 // Listen for scroll events
 scrollManager.addEventListener(
