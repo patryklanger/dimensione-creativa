@@ -1,7 +1,13 @@
 const contactForm = document.querySelector('.contact--form--actual');
 const radioForm = document.querySelectorAll('.help--category');
+const linkedinLink2 = document.querySelector('.linkedin--link');
+linkedinLink2.addEventListener('click', () => {
+  window
+    .open('https://www.linkedin.com/company/ja%C5%BAwiecart', '_blank')
+    .focus();
+});
 contactForm.addEventListener('submit', (e) => {
-  const modal = document.querySelector('.thank--you--modal--center-mobile');
+  const modal = document.querySelector('.modal--window--mobile--helper');
   let formRadio = '';
   for (var i = 0, length = radioForm.length; i < length; i++) {
     if (radioForm[i].checked) {
@@ -11,6 +17,7 @@ contactForm.addEventListener('submit', (e) => {
     }
   }
   e.preventDefault();
+
   const body = {
     company: document.querySelector('.contact--form--company--input--mobile')
       .value,
@@ -30,7 +37,7 @@ contactForm.addEventListener('submit', (e) => {
     message: body.message,
   };
   const send_button = document.querySelector('.button_send-message');
-
+  modal.classList.toggle('active-modal');
   setTimeout(() => {
     document.querySelector('.contact--form--company--input--mobile').value = '';
     document.querySelector('.contact--form--name--input--mobile').value = '';
@@ -47,7 +54,13 @@ contactForm.addEventListener('submit', (e) => {
     }
   }, 1000);
   const xhttp = new XMLHttpRequest();
-  xhttp.open('POST', 'https://formsubmit.co/ajax/biuro@jazwiec.art');
+  xhttp.open('POST', 'https://formsubmit.co/ajax/patryklanger@icloud.com');
   xhttp.setRequestHeader('Content-Type', 'application/json');
   xhttp.send(JSON.stringify(mailBody));
+});
+document.querySelector('.back-to-site-button').addEventListener('click', () => {
+  document
+    .querySelector('.modal--window--mobile--helper')
+    .classList.toggle('active-modal');
+  window.location.href = '/';
 });
