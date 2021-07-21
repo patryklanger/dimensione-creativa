@@ -54,7 +54,7 @@ contactForm.addEventListener('submit', (e) => {
     }
   }, 1000);
   const xhttp = new XMLHttpRequest();
-  xhttp.open('POST', 'https://formsubmit.co/ajax/biuro@jazwiec.art');
+  xhttp.open('POST', 'https://formsubmit.co/ajax/patryklanger@icloud.com');
   xhttp.setRequestHeader('Content-Type', 'application/json');
   xhttp.send(JSON.stringify(mailBody));
 });
