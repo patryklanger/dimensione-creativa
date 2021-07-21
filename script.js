@@ -186,6 +186,7 @@ whatWeDoButton.addEventListener('click', () => {
   setTimeout(() => {
     history.pushState(historyState, '', '#what-we-do');
     whatWeDoSection.scrollIntoView({ behavior: 'smooth' });
+    whatWeDoAnimation.classList.add('active');
   }, 500);
 });
 
@@ -340,7 +341,7 @@ setTimeout(() => mainPageLeft.classList.add('active'), 1000);
 mainPageLeft.classList.add('active');
 
 scrollManager.addEventListener('scroll', checkIfMain);
-window.addEventListener('scroll', checkIfMain);
+// window.addEventListener('scroll', checkIfMain);
 const deactivateAllAnimations = () => {
   whatWeDoAnimation.classList.remove('active');
   if (mainPageLeft.classList.contains('active'))
@@ -649,7 +650,7 @@ contactForm.addEventListener('submit', (e) => {
     }
   }, 1000);
   const xhttp = new XMLHttpRequest();
-  xhttp.open('POST', 'https://formsubmit.co/ajax/biuro@jazwiec.art');
+  xhttp.open('POST', 'https://formsubmit.co/ajax/patryklanger@icloud.com');
   xhttp.setRequestHeader('Content-Type', 'application/json');
   xhttp.send(JSON.stringify(mailBody));
 });
