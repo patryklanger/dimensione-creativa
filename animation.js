@@ -3,7 +3,6 @@ const photoMove = document.querySelector(
 );
 const photoPosition = document.querySelector('.software--development--image');
 const photoAnim = document.querySelector('.sd--img');
-console.log(photoAnim);
 let vHeight = window.innerHeight;
 let vWidth = window.innerWidth;
 let position = photoPosition.getBoundingClientRect();
