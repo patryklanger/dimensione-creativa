@@ -1,2 +1,2 @@
 window.location.href =
-  'https://docviewer.yandex.com/view/0/?page=2&*=XXjYFZcbuvWJS%2FOL9RqJwsm4wYd7InVybCI6InlhLWRpc2stcHVibGljOi8vY0hqd3VaZ1BJN0NxNTRQMy9Ic3ZIQ3VNd05qZUlobEdyaDFTVnIrcFRFWXBXOGpFbjNRaHVSbTV5dWFuUW9aeVJtUi8wZmVQeUd3d1cvV0tXMC9DRUE9PSIsInRpdGxlIjoiSmF6d2llY19hcnRfcHJlemVudGFjamFfcGVsbmEucGRmIiwibm9pZnJhbWUiOnRydWUsInVpZCI6IjAiLCJ0cyI6MTYyNjc4ODM1NzgzNCwieXUiOiI0NjcwNzgzODE2MjYxMTQxMjUifQ%3D%3D';
+  "https://www.canva.com/design/DAEkq1mk3Cg/dwUVpfdRWoeUFslqlvxlCg/view?utm_content=DAEkq1mk3Cg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink";
