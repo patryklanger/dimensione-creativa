@@ -17,6 +17,18 @@ body {
   overflow-x: hidden;
 }
 
+.osano-cm-widget {
+  -webkit-transform: translate(-200%, -40%);
+          transform: translate(-200%, -40%);
+}
+
+.osano-cm-widget:focus,
+.osano-cm-widget:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.3) translate(-200%, -40%);
+          transform: scale(1.3) translate(-200%, -40%);
+}
+
 body {
   color: white;
   width: auto !important;
