@@ -1337,6 +1337,14 @@ h1 {
 .yellow-box-who_we_are--element:last-of-type {
   border: none;
 }
+.h1-main-info-who-we-are {
+  font-size: #{'min(min(4.56vh, 2.85vw), 41px)'};
+  line-height: #{'min(min(3.78vh, 2.36vw), 34px)'};
+  letter-spacing: #{'max(max(-0.06vh, -0.03vw), -0.5px)'};
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: #{'min(min(2.44vh, 1.53vw), 22px)'};
+}
 .yellow--box--who_we_are::before {
   content: '';
   z-index: -1;
@@ -2881,5 +2889,20 @@ h1 {
     line-height: #{'min(min(8.40vh,14.93vw),56px)'};
     margin-bottom: #{'min(min(4.50vh,8.00vw),30px)'};
     cursor: pointer;
+  }
+}
+@media (max-aspect-ratio: 1 / 1) and (max-width: 600px) {
+  .h1-main-info-who-we-are {
+    margin-top: #{'min(min(15.59vh, 27.73vw), 104px)'};
+    font-size: #{'min(min(4.8vh, 8.53vw), 32px)'};
+    line-height: #{'min(min(5.1vh, 9.07vw), 34px)'};
+  }
+}
+@media (max-aspect-ratio: 1 / 1) and (max-width: 600px) {
+  .h1-main-info-who-we-are {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: #{'min(min(6vh, 10.67vw), 40px) !important'};
+    line-height: #{'min(min(5.1vh, 9.07vw), 34px) !important'};
   }
 }
