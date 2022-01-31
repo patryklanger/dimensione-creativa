@@ -3192,7 +3192,7 @@ h1 {
     line-height: min(min(5.1vh, 9.07vw), 34px);
   }
   .left--container_main {
-    padding: min(min(30.73vh, 54.67vw), 205px) min(min(8.7vh, 15.47vw), 58px) 0
+    padding: min(min(30.73vh, 30.67vw), 205px) min(min(8.7vh, 15.47vw), 58px) 0
       min(min(8.7vh, 15.47vw), 58px);
   }
   .left--container_main_content {
