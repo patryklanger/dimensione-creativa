@@ -2333,14 +2333,14 @@ h1 {
   cursor: pointer;
   margin: 0 30px;
   width: 30px;
-  height: 30px;
+  height: auto;
 }
 
 .facebook--link {
   cursor: pointer;
   margin: 0 30px;
   width: 30px;
-  height: 30px;
+  height: auto;
 }
 
 .contact--cursor {
