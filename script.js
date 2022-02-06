@@ -7,6 +7,9 @@ const blog = document.getElementById("blog");
 const linkedinLink = document.querySelectorAll(".linkedin--link");
 const facebookLink = document.querySelectorAll(".facebook--link");
 const portfolioLink = document.querySelectorAll(".portfolio--link");
+const portfolioLinkMobile = document.querySelectorAll(
+  ".portfolio--link--mobile"
+);
 const blogLink = document.querySelectorAll(".blog--link");
 
 portfolioLink.forEach((e) =>
@@ -14,6 +17,16 @@ portfolioLink.forEach((e) =>
     window
       .open("https://www.intonewdimension.com/presentation", "_blank")
       .focus();
+  })
+);
+
+portfolioLinkMobile.forEach((e) =>
+  e.addEventListener("click", () => {
+    menu.classList.toggle("active"),
+      header.classList.toggle("menu--active"),
+      window
+        .open("https://www.intonewdimension.com/presentation", "_blank")
+        .focus();
   })
 );
 
@@ -146,7 +159,7 @@ nextArrow.addEventListener("click", () => {
 });
 for (let [index, val] of menuLinks.entries()) {
   val.addEventListener("click", () => {
-    if (index > 1 && index < 4)
+    if (index > 1 && index < 5)
       animationElementsArray[index - 1].classList.add("active");
     menu.classList.toggle("active");
     header.classList.toggle("menu--active");
@@ -492,6 +505,19 @@ window.addEventListener(
         technologiesAnimation.classList.add("active--technologies");
       } else if (
         window.pageYOffset >
+          4 * viewHeight - 10 + au1Height + au2Height + au3Height &&
+        window.pageYOffset <
+          5 * viewHeight - 10 + au1Height + au2Height + au3Height &&
+        historyState.currentPage != "#contact_us"
+      ) {
+        historyState.currentPage = "#contact_us";
+        history.pushState(historyState, "", "#contact_us");
+        menuLinks.forEach((e) => {
+          e.classList.remove("activelink");
+        });
+        menuLinks[4].classList.add("activelink");
+      } else if (
+        window.pageYOffset >
           4 * viewHeight - 10 + au1Height + au2Height + au4Height &&
         window.pageYOffset <
           4 * viewHeight - 10 + au1Height + au2Height + au4Height &&
@@ -504,19 +530,6 @@ window.addEventListener(
           e.classList.remove("activelink");
         });
         menuLinks[5].classList.add("activelink");
-      } else if (
-        window.pageYOffset >
-          4 * viewHeight - 10 + au1Height + au2Height + au3Height &&
-        window.pageYOffset <
-          5 * viewHeight - 10 + au1Height + au2Height + au3Height &&
-        historyState.currentPage != "#contact_us"
-      ) {
-        historyState.currentPage = "#contact_us";
-        history.pushState(historyState, "", "#contact_us");
-        menuLinks.forEach((e) => {
-          e.classList.remove("activelink");
-        });
-        menuLinks[4].classList.add("activelink");
       }
     }, 66);
   },
@@ -612,15 +625,6 @@ scrollManager.addEventListener(
         menuLinks[3].classList.add("activelink");
         technologiesAnimation.classList.add("active--technologies");
       } else if (
-        scrollManager.scrollTop > 8 * viewHeight - 10 &&
-        scrollManager.scrollTop < 9 * viewHeight - 10 &&
-        historyState.currentPage != "#blog"
-      ) {
-        historyState.currentPage = "#blog";
-        history.pushState(historyState, "", "#blog");
-        deactivateAllAnimations();
-        menuLinks[5].classList.add("activelink");
-      } else if (
         scrollManager.scrollTop > 9 * viewHeight - 10 &&
         scrollManager.scrollTop < 10 * viewHeight - 10 &&
         historyState.currentPage != "#contact_us"
@@ -629,6 +633,15 @@ scrollManager.addEventListener(
         history.pushState(historyState, "", "#contact_us");
         deactivateAllAnimations();
         menuLinks[4].classList.add("activelink");
+      } else if (
+        scrollManager.scrollTop > 8 * viewHeight - 10 &&
+        scrollManager.scrollTop < 9 * viewHeight - 10 &&
+        historyState.currentPage != "#blog"
+      ) {
+        historyState.currentPage = "#blog";
+        history.pushState(historyState, "", "#blog");
+        deactivateAllAnimations();
+        menuLinks[5].classList.add("activelink");
       }
     }, 66);
   },
