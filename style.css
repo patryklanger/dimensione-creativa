@@ -724,6 +724,13 @@ h1 {
   box-shadow: 2px 3px 9px -1px rgba(255, 215, 38, 0.45);
 }
 
+.button--green {
+  color: white;
+  background: #b4d51e;
+  -webkit-box-shadow: 2px 3px 9px -1px rgba(255, 215, 38, 0.45);
+  box-shadow: 2px 3px 9px -1px rgba(255, 215, 38, 0.45);
+}
+
 .scroll--down {
   cursor: pointer;
   left: 2.57vw;
@@ -2417,7 +2424,7 @@ h1 {
   display: flex;
   position: absolute;
   height: 100%;
-  width: 29.7%;
+  width: 40%;
   right: 0;
   top: 0;
 }

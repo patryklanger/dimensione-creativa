@@ -3,6 +3,7 @@
 const aboutUs1 = document.getElementById("about-us");
 const aboutUs2 = document.getElementById("about-us2");
 const aboutUs3 = document.getElementById("about-us3");
+const blog = document.getElementById("blog");
 const linkedinLink = document.querySelectorAll(".linkedin--link");
 const facebookLink = document.querySelectorAll(".facebook--link");
 const portfolioLink = document.querySelectorAll(".portfolio--link");
@@ -44,6 +45,7 @@ linkedinLink.forEach((e) =>
 let au1Height = aboutUs1.offsetHeight;
 let au2Height = aboutUs2.offsetHeight;
 let au3Height = aboutUs3.offsetHeight;
+let au4Height = blog.offsetHeight;
 
 let viewHeight = window.innerHeight;
 
@@ -370,6 +372,7 @@ mainPageLeft.classList.add("active");
 scrollManager.addEventListener("scroll", checkIfMain);
 // window.addEventListener('scroll', checkIfMain);
 const deactivateAllAnimations = () => {
+  blog.classList.remove("active");
   whatWeDoAnimation.classList.remove("active");
   if (mainPageLeft.classList.contains("active"))
     mainPageLeft.classList.remove("active");
@@ -489,6 +492,20 @@ window.addEventListener(
         technologiesAnimation.classList.add("active--technologies");
       } else if (
         window.pageYOffset >
+          4 * viewHeight - 10 + au1Height + au2Height + au4Height &&
+        window.pageYOffset <
+          4 * viewHeight - 10 + au1Height + au2Height + au4Height &&
+        historyState.currentPage != "#blog"
+      ) {
+        historyState.currentPage = "#blog";
+        history.pushState(historyState, "", "#blog");
+        blog.classList.add("active");
+        menuLinks.forEach((e) => {
+          e.classList.remove("activelink");
+        });
+        menuLinks[5].classList.add("activelink");
+      } else if (
+        window.pageYOffset >
           4 * viewHeight - 10 + au1Height + au2Height + au3Height &&
         window.pageYOffset <
           5 * viewHeight - 10 + au1Height + au2Height + au3Height &&
@@ -595,6 +612,15 @@ scrollManager.addEventListener(
         menuLinks[3].classList.add("activelink");
         technologiesAnimation.classList.add("active--technologies");
       } else if (
+        scrollManager.scrollTop > 8 * viewHeight - 10 &&
+        scrollManager.scrollTop < 9 * viewHeight - 10 &&
+        historyState.currentPage != "#blog"
+      ) {
+        historyState.currentPage = "#blog";
+        history.pushState(historyState, "", "#blog");
+        deactivateAllAnimations();
+        menuLinks[5].classList.add("activelink");
+      } else if (
         scrollManager.scrollTop > 9 * viewHeight - 10 &&
         scrollManager.scrollTop < 10 * viewHeight - 10 &&
         historyState.currentPage != "#contact_us"
@@ -614,6 +640,7 @@ window.addEventListener("resize", () => {
   au1Height = aboutUs1.offsetHeight;
   au2Height = aboutUs2.offsetHeight;
   au3Height = aboutUs3.offsetHeight;
+  au4Height = blog.offsetHeight;
 });
 
 window.onpopstate = function (e) {
