@@ -4072,8 +4072,8 @@ h1 {
 }
 
 @media (min-aspect-ratio: 278 / 584), (max-width: 320px) {
-  .first--page--marketing .scroll--down,
-  .page--primary--technologies .scroll--down {
+  /* .page--primary--technologies .scroll--down */
+  .first--page--marketing .scroll--down {
     display: none;
   }
   .technologies--grid {
