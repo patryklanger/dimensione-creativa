@@ -3,7 +3,6 @@
 const aboutUs1 = document.getElementById("about-us");
 const aboutUs2 = document.getElementById("about-us2");
 const aboutUs3 = document.getElementById("about-us3");
-const blog = document.getElementById("blog");
 const linkedinLink = document.querySelectorAll(".linkedin--link");
 const facebookLink = document.querySelectorAll(".facebook--link");
 const portfolioLink = document.querySelectorAll(".portfolio--link");
@@ -159,7 +158,7 @@ nextArrow.addEventListener("click", () => {
 });
 for (let [index, val] of menuLinks.entries()) {
   val.addEventListener("click", () => {
-    if (index > 1 && index < 5)
+    if (index > 1 && index < 3)
       animationElementsArray[index - 1].classList.add("active");
     menu.classList.toggle("active");
     header.classList.toggle("menu--active");
@@ -385,7 +384,6 @@ mainPageLeft.classList.add("active");
 scrollManager.addEventListener("scroll", checkIfMain);
 // window.addEventListener('scroll', checkIfMain);
 const deactivateAllAnimations = () => {
-  blog.classList.remove("active");
   whatWeDoAnimation.classList.remove("active");
   if (mainPageLeft.classList.contains("active"))
     mainPageLeft.classList.remove("active");
@@ -507,25 +505,24 @@ window.addEventListener(
         window.pageYOffset >
           4 * viewHeight - 10 + au1Height + au2Height + au3Height &&
         window.pageYOffset <
-          5 * viewHeight - 10 + au1Height + au2Height + au3Height &&
-        historyState.currentPage != "#contact_us"
+          4 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
+        historyState.currentPage != "#blog"
       ) {
-        historyState.currentPage = "#contact_us";
-        history.pushState(historyState, "", "#contact_us");
+        historyState.currentPage = "#blog";
+        history.pushState(historyState, "", "#blog");
         menuLinks.forEach((e) => {
           e.classList.remove("activelink");
         });
         menuLinks[4].classList.add("activelink");
       } else if (
         window.pageYOffset >
-          4 * viewHeight - 10 + au1Height + au2Height + au4Height &&
+          4 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
         window.pageYOffset <
-          4 * viewHeight - 10 + au1Height + au2Height + au4Height &&
-        historyState.currentPage != "#blog"
+          5 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
+        historyState.currentPage != "#contact_us"
       ) {
-        historyState.currentPage = "#blog";
-        history.pushState(historyState, "", "#blog");
-        blog.classList.add("active");
+        historyState.currentPage = "#contact_us";
+        history.pushState(historyState, "", "#contact_us");
         menuLinks.forEach((e) => {
           e.classList.remove("activelink");
         });
@@ -625,21 +622,21 @@ scrollManager.addEventListener(
         menuLinks[3].classList.add("activelink");
         technologiesAnimation.classList.add("active--technologies");
       } else if (
-        scrollManager.scrollTop > 9 * viewHeight - 10 &&
-        scrollManager.scrollTop < 10 * viewHeight - 10 &&
-        historyState.currentPage != "#contact_us"
-      ) {
-        historyState.currentPage = "#contact_us";
-        history.pushState(historyState, "", "#contact_us");
-        deactivateAllAnimations();
-        menuLinks[4].classList.add("activelink");
-      } else if (
         scrollManager.scrollTop > 8 * viewHeight - 10 &&
         scrollManager.scrollTop < 9 * viewHeight - 10 &&
         historyState.currentPage != "#blog"
       ) {
         historyState.currentPage = "#blog";
         history.pushState(historyState, "", "#blog");
+        deactivateAllAnimations();
+        menuLinks[4].classList.add("activelink");
+      } else if (
+        scrollManager.scrollTop > 10 * viewHeight - 10 &&
+        scrollManager.scrollTop < 11 * viewHeight - 10 &&
+        historyState.currentPage != "#contact_us"
+      ) {
+        historyState.currentPage = "#contact_us";
+        history.pushState(historyState, "", "#contact_us");
         deactivateAllAnimations();
         menuLinks[5].classList.add("activelink");
       }
@@ -653,7 +650,6 @@ window.addEventListener("resize", () => {
   au1Height = aboutUs1.offsetHeight;
   au2Height = aboutUs2.offsetHeight;
   au3Height = aboutUs3.offsetHeight;
-  au4Height = blog.offsetHeight;
 });
 
 window.onpopstate = function (e) {
