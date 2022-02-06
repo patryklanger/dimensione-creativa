@@ -5,6 +5,20 @@ const aboutUs2 = document.getElementById("about-us2");
 const aboutUs3 = document.getElementById("about-us3");
 const linkedinLink = document.querySelectorAll(".linkedin--link");
 const facebookLink = document.querySelectorAll(".facebook--link");
+const portfolioLink = document.querySelectorAll(".portfolio--link");
+const blogLink = document.querySelectorAll(".blog--link");
+
+portfolioLink.forEach((e) =>
+  e.addEventListener("click", () => {
+    window.open("https://www.intonewdimension.com/portfolio", "_blank").focus();
+  })
+);
+
+blogLink.forEach((e) =>
+  e.addEventListener("click", () => {
+    window.open("https://www.blog.intonewdimension.com", "_blank").focus();
+  })
+);
 
 facebookLink.forEach((e) =>
   e.addEventListener("click", () => {

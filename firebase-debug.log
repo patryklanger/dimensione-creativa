@@ -1,0 +1,31 @@
+[debug] [2022-02-06T17:47:02.189Z] ----------------------------------------------------------------------
+[debug] [2022-02-06T17:47:02.190Z] Command:       /usr/local/bin/firebase /Users/paweltrojanowski/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2022-02-06T17:47:02.191Z] CLI Version:   9.20.0
+[debug] [2022-02-06T17:47:02.191Z] Platform:      darwin
+[debug] [2022-02-06T17:47:02.191Z] Node Version:  v12.18.1
+[debug] [2022-02-06T17:47:02.192Z] Time:          Sun Feb 06 2022 18:47:02 GMT+0100 (GMT+01:00)
+[debug] [2022-02-06T17:47:02.192Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-02-06T17:47:02.236Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-02-06T17:47:02.237Z] > authorizing via signed-in user (lewapoel@gmail.com)
+[debug] [2022-02-06T17:47:02.237Z] [iam] checking project dimensione-creativa for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-02-06T17:47:02.239Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/dimensione-creativa:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-02-06T17:47:03.280Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 06 Feb 2022 17:47:03 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=708","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-06T17:47:03.293Z] > refreshing access token with scopes: []
+[debug] [2022-02-06T17:47:03.294Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-02-06T17:47:03.640Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Sun, 06 Feb 2022 17:47:03 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-06T17:47:03.714Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dimensione-creativa [none]
+[debug] [2022-02-06T17:47:04.319Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dimensione-creativa 200
+[debug] [2022-02-06T17:47:04.320Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dimensione-creativa {"projectId":"dimensione-creativa","projectNumber":"121966325154","displayName":"dimensione-creativa","name":"projects/dimensione-creativa","resources":{"hostingSite":"dimensione-creativa"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'dimensione-creativa'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-02-06T17:47:04.328Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-02-06T17:47:04.328Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-02-06T17:47:04.610Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 06 Feb 2022 17:47:04 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-06T17:47:04.662Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/dimensione-creativa/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
