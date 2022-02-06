@@ -464,7 +464,7 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   align-items: center;
-  margin-left: 3em;
+  margin-left: 5em;
   right: 0px;
   z-index: 98;
 }
