@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;700&display=swap");
 
 .company-logo {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 * {
@@ -3076,7 +3076,8 @@ h1 {
   .software--development--bg,
   .contact--cursor,
   .subcategory--title img,
-  .hide--mobile {
+  .hide--mobile,
+  .header--contact_us {
     display: none;
   }
   .sd--tile--title_software:hover > .software--tile--anim,
@@ -4113,4 +4114,3 @@ h1 {
     line-height: min(min(5.1vh, 9.07vw), 34px) !important;
   }
 }
-/*# sourceMappingURL=style.css.map */
