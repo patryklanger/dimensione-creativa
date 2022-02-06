@@ -10,13 +10,15 @@ const blogLink = document.querySelectorAll(".blog--link");
 
 portfolioLink.forEach((e) =>
   e.addEventListener("click", () => {
-    window.open("https://www.intonewdimension.com/portfolio", "_blank").focus();
+    window
+      .open("https://www.intonewdimension.com/presentation", "_blank")
+      .focus();
   })
 );
 
 blogLink.forEach((e) =>
   e.addEventListener("click", () => {
-    window.open("https://www.blog.intonewdimension.com", "_blank").focus();
+    window.open("https://blog.intonewdimension.com", "_blank").focus();
   })
 );
 
