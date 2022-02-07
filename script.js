@@ -94,6 +94,7 @@ const whatWeDoAnimation = document.querySelector(".left--container_what_we_do");
 const technologies = document.querySelector(".technologies--grid");
 const nextSectionButtonArr = document.querySelectorAll(".scroll--down");
 const whatWeDoButton = document.querySelector(".button--to_what_we_do");
+const blogButton = document.querySelector(".button--blog");
 const whatWeDoSection = document.getElementById("what-we-do");
 const softwareDevSection = document.getElementById("software-development");
 const softwareTile = document.querySelector(".link--tile--right");
@@ -228,6 +229,12 @@ whatWeDoButton.addEventListener("click", () => {
     history.pushState(historyState, "", "#what-we-do");
     whatWeDoSection.scrollIntoView({ behavior: "smooth" });
     whatWeDoAnimation.classList.add("active");
+  }, 500);
+});
+
+blogButton.addEventListener("click", () => {
+  setTimeout(() => {
+    window.open("https://blog.intonewdimension.com", "_blank");
   }, 500);
 });
 

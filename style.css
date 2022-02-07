@@ -607,6 +607,32 @@ h1 {
   z-index: 50;
 }
 
+.blog-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  padding-left: 7.43vw;
+}
+
+.blog-section-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.blog-paragraph {
+  width: 65%;
+}
+
+.blog-bg {
+  -o-object-position: center;
+  object-position: center;
+  width: 50.5vw;
+  z-index: 50;
+}
+
 .left--container_main {
   color: white;
   position: absolute;
