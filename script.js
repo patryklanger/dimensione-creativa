@@ -234,7 +234,7 @@ whatWeDoButton.addEventListener("click", () => {
 
 blogButton.addEventListener("click", () => {
   setTimeout(() => {
-    window.open("https://blog.intonewdimension.com", "_blank");
+    window.open("https://blog.intonewdimension.com", "_self");
   }, 500);
 });
 
