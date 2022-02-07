@@ -90,6 +90,7 @@ const aboutUs3AnimationTiles = document.querySelector(".about--us2--tiles");
 const aboutUs4Animation = document.querySelector(".about_us3_animate");
 const radioForm = document.getElementsByName("help--category");
 const mainPageLeft = document.querySelector(".left--container_main_content");
+const blogSectionLeft = document.querySelector(".blog-section-left");
 const whatWeDoAnimation = document.querySelector(".left--container_what_we_do");
 const technologies = document.querySelector(".technologies--grid");
 const nextSectionButtonArr = document.querySelectorAll(".scroll--down");
@@ -385,6 +386,7 @@ const checkIfMain = () => {
     technologies.style.transform = `translateX(0)`;
   }
 };
+
 setTimeout(() => mainPageLeft.classList.add("active"), 1000);
 mainPageLeft.classList.add("active");
 
@@ -394,6 +396,7 @@ const deactivateAllAnimations = () => {
   whatWeDoAnimation.classList.remove("active");
   if (mainPageLeft.classList.contains("active"))
     mainPageLeft.classList.remove("active");
+  blogSectionLeft.classList.remove("active");
   technologiesAnimation.classList.remove("active--technologies");
   menuLinks.forEach((e) => {
     e.classList.remove("activelink");
@@ -517,6 +520,7 @@ window.addEventListener(
       ) {
         historyState.currentPage = "#blog";
         history.pushState(historyState, "", "#blog");
+        blogSectionLeft.classList.add("active");
         menuLinks.forEach((e) => {
           e.classList.remove("activelink");
         });
@@ -636,6 +640,7 @@ scrollManager.addEventListener(
         historyState.currentPage = "#blog";
         history.pushState(historyState, "", "#blog");
         deactivateAllAnimations();
+        blogSectionLeft.classList.add("active");
         menuLinks[4].classList.add("activelink");
       } else if (
         scrollManager.scrollTop > 10 * viewHeight - 10 &&
