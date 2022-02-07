@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;700&display=swap");
 
 .company-logo {
-  margin-bottom: 30px;
+  width: 25%;
 }
 
 * {
@@ -265,6 +265,7 @@ body {
 }
 
 .menu--container {
+  padding-top: 15vh;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -329,7 +330,7 @@ body {
 
 .menu--container ul li {
   position: relative;
-  font-size: min(min(9.6vh, 17.07vw), 64px);
+  font-size: 2.2em;
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
@@ -340,15 +341,15 @@ body {
 
 .activelink::before {
   position: absolute;
-  top: 40%;
-  right: 10%;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%) rotate(15deg);
+  transform: translate(-50%, -50%) rotate(15deg);
   content: "";
   width: min(min(40.93vh, 72.8vw), 273px);
   height: min(min(1.65vh, 2.93vw), 11px);
   background: #ffd726;
   z-index: -1;
-  -webkit-transform: rotate(15deg);
-  transform: rotate(15deg);
 }
 
 .particles {
@@ -484,7 +485,7 @@ h1 {
   cursor: pointer !important;
   font-family: Poppins, Helvetica, sans-serif;
   font-weight: 300;
-  font-size: min(min(1.78vh, 1.11vw), 16px);
+  font-size: 1.2em;
   color: white;
   margin: 0 30px;
   text-decoration: none;
@@ -621,10 +622,11 @@ h1 {
 .blog-section-left {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 60px;
 }
 
 .blog-title {
+  font-size: min(min(7.11vh, 4.44vw), 64px);
   -webkit-transform: translateX(-100vw);
   transform: translateX(-100vw);
   -webkit-transition: -webkit-transform ease-in-out 0.5s;
@@ -640,6 +642,7 @@ h1 {
 
 .blog-paragraph {
   width: 65%;
+  font-size: 1.25vw;
 }
 
 .blog-bg {
@@ -647,6 +650,12 @@ h1 {
   object-position: center;
   width: 50.5vw;
   z-index: 50;
+}
+
+.blog-bg img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .left--container_main {
@@ -658,15 +667,18 @@ h1 {
 }
 
 .left--container_main_content {
-  padding-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
   width: 100%;
+  height: 100%;
 }
 
 .main_description {
   width: 63.5%;
-  margin-top: 1.66vw;
+  margin: 0;
   font-size: 1.25vw;
-  margin-bottom: 3.06vw;
 }
 
 .left--container_main_content p {
@@ -1599,7 +1611,7 @@ h1 {
   }
   .menu--container ul li {
     position: relative;
-    font-size: min(min(6.3vh, 11.2vw), 42px);
+    font-size: 4.2em;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
@@ -1640,7 +1652,7 @@ h1 {
   }
   .menu--container ul li {
     position: relative;
-    font-size: min(min(6.3vh, 11.2vw), 42px);
+    font-size: 2.2em;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
@@ -2995,7 +3007,7 @@ h1 {
   }
   .menu--container ul li {
     position: relative;
-    font-size: min(min(6.3vh, 11.2vw), 42px);
+    font-size: 2.2em;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
@@ -3079,7 +3091,7 @@ h1 {
   }
   .menu--container ul li {
     position: relative;
-    font-size: min(min(6.3vh, 11.2vw), 42px);
+    font-size: 2.2em;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
@@ -3095,7 +3107,7 @@ h1 {
   }
   .menu--container ul li {
     position: relative;
-    font-size: min(min(9.6vh, 17.07vw), 64px);
+    font-size: 2.2em;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
@@ -3119,14 +3131,15 @@ h1 {
   .marketing--sol--subpage_image_uxui,
   .sd--subpage_image,
   .subpage--button .page--indicator,
-  .sd--subpages .scroll--down,
+  .sd--subpages,
   .software--development--title--secondary,
   .software--development--image,
   .software--development--bg,
   .contact--cursor,
   .subcategory--title img,
   .hide--mobile,
-  .header--contact_us {
+  .header--contact_us,
+  .scroll--down {
     display: none;
   }
   .sd--tile--title_software:hover > .software--tile--anim,
@@ -3209,7 +3222,7 @@ h1 {
   }
   .menu--container ul li {
     position: relative;
-    font-size: min(min(6.3vh, 11.2vw), 42px);
+    font-size: 2.2em;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
@@ -3263,8 +3276,6 @@ h1 {
     font-size: min(min(2.4vh, 4.27vw), 16px) !important;
     line-height: min(min(3.6vh, 6.4vw), 24px) !important;
     width: 100% !important;
-    margin-top: min(min(3vh, 5.33vw), 20px);
-    margin-bottom: min(min(6vh, 10.67vw), 40px);
   }
   .button--to_what_we_do {
     width: min(min(27.44vh, 48.8vw), 183px);
@@ -4120,9 +4131,17 @@ h1 {
   }
 }
 
+@media (min-width: 2500px) {
+  .menu--container ul li {
+    font-size: 4.2em;
+  }
+}
+
 @media (min-aspect-ratio: 278 / 584), (max-width: 320px) {
-  /* .page--primary--technologies .scroll--down */
-  .first--page--marketing .scroll--down {
+  .page--primary--technologies
+    .scroll--down
+    .first--page--marketing
+    .scroll--down {
     display: none;
   }
   .technologies--grid {
@@ -4137,7 +4156,7 @@ h1 {
   }
   .menu--container ul li {
     position: relative;
-    font-size: min(min(6.3vh, 11.2vw), 42px);
+    font-size: 2.2em;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
@@ -4148,6 +4167,41 @@ h1 {
 }
 
 @media (max-aspect-ratio: 1 / 1) and (max-width: 600px) {
+  .company-logo {
+    width: 40vw;
+  }
+  .left--container_main_content,
+  .blog-section-left {
+    gap: 5vh;
+  }
+
+  .blog-title {
+    font-size: min(min(4.8vh, 8.53vw), 32px);
+  }
+
+  .blog-paragraph {
+    font-size: min(min(2.4vh, 4.27vw), 16px) !important;
+  }
+
+  .button--blog {
+    width: min(min(27.44vh, 48.8vw), 183px);
+    height: min(min(7.2vh, 12.8vw), 48px);
+    border-radius: min(min(1.5vh, 2.67vw), 10px);
+    font-size: min(min(2.4vh, 4.27vw), 16px);
+  }
+
+  .blog-bg {
+    display: none;
+  }
+
+  .scroll--down {
+    display: none;
+  }
+
+  .menu--container li {
+    margin-bottom: 20px !important;
+  }
+
   .h1-main-info-who-we-are {
     margin-top: min(min(15.59vh, 27.73vw), 104px);
     font-size: min(min(4.8vh, 8.53vw), 32px);
