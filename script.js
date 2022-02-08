@@ -643,8 +643,8 @@ scrollManager.addEventListener(
         blogSectionLeft.classList.add("active");
         menuLinks[4].classList.add("activelink");
       } else if (
-        scrollManager.scrollTop > 10 * viewHeight - 10 &&
-        scrollManager.scrollTop < 11 * viewHeight - 10 &&
+        scrollManager.scrollTop > 9 * viewHeight - 10 &&
+        scrollManager.scrollTop < 10 * viewHeight - 10 &&
         historyState.currentPage != "#contact_us"
       ) {
         historyState.currentPage = "#contact_us";
