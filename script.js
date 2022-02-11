@@ -49,7 +49,7 @@ facebookLink.forEach((e) =>
 linkedinLink.forEach((e) =>
   e.addEventListener("click", () => {
     window
-      .open("https://www.linkedin.com/company/ja%C5%BAwiecart", "_blank")
+      .open("https://www.linkedin.com/company/dimensionecreativa", "_blank")
       .focus();
   })
 );
