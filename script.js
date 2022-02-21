@@ -252,7 +252,6 @@ function checkAndAnimate() {
     deactivateAllAnimations();
     menuLinks[5].classList.add('activelink');
   }
-  console.log('lol');
 }
 
 let au1Height = aboutUs1.offsetHeight;
@@ -280,7 +279,7 @@ if (queryStrings.includes(window.location.hash)) {
 } else queryString = '#main-page';
 let currentPage = '';
 sections[queryStrings.indexOf(queryString)].scrollIntoView();
-console.log('XD');
+
 checkAndAnimate();
 
 currentPage = queryString;

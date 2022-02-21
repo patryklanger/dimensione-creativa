@@ -27,7 +27,7 @@ contactForm.addEventListener("submit", (e) => {
     helpCategory: formRadio,
     message: document.getElementById("contact--form--message").value,
   };
-  console.log(body);
+ 
   const mailBody = {
     type: body.helpCategory,
     name: body.name,
