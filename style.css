@@ -1913,8 +1913,8 @@ h1 {
   bottom: 0;
   right: 0;
   width: min(67.78vh, 42.36vw);
-  -o-object-fit: scale-down;
-  object-fit: scale-down;
+  -o-object-fit: fill;
+  object-fit: fill;
 }
 
 .yellow--box--who_we_are {
@@ -1990,7 +1990,7 @@ h1 {
 
 #about-us2 h1 {
   width: min(136.67vh, 85.42vw);
-  max-width: 1230px;
+  /* max-width: 1230px; */
 }
 
 .about--us2--tiles {
