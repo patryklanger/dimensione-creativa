@@ -278,6 +278,10 @@ if (queryStrings.includes(window.location.hash)) {
   queryString = window.location.hash;
 } else queryString = '#main-page';
 let currentPage = '';
+console.log(queryStrings);
+console.log(sections);
+console.log(queryString);
+console.log(queryStrings.indexOf(queryString));
 sections[queryStrings.indexOf(queryString)].scrollIntoView();
 
 checkAndAnimate();
