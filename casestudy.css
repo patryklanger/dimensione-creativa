@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;700&display=swap");
+body {
+  font-family: Poppins, Helvetica, sans-serif;
+  font-style: normal;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.casestudy--content {
+  padding: min(84.0000vw,9.333vh) min(10.7639vw,17.222vh) min(9.6528vw,15.444vh) min(10.7639vw,17.222vh);
+  background-color: #000;
+  color: #fff;
+}
+
+.casestudy--content h1,
+.casestudy--content h2 {
+  font-size: min(2.9167vw,4.667vh);
+  line-height: min(4.3750vw,7.000vh);
+  text-transform: uppercase;
+  margin-bottom: min(2.0139vw,3.222vh);
+}
+
+.casestudy--content p {
+  font-size: min(1.1111vw,1.778vh);
+  line-height: min(1.8750vw,3.000vh);
+  margin-bottom: min(5.1389vw,8.222vh);
+}
+
+.casestudy--full--width--photo {
+  width: 100%;
+  margin-bottom: min(5.3472vw,8.556vh);
+}
+
+.casestudy--two--column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: min(4.3750vw,7.000vh);
+}
+
+.casestudy--two--column img {
+  width: 50%;
+}
+
+.casestudy--text--1--2--column {
+  width: 50%;
+  padding: 0 min(2.4653vw,3.944vh);
+}
+
+.casestudy--icon img {
+  width: min(2.6389vw,4.222vh);
+}
+
+.casestudy--icon p {
+  font-size: min(1.3889vw,2.222vh);
+  line-height: min(2.2222vw,3.556vh);
+}
+
+.casestudy--icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: min(1.4583vw,2.333vh);
+}
+
+.casestudy--icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: min(4.6528vw,7.444vh);
+}
+
+.casestudy--others {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  gap: min(5.4167vw,8.667vh);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #000;
+}
+
+.casestudy--others--element {
+  width: min(22.7778vw,36.444vh);
+}
+
+.casestudy--others--element img {
+  width: min(22.7778vw,36.444vh);
+}
+
+.casestudy--others--element p {
+  font-size: min(1.7361vw,2.778vh);
+  line-height: min(1.3889vw,2.222vh);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: min(1.5278vw,2.444vh);
+}
+
+.casestudy--other--container {
+  background-color: #fff;
+  padding: min(2.9167vw,4.667vh) 0;
+  color: black;
+}
+
+.casestudy--other--container h2,
+.casestudy--lowercase--h2 {
+  font-size: min(3.4722vw,5.556vh);
+  line-height: min(5.2083vw,8.333vh);
+  margin-bottom: min(3.1250vw,5.000vh);
+  text-align: center;
+  text-transform: unset !important;
+}
+
+.casestudy--contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: min(7.2222vw,11.556vh);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.casestudy--contact img {
+  width: min(32.7778vw,52.444vh);
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+/*# sourceMappingURL=casestudy.css.map */

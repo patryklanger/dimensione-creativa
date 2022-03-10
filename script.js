@@ -25,6 +25,9 @@ const technologiesAnimation = document.querySelector(
 );
 const aboutUs2Animation = document.querySelector('.animate_me_aboutus2');
 const aboutUs3Animation = document.querySelector('.animate_me_aboutus3');
+const creator1Animation = document.querySelectorAll('.creator1--animate--me');
+const creator2Animation = document.querySelectorAll('.creator2--animate--me');
+const teamAnimation = document.querySelectorAll('.team--animate--me');
 const aboutUs3AnimationTiles = document.querySelector('.about--us2--tiles');
 const aboutUs4Animation = document.querySelector('.about_us3_animate');
 const radioForm = document.getElementsByName('help--category');
@@ -84,7 +87,7 @@ const animationElementsArray = [
   aboutUs2Animation,
   technologiesAnimation,
 ];
-
+console.log(menuLinks);
 const menuSections = document.querySelectorAll('.menu--child');
 portfolioLink.forEach((e) =>
   e.addEventListener('click', () => {
@@ -150,6 +153,9 @@ const deactivateAllAnimations = () => {
   aboutUs3AnimationTiles.classList.remove('active');
   aboutUs4Animation.classList.remove('active');
   yellowBoxAnimation.classList.remove('active');
+  creator1Animation.forEach((e) => e.classList.remove('active'));
+  creator2Animation.forEach((e) => e.classList.remove('active'));
+  teamAnimation.forEach((e) => e.classList.remove('active'));
 };
 function checkAndAnimate() {
   if (
@@ -164,93 +170,167 @@ function checkAndAnimate() {
   } else if (
     scrollManager.scrollTop > viewHeight - 10 &&
     scrollManager.scrollTop < 2 * viewHeight - 10 &&
-    historyState.currentPage != '#what-we-do'
+    historyState.currentPage != '#casestudy'
   ) {
-    historyState.currentPage = '#what-we-do';
-    history.pushState(historyState, '', '#what-we-do');
+    historyState.currentPage = '#casestudy';
+    history.pushState(historyState, '', '#casestudy');
     deactivateAllAnimations();
-    whatWeDoAnimation.classList.add('active');
     menuLinks[1].classList.add('activelink');
   } else if (
     scrollManager.scrollTop > 2 * viewHeight - 10 &&
     scrollManager.scrollTop < 3 * viewHeight - 10 &&
+    historyState.currentPage != '#opinions'
+  ) {
+    historyState.currentPage = '#opinions';
+    history.pushState(historyState, '', '#opinions');
+    deactivateAllAnimations();
+    menuLinks[2].classList.add('activelink');
+  } else if (
+    scrollManager.scrollTop > 3 * viewHeight - 10 &&
+    scrollManager.scrollTop < 4 * viewHeight - 10 &&
+    historyState.currentPage != '#partners'
+  ) {
+    historyState.currentPage = '#partners';
+    history.pushState(historyState, '', '#partners');
+    deactivateAllAnimations();
+    menuLinks[3].classList.add('activelink');
+  } else if (
+    scrollManager.scrollTop > 4 * viewHeight - 10 &&
+    scrollManager.scrollTop < 5 * viewHeight - 10 &&
+    historyState.currentPage != '#what-we-do'
+  ) {
+    historyState.currentPage = '#what-we-do';
+    menuLinks[4].classList.add('activelink');
+    history.pushState(historyState, '', '#what-we-do');
+    deactivateAllAnimations();
+    whatWeDoAnimation.classList.add('active');
+    menuLinks[4].classList.add('activelink');
+  } else if (
+    scrollManager.scrollTop > 5 * viewHeight - 10 &&
+    scrollManager.scrollTop < 6 * viewHeight - 10 &&
     historyState.currentPage != '#marketing-solutions'
   ) {
     historyState.currentPage = '#marketing-solutions';
     history.pushState(historyState, '', '#marketing-solutions');
     deactivateAllAnimations();
-    menuLinks[1].classList.add('activelink');
+    menuLinks[4].classList.add('activelink');
   } else if (
-    scrollManager.scrollTop > 3 * viewHeight - 10 &&
-    scrollManager.scrollTop < 4 * viewHeight - 10 &&
+    scrollManager.scrollTop > 6 * viewHeight - 10 &&
+    scrollManager.scrollTop < 7 * viewHeight - 10 &&
     historyState.currentPage != '#software-development'
   ) {
     historyState.currentPage = '#software-development';
     history.pushState(historyState, '', '#software-development');
     deactivateAllAnimations();
-    menuLinks[1].classList.add('activelink');
     softwareDevAnim.classList.add('active');
   } else if (
-    scrollManager.scrollTop > 4 * viewHeight - 10 &&
-    scrollManager.scrollTop < 5 * viewHeight - 10 &&
+    scrollManager.scrollTop > 7 * viewHeight - 10 &&
+    scrollManager.scrollTop < 8 * viewHeight - 10 &&
     historyState.currentPage != '#about-us'
   ) {
     historyState.currentPage = '#about-us';
     history.pushState(historyState, '', '#about-us');
     deactivateAllAnimations();
-    menuLinks[2].classList.add('activelink');
+    // menuLinks[2].classList.add('activelink');
     aboutUs2Animation.classList.add('active');
     yellowBoxAnimation.classList.add('active');
   } else if (
-    scrollManager.scrollTop > 5 * viewHeight - 10 &&
-    scrollManager.scrollTop < 6 * viewHeight - 10 &&
+    scrollManager.scrollTop > 8 * viewHeight - 10 &&
+    scrollManager.scrollTop < 9 * viewHeight - 10 &&
     historyState.currentPage != '#about-us2'
   ) {
     historyState.currentPage = '#about-us2';
     history.pushState(historyState, '', '#about-us2');
     deactivateAllAnimations();
     aboutUs3Animation.classList.add('active');
-    menuLinks[2].classList.add('activelink');
+    // menuLinks[4].classList.add('activelink');
     aboutUs3AnimationTiles.classList.add('active');
   } else if (
-    scrollManager.scrollTop > 6 * viewHeight - 10 &&
-    scrollManager.scrollTop < 7 * viewHeight - 10 &&
+    scrollManager.scrollTop > 9 * viewHeight - 10 &&
+    scrollManager.scrollTop < 10 * viewHeight - 10 &&
     historyState.currentPage != '#about-us3'
   ) {
     historyState.currentPage = '#about-us3';
     history.pushState(historyState, '', '#about-us3');
     deactivateAllAnimations();
-    menuLinks[2].classList.add('activelink');
+    // menuLinks[2].classList.add('activelink');
     aboutUs4Animation.classList.add('active');
   } else if (
-    scrollManager.scrollTop > 7 * viewHeight - 10 &&
-    scrollManager.scrollTop < 8 * viewHeight - 10 &&
+    scrollManager.scrollTop > 10 * viewHeight - 10 &&
+    scrollManager.scrollTop < 11 * viewHeight - 10 &&
+    historyState.currentPage != '#pricing'
+  ) {
+    historyState.currentPage = '#pricing';
+    history.pushState(historyState, '', '#pricing');
+    deactivateAllAnimations();
+    menuLinks[6].classList.add('activelink');
+  } else if (
+    scrollManager.scrollTop > 11 * viewHeight - 10 &&
+    scrollManager.scrollTop < 12 * viewHeight - 10 &&
     historyState.currentPage != '#technologies'
   ) {
     historyState.currentPage = '#technologies';
     history.pushState(historyState, '', '#technologies');
     deactivateAllAnimations();
-    menuLinks[3].classList.add('activelink');
+    menuLinks[7].classList.add('activelink');
     technologiesAnimation.classList.add('active--technologies');
   } else if (
-    scrollManager.scrollTop > 8 * viewHeight - 10 &&
-    scrollManager.scrollTop < 9 * viewHeight - 10 &&
+    scrollManager.scrollTop > 12 * viewHeight - 10 &&
+    scrollManager.scrollTop < 13 * viewHeight - 10 &&
+    historyState.currentPage != '#creator1'
+  ) {
+    historyState.currentPage = '#creator1';
+    history.pushState(historyState, '', '#creator1');
+    deactivateAllAnimations();
+    creator1Animation.forEach((e) => e.classList.add('active'));
+    menuLinks[7].classList.add('activelink');
+  } else if (
+    scrollManager.scrollTop > 13 * viewHeight - 10 &&
+    scrollManager.scrollTop < 14 * viewHeight - 10 &&
+    historyState.currentPage != '#creator2'
+  ) {
+    historyState.currentPage = '#creator2';
+    history.pushState(historyState, '', '#creator2');
+    deactivateAllAnimations();
+    creator2Animation.forEach((e) => e.classList.add('active'));
+    menuLinks[7].classList.add('activelink');
+  } else if (
+    scrollManager.scrollTop > 14 * viewHeight - 10 &&
+    scrollManager.scrollTop < 15 * viewHeight - 10 &&
+    historyState.currentPage != '#team'
+  ) {
+    historyState.currentPage = '#team';
+    history.pushState(historyState, '', '#team');
+    deactivateAllAnimations();
+    teamAnimation.forEach(e=>e.classList.add('active'))
+    menuLinks[8].classList.add('activelink');
+  } else if (
+    scrollManager.scrollTop > 15 * viewHeight - 10 &&
+    scrollManager.scrollTop < 16 * viewHeight - 10 &&
     historyState.currentPage != '#blog'
   ) {
     historyState.currentPage = '#blog';
     history.pushState(historyState, '', '#blog');
     deactivateAllAnimations();
     blogSectionLeft.classList.add('active');
-    menuLinks[4].classList.add('activelink');
+    menuLinks[9].classList.add('activelink');
   } else if (
-    scrollManager.scrollTop > 9 * viewHeight - 10 &&
-    scrollManager.scrollTop < 10 * viewHeight - 10 &&
+    scrollManager.scrollTop > 16 * viewHeight - 10 &&
+    scrollManager.scrollTop < 17 * viewHeight - 10 &&
     historyState.currentPage != '#contact_us'
   ) {
     historyState.currentPage = '#contact_us';
     history.pushState(historyState, '', '#contact_us');
     deactivateAllAnimations();
-    menuLinks[5].classList.add('activelink');
+    menuLinks[10].classList.add('activelink');
+  } else if (
+    scrollManager.scrollTop > 17 * viewHeight - 10 &&
+    scrollManager.scrollTop < 18 * viewHeight - 10 &&
+    historyState.currentPage != '#footer'
+  ) {
+    historyState.currentPage = '#footer';
+    history.pushState(historyState, '', '#footer');
+    deactivateAllAnimations();
   }
 }
 
@@ -261,19 +341,29 @@ let au4Height = blog.offsetHeight;
 
 const queryStrings = [
   '#main-page',
+  '#casestudy',
+  '#opinions',
+  '#partners',
   '#what-we-do',
   '#marketing-solutions',
   '#software-development',
   '#about-us',
   '#about-us2',
   '#about-us3',
+  '#pricing',
   '#technologies',
+  '#creator1',
+  '#creator2',
+  '#team',
   '#blog',
   '#contact_us',
+  '#footer',
 ];
 let viewHeight = window.innerHeight;
 
 let queryString = '';
+if (window.location.hash == '' || window.location.hash == '#')
+  menuLinks[0].classList.add('activelink');
 if (queryStrings.includes(window.location.hash)) {
   queryString = window.location.hash;
 } else queryString = '#main-page';
@@ -288,7 +378,6 @@ checkAndAnimate();
 
 currentPage = queryString;
 
-menuLinks[0].classList.add('activelink');
 document
   .querySelector('.button--write--to--us--mobile')
   .addEventListener('click', () => {
@@ -531,142 +620,154 @@ setTimeout(() => mainPageLeft.classList.add('active'), 1000);
 mainPageLeft.classList.add('active');
 
 scrollManager.addEventListener('scroll', checkIfMain);
-// window.addEventListener('scroll', checkIfMain);
+window.addEventListener('scroll', checkIfMain);
 
-window.addEventListener(
-  'scroll',
-  function (event) {
-    // Clear our timeout throughout the scroll
-    window.clearTimeout(isScrolling);
+// window.addEventListener(
+//   'scroll',
+//   function (event) {
+//     // Clear our timeout throughout the scroll
+//     window.clearTimeout(isScrolling);
 
-    // Set a timeout to run after scrolling ends
-    isScrolling = setTimeout(function () {
-      if (window.pageYOffset < 10 && historyState.currentPage != '#main-page') {
-        historyState.currentPage = '#main-page';
-        history.pushState(historyState, '', '/');
-        mainPageLeft.classList.add('active');
-        menuLinks.forEach((e) => {
-          e.classList.remove('activelink');
-        });
-        menuLinks[0].classList.add('activelink');
-      } else if (
-        window.pageYOffset > 10 &&
-        window.pageYOffset < viewHeight - 10 &&
-        historyState.currentPage != '#what-we-do'
-      ) {
-        historyState.currentPage = '#what-we-do';
-        history.pushState(historyState, '', '#what-we-do');
-        whatWeDoAnimation.classList.add('active');
-        menuLinks.forEach((e) => {
-          e.classList.remove('activelink');
-        });
-        menuLinks[1].classList.add('activelink');
-      } else if (
-        window.pageYOffset > 1 * viewHeight - 10 &&
-        window.pageYOffset < 2 * viewHeight - 10 &&
-        historyState.currentPage != '#marketing-solutions'
-      ) {
-        historyState.currentPage = '#marketing-solutions';
-        history.pushState(historyState, '', '#marketing-solutions');
-        menuLinks.forEach((e) => {
-          e.classList.remove('activelink');
-        });
-        menuLinks[1].classList.add('activelink');
-      } else if (
-        window.pageYOffset > 2 * viewHeight - 10 &&
-        window.pageYOffset < 3 * viewHeight - 10 &&
-        historyState.currentPage != '#software-development'
-      ) {
-        historyState.currentPage = '#software-development';
-        history.pushState(historyState, '', '#software-development');
-        menuLinks.forEach((e) => {
-          e.classList.remove('activelink');
-        });
-        menuLinks[1].classList.add('activelink');
-        softwareDevAnim.classList.add('active');
-      } else if (
-        window.pageYOffset > 3 * viewHeight - 10 &&
-        window.pageYOffset < 4 * viewHeight - 10 &&
-        historyState.currentPage != '#about-us'
-      ) {
-        historyState.currentPage = '#about-us';
-        history.pushState(historyState, '', '#about-us');
-        menuLinks.forEach((e) => {
-          e.classList.remove('activelink');
-        });
-        menuLinks[2].classList.add('activelink');
-        aboutUs2Animation.classList.add('active');
-        yellowBoxAnimation.classList.add('active');
-      } else if (
-        window.pageYOffset > 4 * viewHeight - 10 &&
-        window.pageYOffset < 4 * viewHeight - 10 + au1Height &&
-        historyState.currentPage != '#about-us2'
-      ) {
-        historyState.currentPage = '#about-us2';
-        history.pushState(historyState, '', '#about-us2');
-        menuLinks.forEach((e) => {
-          e.classList.remove('activelink');
-        });
-        aboutUs3Animation.classList.add('active');
-        menuLinks[2].classList.add('activelink');
-        aboutUs3AnimationTiles.classList.add('active');
-      } else if (
-        window.pageYOffset > 4 * viewHeight - 10 + au1Height &&
-        window.pageYOffset < 4 * viewHeight - 10 + au1Height + au2Height &&
-        historyState.currentPage != '#about-us3'
-      ) {
-        historyState.currentPage = '#about-us3';
-        history.pushState(historyState, '', '#about-us3');
-        menuLinks.forEach((e) => {
-          e.classList.remove('activelink');
-        });
-        menuLinks[2].classList.add('activelink');
-        aboutUs4Animation.classList.add('active');
-      } else if (
-        window.pageYOffset > 4 * viewHeight - 10 + au1Height + au2Height &&
-        window.pageYOffset <
-          4 * viewHeight - 10 + au1Height + au2Height + au3Height &&
-        historyState.currentPage != '#technologies'
-      ) {
-        historyState.currentPage = '#technologies';
-        history.pushState(historyState, '', '#technologies');
-        menuLinks.forEach((e) => {
-          e.classList.remove('activelink');
-        });
-        menuLinks[3].classList.add('activelink');
-        technologiesAnimation.classList.add('active--technologies');
-      } else if (
-        window.pageYOffset >
-          4 * viewHeight - 10 + au1Height + au2Height + au3Height &&
-        window.pageYOffset <
-          4 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
-        historyState.currentPage != '#blog'
-      ) {
-        historyState.currentPage = '#blog';
-        history.pushState(historyState, '', '#blog');
-        blogSectionLeft.classList.add('active');
-        menuLinks.forEach((e) => {
-          e.classList.remove('activelink');
-        });
-        menuLinks[4].classList.add('activelink');
-      } else if (
-        window.pageYOffset >
-          4 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
-        window.pageYOffset <
-          5 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
-        historyState.currentPage != '#contact_us'
-      ) {
-        historyState.currentPage = '#contact_us';
-        history.pushState(historyState, '', '#contact_us');
-        menuLinks.forEach((e) => {
-          e.classList.remove('activelink');
-        });
-        menuLinks[5].classList.add('activelink');
-      }
-    }, 66);
-  },
-  false
-);
+//     // Set a timeout to run after scrolling ends
+//     isScrolling = setTimeout(function () {
+//       if (window.pageYOffset < 10 && historyState.currentPage != '#main-page') {
+//         historyState.currentPage = '#main-page';
+//         history.pushState(historyState, '', '/');
+//         mainPageLeft.classList.add('active');
+//         menuLinks.forEach((e) => {
+//           e.classList.remove('activelink');
+//         });
+//         menuLinks[0].classList.add('activelink');
+//       } else if (
+//         window.pageYOffset > 10 &&
+//         window.pageYOffset < viewHeight - 10 &&
+//         historyState.currentPage != '#what-we-do'
+//       ) {
+//         historyState.currentPage = '#what-we-do';
+//         history.pushState(historyState, '', '#what-we-do');
+//         whatWeDoAnimation.classList.add('active');
+//         menuLinks.forEach((e) => {
+//           e.classList.remove('activelink');
+//         });
+//         menuLinks[1].classList.add('activelink');
+//       } else if (
+//         window.pageYOffset > 1 * viewHeight - 10 &&
+//         window.pageYOffset < 2 * viewHeight - 10 &&
+//         historyState.currentPage != '#marketing-solutions'
+//       ) {
+//         historyState.currentPage = '#marketing-solutions';
+//         history.pushState(historyState, '', '#marketing-solutions');
+//         menuLinks.forEach((e) => {
+//           e.classList.remove('activelink');
+//         });
+//         menuLinks[1].classList.add('activelink');
+//       } else if (
+//         window.pageYOffset > 2 * viewHeight - 10 &&
+//         window.pageYOffset < 3 * viewHeight - 10 &&
+//         historyState.currentPage != '#software-development'
+//       ) {
+//         historyState.currentPage = '#software-development';
+//         history.pushState(historyState, '', '#software-development');
+//         menuLinks.forEach((e) => {
+//           e.classList.remove('activelink');
+//         });
+//         menuLinks[1].classList.add('activelink');
+//         softwareDevAnim.classList.add('active');
+//       } else if (
+//         window.pageYOffset > 3 * viewHeight - 10 &&
+//         window.pageYOffset < 4 * viewHeight - 10 &&
+//         historyState.currentPage != '#about-us'
+//       ) {
+//         historyState.currentPage = '#about-us';
+//         history.pushState(historyState, '', '#about-us');
+//         menuLinks.forEach((e) => {
+//           e.classList.remove('activelink');
+//         });
+//         menuLinks[2].classList.add('activelink');
+//         aboutUs2Animation.classList.add('active');
+//         yellowBoxAnimation.classList.add('active');
+//       } else if (
+//         window.pageYOffset > 4 * viewHeight - 10 &&
+//         window.pageYOffset < 4 * viewHeight - 10 + au1Height &&
+//         historyState.currentPage != '#about-us2'
+//       ) {
+//         historyState.currentPage = '#about-us2';
+//         history.pushState(historyState, '', '#about-us2');
+//         menuLinks.forEach((e) => {
+//           e.classList.remove('activelink');
+//         });
+//         aboutUs3Animation.classList.add('active');
+//         menuLinks[2].classList.add('activelink');
+//         aboutUs3AnimationTiles.classList.add('active');
+//       } else if (
+//         window.pageYOffset > 4 * viewHeight - 10 + au1Height &&
+//         window.pageYOffset < 4 * viewHeight - 10 + au1Height + au2Height &&
+//         historyState.currentPage != '#about-us3'
+//       ) {
+//         historyState.currentPage = '#about-us3';
+//         history.pushState(historyState, '', '#about-us3');
+//         menuLinks.forEach((e) => {
+//           e.classList.remove('activelink');
+//         });
+//         menuLinks[2].classList.add('activelink');
+//         aboutUs4Animation.classList.add('active');
+//       } else if (
+//         window.pageYOffset > 4 * viewHeight - 10 + au1Height + au2Height &&
+//         window.pageYOffset <
+//           4 * viewHeight - 10 + au1Height + au2Height + au3Height &&
+//         historyState.currentPage != '#technologies'
+//       ) {
+//         historyState.currentPage = '#technologies';
+//         history.pushState(historyState, '', '#technologies');
+//         menuLinks.forEach((e) => {
+//           e.classList.remove('activelink');
+//         });
+//         menuLinks[3].classList.add('activelink');
+//         technologiesAnimation.classList.add('active--technologies');
+//       } else if (
+//         window.pageYOffset >
+//           4 * viewHeight - 10 + au1Height + au2Height + au3Height &&
+//         window.pageYOffset <
+//           4 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
+//         historyState.currentPage != '#blog'
+//       ) {
+//         historyState.currentPage = '#blog';
+//         history.pushState(historyState, '', '#blog');
+//         blogSectionLeft.classList.add('active');
+//         menuLinks.forEach((e) => {
+//           e.classList.remove('activelink');
+//         });
+//         menuLinks[4].classList.add('activelink');
+//       } else if (
+//         window.pageYOffset >
+//           4 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
+//         window.pageYOffset <
+//           5 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
+//         historyState.currentPage != '#contact_us'
+//       ) {
+//         historyState.currentPage = '#contact_us';
+//         history.pushState(historyState, '', '#contact_us');
+//         menuLinks.forEach((e) => {
+//           e.classList.remove('activelink');
+//         });
+//         menuLinks[5].classList.add('activelink');
+//       } else if (
+//         window.pageYOffset >
+//           5 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
+//         window.pageYOffset <
+//           6 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
+//         historyState.currentPage != '#footer'
+//       ) {
+//         historyState.currentPage = '#footer';
+//         history.pushState(historyState, '', '#footer');
+//         menuLinks.forEach((e) => {
+//           e.classList.remove('activelink');
+//         });
+//       }
+//     }, 66);
+//   },
+//   false
+// );
 // Listen for scroll events
 scrollManager.addEventListener(
   'scroll',
