@@ -131,6 +131,17 @@ linkedinLink.forEach((e) =>
       .focus();
   })
 );
+let sectionHeights = [];
+function countHeights() {
+  let tempMaxHeight = 0;
+  sections.forEach((e) => {
+    let actualSectionHeight = e.offsetHeight;
+    tempMaxHeight += actualSectionHeight;
+    sectionHeights.push(tempMaxHeight);
+  });
+}
+countHeights();
+
 let marketingSolutionsArray = [0, 100, 200, 300];
 let softwareDevelopmentArray = [0, 100, 200, 300, 400];
 const historyState = {
@@ -157,180 +168,182 @@ const deactivateAllAnimations = () => {
   creator2Animation.forEach((e) => e.classList.remove('active'));
   teamAnimation.forEach((e) => e.classList.remove('active'));
 };
-function checkAndAnimate() {
+
+function checkAndAnimate(element, mobile = false) {
+  console.log('mobile działą');
   if (
-    scrollManager.scrollTop < viewHeight - 10 &&
+    element < sectionHeights[0] - 10 &&
     historyState.currentPage != '#main-page'
   ) {
     historyState.currentPage = '#main-page';
     history.pushState(historyState, '', '/');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     mainPageLeft.classList.add('active');
     menuLinks[0].classList.add('activelink');
   } else if (
-    scrollManager.scrollTop > viewHeight - 10 &&
-    scrollManager.scrollTop < 2 * viewHeight - 10 &&
+    element > sectionHeights[0] - 10 &&
+    element < sectionHeights[1] - 10 &&
     historyState.currentPage != '#casestudy'
   ) {
     historyState.currentPage = '#casestudy';
     history.pushState(historyState, '', '#casestudy');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     menuLinks[1].classList.add('activelink');
   } else if (
-    scrollManager.scrollTop > 2 * viewHeight - 10 &&
-    scrollManager.scrollTop < 3 * viewHeight - 10 &&
+    element > sectionHeights[1] - 10 &&
+    element < sectionHeights[2] - 10 &&
     historyState.currentPage != '#opinions'
   ) {
     historyState.currentPage = '#opinions';
     history.pushState(historyState, '', '#opinions');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     menuLinks[2].classList.add('activelink');
   } else if (
-    scrollManager.scrollTop > 3 * viewHeight - 10 &&
-    scrollManager.scrollTop < 4 * viewHeight - 10 &&
+    element > sectionHeights[2] - 10 &&
+    element < sectionHeights[3] - 10 &&
     historyState.currentPage != '#partners'
   ) {
     historyState.currentPage = '#partners';
     history.pushState(historyState, '', '#partners');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     menuLinks[3].classList.add('activelink');
   } else if (
-    scrollManager.scrollTop > 4 * viewHeight - 10 &&
-    scrollManager.scrollTop < 5 * viewHeight - 10 &&
+    element > sectionHeights[3] - 10 &&
+    element < sectionHeights[4] - 10 &&
     historyState.currentPage != '#what-we-do'
   ) {
     historyState.currentPage = '#what-we-do';
     menuLinks[4].classList.add('activelink');
     history.pushState(historyState, '', '#what-we-do');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     whatWeDoAnimation.classList.add('active');
     menuLinks[4].classList.add('activelink');
   } else if (
-    scrollManager.scrollTop > 5 * viewHeight - 10 &&
-    scrollManager.scrollTop < 6 * viewHeight - 10 &&
+    element > sectionHeights[4] - 10 &&
+    element < sectionHeights[5] - 10 &&
     historyState.currentPage != '#marketing-solutions'
   ) {
     historyState.currentPage = '#marketing-solutions';
     history.pushState(historyState, '', '#marketing-solutions');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     menuLinks[4].classList.add('activelink');
   } else if (
-    scrollManager.scrollTop > 6 * viewHeight - 10 &&
-    scrollManager.scrollTop < 7 * viewHeight - 10 &&
+    element > sectionHeights[5] - 10 &&
+    element < sectionHeights[6] - 10 &&
     historyState.currentPage != '#software-development'
   ) {
     historyState.currentPage = '#software-development';
     history.pushState(historyState, '', '#software-development');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     softwareDevAnim.classList.add('active');
   } else if (
-    scrollManager.scrollTop > 7 * viewHeight - 10 &&
-    scrollManager.scrollTop < 8 * viewHeight - 10 &&
+    element > sectionHeights[6] - 10 &&
+    element < sectionHeights[7] - 10 &&
     historyState.currentPage != '#about-us'
   ) {
     historyState.currentPage = '#about-us';
     history.pushState(historyState, '', '#about-us');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     // menuLinks[2].classList.add('activelink');
     aboutUs2Animation.classList.add('active');
     yellowBoxAnimation.classList.add('active');
   } else if (
-    scrollManager.scrollTop > 8 * viewHeight - 10 &&
-    scrollManager.scrollTop < 9 * viewHeight - 10 &&
+    element > sectionHeights[7] - 10 &&
+    element < sectionHeights[8] - 10 &&
     historyState.currentPage != '#about-us2'
   ) {
     historyState.currentPage = '#about-us2';
     history.pushState(historyState, '', '#about-us2');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     aboutUs3Animation.classList.add('active');
     // menuLinks[4].classList.add('activelink');
     aboutUs3AnimationTiles.classList.add('active');
   } else if (
-    scrollManager.scrollTop > 9 * viewHeight - 10 &&
-    scrollManager.scrollTop < 10 * viewHeight - 10 &&
+    element > sectionHeights[8] - 10 &&
+    element < sectionHeights[9] - 10 &&
     historyState.currentPage != '#about-us3'
   ) {
     historyState.currentPage = '#about-us3';
     history.pushState(historyState, '', '#about-us3');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     // menuLinks[2].classList.add('activelink');
     aboutUs4Animation.classList.add('active');
   } else if (
-    scrollManager.scrollTop > 10 * viewHeight - 10 &&
-    scrollManager.scrollTop < 11 * viewHeight - 10 &&
+    element > sectionHeights[9] - 10 &&
+    element < sectionHeights[10] - 10 &&
     historyState.currentPage != '#pricing'
   ) {
     historyState.currentPage = '#pricing';
     history.pushState(historyState, '', '#pricing');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     menuLinks[6].classList.add('activelink');
   } else if (
-    scrollManager.scrollTop > 11 * viewHeight - 10 &&
-    scrollManager.scrollTop < 12 * viewHeight - 10 &&
+    element > sectionHeights[10] - 10 &&
+    element < sectionHeights[11] - 10 &&
     historyState.currentPage != '#technologies'
   ) {
     historyState.currentPage = '#technologies';
     history.pushState(historyState, '', '#technologies');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     menuLinks[7].classList.add('activelink');
     technologiesAnimation.classList.add('active--technologies');
   } else if (
-    scrollManager.scrollTop > 12 * viewHeight - 10 &&
-    scrollManager.scrollTop < 13 * viewHeight - 10 &&
+    element > sectionHeights[11] - 10 &&
+    element < sectionHeights[12] - 10 &&
     historyState.currentPage != '#creator1'
   ) {
     historyState.currentPage = '#creator1';
     history.pushState(historyState, '', '#creator1');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     creator1Animation.forEach((e) => e.classList.add('active'));
     menuLinks[7].classList.add('activelink');
   } else if (
-    scrollManager.scrollTop > 13 * viewHeight - 10 &&
-    scrollManager.scrollTop < 14 * viewHeight - 10 &&
+    element > sectionHeights[12] - 10 &&
+    element < sectionHeights[13] - 10 &&
     historyState.currentPage != '#creator2'
   ) {
     historyState.currentPage = '#creator2';
     history.pushState(historyState, '', '#creator2');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     creator2Animation.forEach((e) => e.classList.add('active'));
     menuLinks[7].classList.add('activelink');
   } else if (
-    scrollManager.scrollTop > 14 * viewHeight - 10 &&
-    scrollManager.scrollTop < 15 * viewHeight - 10 &&
+    element > sectionHeights[13] - 10 &&
+    element < sectionHeights[14] - 10 &&
     historyState.currentPage != '#team'
   ) {
     historyState.currentPage = '#team';
     history.pushState(historyState, '', '#team');
-    deactivateAllAnimations();
-    teamAnimation.forEach(e=>e.classList.add('active'))
+    if (!mobile) deactivateAllAnimations();
+    teamAnimation.forEach((e) => e.classList.add('active'));
     menuLinks[8].classList.add('activelink');
   } else if (
-    scrollManager.scrollTop > 15 * viewHeight - 10 &&
-    scrollManager.scrollTop < 16 * viewHeight - 10 &&
+    element > sectionHeights[14] - 10 &&
+    element < sectionHeights[15] - 10 &&
     historyState.currentPage != '#blog'
   ) {
     historyState.currentPage = '#blog';
     history.pushState(historyState, '', '#blog');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     blogSectionLeft.classList.add('active');
     menuLinks[9].classList.add('activelink');
   } else if (
-    scrollManager.scrollTop > 16 * viewHeight - 10 &&
-    scrollManager.scrollTop < 17 * viewHeight - 10 &&
+    element > sectionHeights[15] - 10 &&
+    element < sectionHeights[16] - 10 &&
     historyState.currentPage != '#contact_us'
   ) {
     historyState.currentPage = '#contact_us';
     history.pushState(historyState, '', '#contact_us');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
     menuLinks[10].classList.add('activelink');
   } else if (
-    scrollManager.scrollTop > 17 * viewHeight - 10 &&
-    scrollManager.scrollTop < 18 * viewHeight - 10 &&
+    element > sectionHeights[16] - 10 &&
+    element < sectionHeights[17] - 10 &&
     historyState.currentPage != '#footer'
   ) {
     historyState.currentPage = '#footer';
     history.pushState(historyState, '', '#footer');
-    deactivateAllAnimations();
+    if (!mobile) deactivateAllAnimations();
   }
 }
 
@@ -374,7 +387,7 @@ console.log(queryString);
 console.log(queryStrings.indexOf(queryString));
 sections[queryStrings.indexOf(queryString)].scrollIntoView();
 
-checkAndAnimate();
+checkAndAnimate(scrollManager.scrollTop);
 
 currentPage = queryString;
 
@@ -622,152 +635,22 @@ mainPageLeft.classList.add('active');
 scrollManager.addEventListener('scroll', checkIfMain);
 window.addEventListener('scroll', checkIfMain);
 
-// window.addEventListener(
-//   'scroll',
-//   function (event) {
-//     // Clear our timeout throughout the scroll
-//     window.clearTimeout(isScrolling);
+window.addEventListener(
+  'scroll',
+  function (event) {
+    // Clear our timeout throughout the scroll
+    window.clearTimeout(isScrolling);
 
-//     // Set a timeout to run after scrolling ends
-//     isScrolling = setTimeout(function () {
-//       if (window.pageYOffset < 10 && historyState.currentPage != '#main-page') {
-//         historyState.currentPage = '#main-page';
-//         history.pushState(historyState, '', '/');
-//         mainPageLeft.classList.add('active');
-//         menuLinks.forEach((e) => {
-//           e.classList.remove('activelink');
-//         });
-//         menuLinks[0].classList.add('activelink');
-//       } else if (
-//         window.pageYOffset > 10 &&
-//         window.pageYOffset < viewHeight - 10 &&
-//         historyState.currentPage != '#what-we-do'
-//       ) {
-//         historyState.currentPage = '#what-we-do';
-//         history.pushState(historyState, '', '#what-we-do');
-//         whatWeDoAnimation.classList.add('active');
-//         menuLinks.forEach((e) => {
-//           e.classList.remove('activelink');
-//         });
-//         menuLinks[1].classList.add('activelink');
-//       } else if (
-//         window.pageYOffset > 1 * viewHeight - 10 &&
-//         window.pageYOffset < 2 * viewHeight - 10 &&
-//         historyState.currentPage != '#marketing-solutions'
-//       ) {
-//         historyState.currentPage = '#marketing-solutions';
-//         history.pushState(historyState, '', '#marketing-solutions');
-//         menuLinks.forEach((e) => {
-//           e.classList.remove('activelink');
-//         });
-//         menuLinks[1].classList.add('activelink');
-//       } else if (
-//         window.pageYOffset > 2 * viewHeight - 10 &&
-//         window.pageYOffset < 3 * viewHeight - 10 &&
-//         historyState.currentPage != '#software-development'
-//       ) {
-//         historyState.currentPage = '#software-development';
-//         history.pushState(historyState, '', '#software-development');
-//         menuLinks.forEach((e) => {
-//           e.classList.remove('activelink');
-//         });
-//         menuLinks[1].classList.add('activelink');
-//         softwareDevAnim.classList.add('active');
-//       } else if (
-//         window.pageYOffset > 3 * viewHeight - 10 &&
-//         window.pageYOffset < 4 * viewHeight - 10 &&
-//         historyState.currentPage != '#about-us'
-//       ) {
-//         historyState.currentPage = '#about-us';
-//         history.pushState(historyState, '', '#about-us');
-//         menuLinks.forEach((e) => {
-//           e.classList.remove('activelink');
-//         });
-//         menuLinks[2].classList.add('activelink');
-//         aboutUs2Animation.classList.add('active');
-//         yellowBoxAnimation.classList.add('active');
-//       } else if (
-//         window.pageYOffset > 4 * viewHeight - 10 &&
-//         window.pageYOffset < 4 * viewHeight - 10 + au1Height &&
-//         historyState.currentPage != '#about-us2'
-//       ) {
-//         historyState.currentPage = '#about-us2';
-//         history.pushState(historyState, '', '#about-us2');
-//         menuLinks.forEach((e) => {
-//           e.classList.remove('activelink');
-//         });
-//         aboutUs3Animation.classList.add('active');
-//         menuLinks[2].classList.add('activelink');
-//         aboutUs3AnimationTiles.classList.add('active');
-//       } else if (
-//         window.pageYOffset > 4 * viewHeight - 10 + au1Height &&
-//         window.pageYOffset < 4 * viewHeight - 10 + au1Height + au2Height &&
-//         historyState.currentPage != '#about-us3'
-//       ) {
-//         historyState.currentPage = '#about-us3';
-//         history.pushState(historyState, '', '#about-us3');
-//         menuLinks.forEach((e) => {
-//           e.classList.remove('activelink');
-//         });
-//         menuLinks[2].classList.add('activelink');
-//         aboutUs4Animation.classList.add('active');
-//       } else if (
-//         window.pageYOffset > 4 * viewHeight - 10 + au1Height + au2Height &&
-//         window.pageYOffset <
-//           4 * viewHeight - 10 + au1Height + au2Height + au3Height &&
-//         historyState.currentPage != '#technologies'
-//       ) {
-//         historyState.currentPage = '#technologies';
-//         history.pushState(historyState, '', '#technologies');
-//         menuLinks.forEach((e) => {
-//           e.classList.remove('activelink');
-//         });
-//         menuLinks[3].classList.add('activelink');
-//         technologiesAnimation.classList.add('active--technologies');
-//       } else if (
-//         window.pageYOffset >
-//           4 * viewHeight - 10 + au1Height + au2Height + au3Height &&
-//         window.pageYOffset <
-//           4 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
-//         historyState.currentPage != '#blog'
-//       ) {
-//         historyState.currentPage = '#blog';
-//         history.pushState(historyState, '', '#blog');
-//         blogSectionLeft.classList.add('active');
-//         menuLinks.forEach((e) => {
-//           e.classList.remove('activelink');
-//         });
-//         menuLinks[4].classList.add('activelink');
-//       } else if (
-//         window.pageYOffset >
-//           4 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
-//         window.pageYOffset <
-//           5 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
-//         historyState.currentPage != '#contact_us'
-//       ) {
-//         historyState.currentPage = '#contact_us';
-//         history.pushState(historyState, '', '#contact_us');
-//         menuLinks.forEach((e) => {
-//           e.classList.remove('activelink');
-//         });
-//         menuLinks[5].classList.add('activelink');
-//       } else if (
-//         window.pageYOffset >
-//           5 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
-//         window.pageYOffset <
-//           6 * viewHeight - 10 + au1Height + au2Height + au3Height + au3Height &&
-//         historyState.currentPage != '#footer'
-//       ) {
-//         historyState.currentPage = '#footer';
-//         history.pushState(historyState, '', '#footer');
-//         menuLinks.forEach((e) => {
-//           e.classList.remove('activelink');
-//         });
-//       }
-//     }, 66);
-//   },
-//   false
-// );
+    // Set a timeout to run after scrolling ends
+    isScrolling = setTimeout(function () {
+      checkAndAnimate(window.scrollY, true);
+    }, 66);
+  },
+  false
+);
+function checkAndAnimateDesktop() {
+  checkAndAnimate(scrollManager.scrollTop);
+}
 // Listen for scroll events
 scrollManager.addEventListener(
   'scroll',
@@ -776,16 +659,13 @@ scrollManager.addEventListener(
     window.clearTimeout(isScrolling);
 
     // Set a timeout to run after scrolling ends
-    isScrolling = setTimeout(checkAndAnimate, 66);
+    isScrolling = setTimeout(checkAndAnimateDesktop, 66);
   },
   false
 );
 
 window.addEventListener('resize', () => {
-  viewHeight = window.innerHeight;
-  au1Height = aboutUs1.offsetHeight;
-  au2Height = aboutUs2.offsetHeight;
-  au3Height = aboutUs3.offsetHeight;
+  countHeights();
 });
 
 window.onpopstate = function (e) {

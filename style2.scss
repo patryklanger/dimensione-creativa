@@ -374,6 +374,8 @@
   width: 100vw;
   height: 100vh;
   background-image: url('content/pricing/pricing-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
 }
@@ -407,4 +409,89 @@
 }
 .active {
   transform: translateX(0) !important;
+}
+@media (max-width: 600px) {
+  html {
+    font-size: #{'min(4.8000vw,2.217vh)'};
+  }
+
+  .menu--links--row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .menu--container {
+    overflow-y: auto;
+    padding-top: 20vh;
+  }
+  .menu--container ul {
+    margin-top: 12vh;
+    position: absolute;
+    top: 0;
+  }
+  .left--container_main {
+    padding-top: 0;
+  }
+  .casestudy--right--side {
+    display: none;
+  }
+  .casestudy--left--side {
+    width: 100vw;
+    padding: 0 3.2222rem;
+  }
+  .casestudy--number {
+    font-size: 0.78rem;
+    line-height: 0.78rem;
+  }
+  .casestudy--header {
+    font-size: 3.55rem;
+    line-height: 4.2222rem;
+    margin-bottom: 1.11rem;
+  }
+  .casestudy--description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  .casestudy--button,
+  .casestudy--role--description,
+  .clients--name,
+  .clients--position,
+  .partners--position,
+  .partners--name {
+    font-size: 0.9rem;
+    line-height: 1.16rem;
+  }
+  .casestudy--button {
+    padding: 0.66rem 0.39rem;
+    border-radius: 0.27rem;
+  }
+  .casestudy--rectangle {
+    display: none;
+  }
+  .clients--header,
+  .partners--header {
+    font-size: 1.77rem;
+    line-height: 2.11rem;
+    margin-bottom: 1.11rem;
+  }
+  .clients--description,
+  .partners--description {
+    width: 100vw;
+    font-size: 0.9rem;
+    margin-bottom: 2.6111rem;
+  }
+  .clients--photo,
+  .partners--photo {
+    width: 8.3333rem;
+  }
+  .clients--dot,
+  .partners--dot {
+    width: 1.25rem;
+  }
+  .clients--position,
+  .partners--position {
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
 }
