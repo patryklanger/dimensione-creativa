@@ -5,9 +5,8 @@
   padding: 0;
 }
 
-#section {
-  width: 100vw;
-  height: 100vh;
+section {
+  overflow-x: hidden;
 }
 
 #opinions,
@@ -140,12 +139,26 @@
 }
 
 .casestudy--header {
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
   font-size: min(4.4444vw,7.111vh);
   line-height: min(5.2778vw,8.444vh);
   margin-bottom: min(0.9028vw,1.444vh);
 }
 
 .casestudy--description {
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
   font-size: min(1.2500vw,2.000vh);
   line-height: min(1.8750vw,3.000vh);
   width: min(28.0556vw,44.889vh);
@@ -538,12 +551,37 @@
   font-size: min(4.4444vw,7.111vh);
   line-height: min(5.2778vw,8.444vh);
   margin-bottom: min(2.1528vw,3.444vh);
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
 }
 
 .pricing--left--side p {
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
   margin-bottom: min(3.1944vw,5.111vh);
   font-size: min(1.2500vw,2.000vh);
   line-height: min(1.8750vw,3.000vh);
+}
+
+.round--button--mobile {
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 
 .pricing--right--side {
@@ -598,10 +636,16 @@
   .left--container_main {
     padding-top: 0;
   }
-  .casestudy--right--side {
+  .casestudy--right--side,
+  .pricing--right--side,
+  .team--left--side {
     display: none;
   }
-  .casestudy--left--side {
+  .casestudy--left--side,
+  .pricing--left--side,
+  .creators--left--container,
+  .creators--photo,
+  .team--right--side {
     width: 100vw;
     padding: 0 3.2222rem;
   }
@@ -609,19 +653,52 @@
     font-size: 0.78rem;
     line-height: 0.78rem;
   }
-  .casestudy--header {
-    font-size: 3.55rem;
-    line-height: 4.2222rem;
+  .casestudy--header,
+  .pricing--left--side h1,
+  .creators--header,
+  .team--header {
+    font-size: 1.77rem;
+    line-height: 2.6667rem;
     margin-bottom: 1.11rem;
   }
-  .casestudy--description {
-    font-size: 1rem;
-    line-height: 1.5rem;
+  .creators--photo {
+    height: unset;
+    width: 100%;
+  }
+  .creators--photo img {
+    width: 100% !important;
+  }
+  .casestudy--description,
+  .pricing--left--side p,
+  .round--button p,
+  .creators--description,
+  .team--description {
+    font-size: 0.8889rem;
+    line-height: 1.3333rem;
     margin-bottom: 2rem;
     width: 100%;
   }
+  .team--team--container {
+    width: 100%;
+  }
+  .team--team--container--element {
+    -ms-grid-columns: 30vw auto;
+        grid-template-columns: 30vw auto;
+    height: unset;
+  }
+  .round--button p {
+    margin-bottom: 0;
+  }
+  .team--team--container--element--position {
+    font-size: 0.7778rem;
+    line-height: 1.1667rem;
+  }
+  .team--team--container--element--name {
+    font-size: 0.8889rem;
+    line-height: 1.3333rem;
+    margin-bottom: 0.6rem;
+  }
   .casestudy--button,
-  .casestudy--role--description,
   .clients--name,
   .clients--position,
   .partners--position,
@@ -629,9 +706,44 @@
     font-size: 0.9rem;
     line-height: 1.16rem;
   }
-  .casestudy--button {
+  .casestudy--role--description {
+    font-size: 0.7778rem;
+    line-height: 1.1667rem;
+  }
+  .clients--dots,
+  .partners--dots {
+    gap: 1.5rem;
+  }
+  .footer--yellow--box {
+    display: none;
+  }
+  #pricing,
+  #creator1,
+  #creator2,
+  #team {
+    height: unset;
+    padding-top: 5.7778rem;
+    padding-bottom: 5.7778rem;
+  }
+  #pricing {
+    min-height: 100vh;
+  }
+  #footer {
+    height: unset;
+  }
+  .footer--main--container {
+    padding-top: 5.7778rem;
+    padding-bottom: 5.7778rem;
+  }
+  .footer--social--link--behance {
+    height: 1.2778rem !important;
+  }
+  .casestudy--button,
+  .round--button--mobile {
     padding: 0.66rem 0.39rem;
     border-radius: 0.27rem;
+    width: unset !important;
+    height: unset !important;
   }
   .casestudy--rectangle {
     display: none;
@@ -660,6 +772,61 @@
   .partners--position {
     margin-bottom: 2.5rem;
     text-align: center;
+  }
+  .creators--photo {
+    position: relative;
+  }
+  #creator1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .creators--left--container {
+    height: unset;
+    width: 100%;
+  }
+  .team--right--side {
+    position: relative;
+  }
+  .footer--row--part {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2.3889rem;
+  }
+  .footer--block--header {
+    font-size: 0.8889rem;
+    line-height: 1.3333rem;
+  }
+  .footer--block--content img {
+    height: 2rem;
+  }
+  .footer--block--content p,
+  .footer--with--links--content a {
+    font-size: 0.7778rem;
+    line-height: 1.3333rem;
+  }
+  .footer--with--icon--icon {
+    width: 2rem;
+    display: none;
+  }
+  .footer--row--part:first-of-type {
+    margin-bottom: 2.3889rem;
+  }
+  .footer--with--icon--content img {
+    display: none;
+  }
+  .footer--social--links {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .white--text {
+    color: #fff;
   }
 }
 /*# sourceMappingURL=style2.css.map */

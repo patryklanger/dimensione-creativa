@@ -746,6 +746,9 @@ h1 {
 }
 
 .round--button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   cursor: pointer;
   width: 14.51vw;
@@ -757,6 +760,11 @@ h1 {
   font-family: Poppins, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 1.11vw;
+}
+.round--button--mobile p{
+  margin-bottom: 0 !important;
+  padding: 0;
+  color: #fff;
 }
 
 .round--button:active,

@@ -27,7 +27,9 @@ const aboutUs2Animation = document.querySelector('.animate_me_aboutus2');
 const aboutUs3Animation = document.querySelector('.animate_me_aboutus3');
 const creator1Animation = document.querySelectorAll('.creator1--animate--me');
 const creator2Animation = document.querySelectorAll('.creator2--animate--me');
+const caseStudyAnimation = document.querySelectorAll('.casestudy--animate--me');
 const teamAnimation = document.querySelectorAll('.team--animate--me');
+const pricingAnimation = document.querySelectorAll('.pricing--animate--me');
 const aboutUs3AnimationTiles = document.querySelector('.about--us2--tiles');
 const aboutUs4Animation = document.querySelector('.about_us3_animate');
 const radioForm = document.getElementsByName('help--category');
@@ -167,6 +169,8 @@ const deactivateAllAnimations = () => {
   creator1Animation.forEach((e) => e.classList.remove('active'));
   creator2Animation.forEach((e) => e.classList.remove('active'));
   teamAnimation.forEach((e) => e.classList.remove('active'));
+  caseStudyAnimation.forEach((e) => e.classList.remove('active'));
+  pricingAnimation.forEach((e) => e.classList.remove('active'));
 };
 
 function checkAndAnimate(element, mobile = false) {
@@ -188,6 +192,7 @@ function checkAndAnimate(element, mobile = false) {
     historyState.currentPage = '#casestudy';
     history.pushState(historyState, '', '#casestudy');
     if (!mobile) deactivateAllAnimations();
+    caseStudyAnimation.forEach((e) => e.classList.add('active'));
     menuLinks[1].classList.add('activelink');
   } else if (
     element > sectionHeights[1] - 10 &&
@@ -277,6 +282,7 @@ function checkAndAnimate(element, mobile = false) {
     history.pushState(historyState, '', '#pricing');
     if (!mobile) deactivateAllAnimations();
     menuLinks[6].classList.add('activelink');
+    pricingAnimation.forEach((e) => e.classList.add('active'));
   } else if (
     element > sectionHeights[10] - 10 &&
     element < sectionHeights[11] - 10 &&
@@ -346,11 +352,6 @@ function checkAndAnimate(element, mobile = false) {
     if (!mobile) deactivateAllAnimations();
   }
 }
-
-let au1Height = aboutUs1.offsetHeight;
-let au2Height = aboutUs2.offsetHeight;
-let au3Height = aboutUs3.offsetHeight;
-let au4Height = blog.offsetHeight;
 
 const queryStrings = [
   '#main-page',
@@ -643,7 +644,7 @@ window.addEventListener(
 
     // Set a timeout to run after scrolling ends
     isScrolling = setTimeout(function () {
-      checkAndAnimate(window.scrollY, true);
+      checkAndAnimate(window.scrollY + window.innerHeight / 2, true);
     }, 66);
   },
   false
