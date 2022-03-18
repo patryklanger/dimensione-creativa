@@ -2393,14 +2393,12 @@ h1 {
 
 .linkedin--link {
   cursor: pointer;
-  margin: 0 30px;
   width: 30px;
   height: auto;
 }
 
 .facebook--link {
   cursor: pointer;
-  margin: 0 30px;
   width: auto;
   height: auto;
 }

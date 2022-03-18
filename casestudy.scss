@@ -68,13 +68,14 @@ body {
 }
 .casestudy--others--element {
   width: #{'min(22.7778vw,36.444vh)'};
+  cursor: pointer;
 }
 .casestudy--others--element img {
   width: #{'min(22.7778vw,36.444vh)'};
 }
 .casestudy--others--element p {
   font-size: #{'min(1.7361vw,2.778vh)'};
-  line-height: #{'min(1.3889vw,2.222vh)'};
+  line-height: #{'min(1.8056vw,2.889vh)'};
   text-transform: uppercase;
   font-weight: bold;
   margin-top: #{'min(1.5278vw,2.444vh)'};
@@ -100,4 +101,51 @@ body {
 .casestudy--contact img {
   width: #{'min(32.7778vw,52.444vh)'};
   object-fit: scale-down;
+}
+@media (max-width: 600px) {
+  html {
+    font-size: #{'min(4.8000vw,2.217vh)'};
+  }
+  .casestudy--content h1,
+  .casestudy--content h2 {
+    font-size: 1.77rem;
+    line-height: 2.6667rem;
+    margin-bottom: 1.11rem;
+  }
+  .casestudy--content p {
+    font-size: 0.8889rem;
+    line-height: 1.3333rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  .casestudy--others--element p {
+    font-size: 0.6rem;
+    line-height: 0.9rem;
+  }
+
+  .casestudy--two--column {
+    flex-direction: column;
+    width: 100%;
+  }
+  .casestudy--two--column img {
+    width: 100%;
+  }
+  .casestudy--text--1--2--column {
+    width: 100%;
+  }
+  .mobile--reverse {
+    flex-direction: column-reverse;
+  }
+  .mobile--no--display {
+    display: none;
+  }
+  .casestudy--icon img {
+    width: 2rem;
+  }
+  .casestudy--contact {
+    flex-direction: column;
+  }
+  .casestudy--contact img {
+    width: 100%;
+  }
 }

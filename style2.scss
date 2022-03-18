@@ -307,7 +307,15 @@ section {
   transform: translateX(100vw);
   transition: transform 0.4s ease-in-out;
 }
-
+.menu--social--links {
+  display: flex;
+  justify-content: space-between;
+  gap: #{'min(1.1806vw,1.889vh)'};
+}
+.menu--social--links img {
+  object-fit: cover;
+  cursor: pointer;
+}
 .creators--photo {
   width: #{'min(52.8472vw,84.556vh)'};
   position: absolute;
@@ -491,10 +499,15 @@ section {
   .casestudy--header,
   .pricing--left--side h1,
   .creators--header,
-  .team--header {
+  .team--header,
+  .casestudy--content h1,
+  .casestudy--content h2 {
     font-size: 1.77rem;
     line-height: 2.6667rem;
     margin-bottom: 1.11rem;
+  }
+  .casestudy--two--column {
+    flex-direction: column;
   }
   .creators--photo {
     height: unset;
@@ -623,36 +636,49 @@ section {
     position: relative;
   }
   .footer--row--part {
-    flex-direction: column;
-    gap: 2.3889rem;
+    flex-direction: column !important;
+    gap: 2.3889rem !important;
   }
   .footer--block--header {
-    font-size: 0.8889rem;
-    line-height: 1.3333rem;
+    font-size: 0.8889rem !important;
+    line-height: 1.3333rem !important;
   }
   .footer--block--content img {
-    height: 2rem;
+    height: 2rem !important;
   }
   .footer--block--content p,
   .footer--with--links--content a {
-    font-size: 0.7778rem;
-    line-height: 1.3333rem;
+    font-size: 0.7778rem !important;
+    line-height: 1.3333rem !important;
   }
   .footer--with--icon--icon {
-    width: 2rem;
-    display: none;
+    width: 2rem !important;
+    display: none !important;
   }
   .footer--row--part:first-of-type {
-    margin-bottom: 2.3889rem;
+    margin-bottom: 2.3889rem !important;
   }
   .footer--with--icon--content img {
-    display: none;
+    display: none !important;
   }
   .footer--social--links {
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
+    margin-top: 1.5rem !important;
+    margin-bottom: 2rem !important;
   }
   .white--text {
     color: #fff;
   }
+  .team--team--container--element {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu--social--links {
+    gap: 1rem;
+  }
+}
+.menu--active {
+  width: 100%;
+}
+.menu--active .menu--social--links {
+  margin: 0 auto;
 }

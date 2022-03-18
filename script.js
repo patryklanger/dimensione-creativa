@@ -763,3 +763,8 @@ contactForm.addEventListener('submit', (e) => {
   xhttp.setRequestHeader('Content-Type', 'application/json');
   xhttp.send(JSON.stringify(mailBody));
 });
+function openInstagram() {
+  window
+    .open('https://www.instagram.com/dimensione.creativa', '_blank')
+    .focus();
+}
