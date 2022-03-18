@@ -1966,12 +1966,13 @@ h1 {
 }
 
 .h1-main-info-who-we-are {
-  font-size: min(4.56vh, 2.85vw);
+  font-size: min(2.7778vw,4.444vh) !important;
   line-height: min(3.78vh, 2.36vw);
   letter-spacing: max(-0.06vh, -0.03vw);
-  font-weight: bold;
+  font-weight: bold !important;
   text-align: center;
   margin-bottom: min(2.44vh, 1.53vw);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .yellow--box--who_we_are::before {

@@ -3,6 +3,7 @@ const sections = document.querySelectorAll('.section--child');
 const aboutUs1 = document.getElementById('about-us');
 const aboutUs2 = document.getElementById('about-us2');
 const aboutUs3 = document.getElementById('about-us3');
+const caseStudySections = document.querySelectorAll('.casestudy--part');
 const linkedinLink = document.querySelectorAll('.linkedin--link');
 const facebookLink = document.querySelectorAll('.facebook--link');
 const portfolioLink = document.querySelectorAll('.portfolio--link');
@@ -10,6 +11,7 @@ const scrollManager = document.querySelector('.scroll--manager');
 const portfolioLinkMobile = document.querySelectorAll(
   '.portfolio--link--mobile'
 );
+let currentCaseStudy = 1;
 const blogLink = document.querySelectorAll('.blog--link');
 let isScrolling = false;
 
@@ -79,6 +81,7 @@ const sdMobileTile = document.querySelector('.sd--tile--title_mobile');
 const sdEshopTile = document.querySelector('.sd--tile--title_eshop');
 const sdWebsitesTile = document.querySelector('.sd--tile--title_websites');
 const sdSoftwareTile = document.querySelector('.sd--tile--title_software');
+const nextCaseStudyButtons = document.querySelectorAll('.next--case--study');
 menuButton.addEventListener('click', () => {
   menu.classList.toggle('active');
   header.classList.toggle('menu--active');
@@ -98,6 +101,31 @@ portfolioLink.forEach((e) =>
       .focus();
   })
 );
+let currentCaseStudyOffset = [];
+function caseStudyInit() {
+  nextCaseStudyButtons.forEach((e) =>
+    e.addEventListener('click', () => {
+      if (currentCaseStudy <= caseStudySections.length) {
+        currentCaseStudy++;
+        currentCaseStudyOffset = currentCaseStudyOffset.map((e) => e - 100);
+        console.log(currentCaseStudyOffset);
+        for (let i = 0; i < caseStudySections.length; i++) {
+          caseStudySections[i].style.transform =
+            'translateX(' + currentCaseStudyOffset[i] + 'vw)';
+        }
+      }
+    })
+  );
+  let i = 0;
+  caseStudySections.forEach((e) => {
+    e.classList.add('casestudy' + i);
+    e.style.transform = 'translateX(' + i * 100 + 'vw)';
+    currentCaseStudyOffset.push(i * 100);
+    i++;
+  });
+}
+
+caseStudyInit();
 
 portfolioLinkMobile.forEach((e) =>
   e.addEventListener('click', () => {
@@ -144,6 +172,7 @@ function countHeights() {
 }
 countHeights();
 
+let caseStudyTimer;
 let marketingSolutionsArray = [0, 100, 200, 300];
 let softwareDevelopmentArray = [0, 100, 200, 300, 400];
 const historyState = {

@@ -13,6 +13,12 @@ section {
   display: flex;
   justify-content: center;
 }
+.casestudy--part {
+  position: absolute;
+  top: 0;
+  display: flex;
+  transition: transform 0.4s;
+}
 
 .clients--header,
 .partners--header {
@@ -159,14 +165,11 @@ section {
 }
 .casestudy--number {
   font-size: #{'min(0.9722vw,1.556vh)'};
+  line-height: #{'min(1.4583vw,2.333vh)'};
   font-weight: bold;
-  margin-bottom: #{'min(7.5000vw,12.000vh)'};
 }
 .casestudy--right--side {
   width: 50.4vw;
-  position: absolute;
-  right: 0;
-  top: 0;
   height: 100vh;
   overflow: hidden;
 }
@@ -258,7 +261,30 @@ section {
   text-align: center;
   text-transform: unset !important;
 }
-
+.casestudy--number--container {
+  display: flex;
+  margin-bottom: #{'min(7.5000vw,12.000vh)'};
+  align-items: center;
+  gap: #{'min(1.7361vw,2.778vh)'};
+}
+.casestudy--number--container img {
+  height: #{'min(2.1875vw,3.500vh)'};
+  animation: bounce-2 2s infinite;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+}
+@keyframes bounce-2 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(#{'min(1.0417vw,1.667vh)'});
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
 .creators--header {
   font-size: #{'min(4.4444vw,7.111vh)'};
   line-height: #{'min(5.2778vw,8.444vh)'};

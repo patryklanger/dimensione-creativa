@@ -20,6 +20,18 @@ section {
           justify-content: center;
 }
 
+.casestudy--part {
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
 .clients--header,
 .partners--header {
   color: white;
@@ -213,15 +225,12 @@ section {
 
 .casestudy--number {
   font-size: min(0.9722vw,1.556vh);
+  line-height: min(1.4583vw,2.333vh);
   font-weight: bold;
-  margin-bottom: min(7.5000vw,12.000vh);
 }
 
 .casestudy--right--side {
   width: 50.4vw;
-  position: absolute;
-  right: 0;
-  top: 0;
   height: 100vh;
   overflow: hidden;
 }
@@ -346,6 +355,56 @@ section {
   margin-bottom: min(3.1250vw,5.000vh);
   text-align: center;
   text-transform: unset !important;
+}
+
+.casestudy--number--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: min(7.5000vw,12.000vh);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: min(1.7361vw,2.778vh);
+}
+
+.casestudy--number--container img {
+  height: min(2.1875vw,3.500vh);
+  -webkit-animation: bounce-2 2s infinite;
+          animation: bounce-2 2s infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  cursor: pointer;
+}
+
+@-webkit-keyframes bounce-2 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(min(1.0417vw,1.667vh));
+            transform: translateX(min(1.0417vw,1.667vh));
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce-2 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(min(1.0417vw,1.667vh));
+            transform: translateX(min(1.0417vw,1.667vh));
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 }
 
 .creators--header {
