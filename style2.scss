@@ -462,7 +462,14 @@ section {
   html {
     font-size: #{'min(4.8000vw,2.217vh)'};
   }
-
+  #opinions {
+    height: unset;
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+  }
+  .page--primary--fit {
+    height: fit-content !important;
+  }
   .menu--links--row {
     flex-direction: column;
     gap: 0;
@@ -574,7 +581,7 @@ section {
     padding-bottom: 5.7778rem;
   }
   #pricing {
-    min-height: 100vh;
+    min-height: fit-content;
   }
   #footer {
     height: unset;

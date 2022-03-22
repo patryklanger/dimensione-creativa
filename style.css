@@ -840,7 +840,10 @@ h1 {
   transition: transform ease-in-out 0.8s, -webkit-transform ease-in-out 0.8s;
   z-index: 60;
 }
+.left--container_what_we_do .main_description:first-of-type {
 
+  margin-top: min(3vh, 5.33vw);
+}
 .active > .what_we_do_h1 {
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -3614,7 +3617,8 @@ h1 {
     height: min(5.7vh, 10.13vw);
   }
   .sd--tile--description {
-    font-size: min(1.8vh, 3.2vw);
+    font-size: min(2.4vh, 4.27vw);
+    line-height: min(3.6vh, 6.4vw);
   }
   .sd--tile--title_mobile p {
     border-color: #433175;
@@ -3657,7 +3661,7 @@ h1 {
     top: min(61.17vh, 108.8vw);
   }
   .left--container_who_we_are {
-    display: unset !important;
+    position: relative;
     width: 100vw;
     height: 100%;
     padding-left: min(6.45vh, 11.47vw);
@@ -3694,7 +3698,8 @@ h1 {
     display: none;
   }
   #about-us {
-    height: min(207.2vh, 368.53vw);
+    height: fit-content;
+    padding-bottom: 10vh;
     position: relative;
   }
   #about-us .page--primary {
@@ -3751,10 +3756,10 @@ h1 {
     width: 100%;
   }
   #about-us2 {
-    height: min(179.91vh, 320vw);
+    height: fit-content;
   }
   #about-us3 {
-    height: min(242.58vh, 431.47vw);
+    height: 180%;
   }
   #about-us3 .page--primary {
     height: 100%;

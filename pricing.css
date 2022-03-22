@@ -1,0 +1,159 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: min(1.2500vw,2.000vh);
+  line-height: 1.5556rem;
+}
+
+section {
+  overflow-x: hidden;
+}
+
+.pricing--main--screen {
+  background-image: url("content/pricing--sec/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  padding: 13.8889rem 23.6111rem 0 5.1667rem;
+}
+
+.pricing--main--screen h1,
+.pricing--what--can--we--give h2,
+.pricing--container h2 {
+  font-size: 3.5556rem;
+  line-height: 4.6111rem;
+  margin-bottom: 1.1111rem;
+  max-width: 58.6111rem;
+}
+
+.pricing--main--screen p {
+  line-height: 1.5rem;
+}
+
+.pricing--what--can--we--give {
+  padding: 5.6667rem 5.1667rem 0 5.1667rem;
+}
+
+.pricing--what--can--we--give h3 {
+  font-size: 2.3333rem;
+  line-height: 1.1111rem;
+  margin-bottom: 2.3333rem;
+}
+
+.pricing--what--can--we--give h2 {
+  margin-bottom: 6.6667rem;
+  text-transform: uppercase;
+}
+
+.pricing--container--tile img {
+  width: 9rem;
+  height: 9rem;
+}
+
+.pricing--container--tile {
+  width: 33.0556rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.3889rem;
+}
+
+.pricing--what--can--we--give--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4.6667rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 6.7222rem;
+}
+
+.pricing--big--par,
+.pricing--bold {
+  font-size: 2.3333rem;
+  line-height: 3.5rem;
+  text-align: center;
+}
+
+.pricing--container {
+  padding: 5.6667rem 5.1667rem 0 5.1667rem;
+}
+
+.pricing--bold {
+  font-weight: bold;
+}
+
+.pricing--process {
+  padding: 5.6667rem 5.1667rem 0 5.1667rem;
+}
+
+.pricing--process p {
+  width: 51.3333rem;
+  margin: 0 auto;
+}
+
+.pricing--line {
+  margin: 1rem 0;
+  width: 100%;
+  background-color: #006cd3;
+  height: 0.1111rem;
+  border-radius: 0.5556rem 0px 0px 0.5556rem;
+}
+
+.pricing--container h2 {
+  margin-bottom: 3.1667rem;
+}
+
+.pricing--pricing h3 {
+  color: #ffd726;
+  font-size: 2.3333rem;
+  line-height: 3.5rem;
+  margin-bottom: 1.2778rem;
+}
+
+.pricing--pricing p {
+  margin-bottom: 2.5rem;
+}
+
+.vertical--line {
+  background-color: white;
+  height: 1.8889rem;
+  width: 0.2222rem;
+}
+
+.pricing--technology {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.6111rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pricing--technology p {
+  margin: 0;
+}
+
+.casestudy--two--column {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 600px) {
+  * {
+    font-size: min(4.8000vw,2.217vh);
+  }
+  .pricing--main--screen {
+    background-image: none;
+    height: unset;
+    width: unset;
+    padding: 13.8889rem 23.6111rem 0 5.1667rem;
+  }
+}
+/*# sourceMappingURL=pricing.css.map */

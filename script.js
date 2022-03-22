@@ -125,6 +125,14 @@ function caseStudyInit() {
   });
 }
 
+function resetCaseStudy() {
+  currentCaseStudy = 0;
+  for (let i = 0; i < caseStudySections.length; i++) {
+    currentCaseStudyOffset.push(i * 100);
+    caseStudySections[i].style.transform = 'translateX(' + i * 100 + 'vw)';
+  }
+}
+
 caseStudyInit();
 
 portfolioLinkMobile.forEach((e) =>
@@ -213,6 +221,7 @@ function checkAndAnimate(element, mobile = false) {
     if (!mobile) deactivateAllAnimations();
     mainPageLeft.classList.add('active');
     menuLinks[0].classList.add('activelink');
+    resetCaseStudy();
   } else if (
     element > sectionHeights[0] - 10 &&
     element < sectionHeights[1] - 10 &&
@@ -232,6 +241,7 @@ function checkAndAnimate(element, mobile = false) {
     history.pushState(historyState, '', '#opinions');
     if (!mobile) deactivateAllAnimations();
     menuLinks[2].classList.add('activelink');
+    resetCaseStudy();
   } else if (
     element > sectionHeights[2] - 10 &&
     element < sectionHeights[3] - 10 &&
