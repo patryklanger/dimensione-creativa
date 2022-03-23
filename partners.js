@@ -38,4 +38,5 @@ function insertDots() {
 function showFirstPartner() {
   partnersDots = document.querySelectorAll('.partners--dot');
   partnersArray[0].classList.add('show');
+  countHeights();
 }

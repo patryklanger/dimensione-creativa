@@ -653,15 +653,11 @@ html {
   line-height: min(1.8750vw,3.000vh);
 }
 
-.round--button--mobile {
-  -webkit-transform: translateX(-100vw);
-          transform: translateX(-100vw);
-  -webkit-transition: -webkit-transform 0.5s ease-in;
-  transition: -webkit-transform 0.5s ease-in;
-  transition: transform 0.5s ease-in;
-  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
+.round--button-mobile {
+  width: min(27.44vh, 48.8vw);
+  height: min(7.2vh, 12.8vw);
+  border-radius: min(1.5vh, 2.67vw);
+  font-size: min(2.4vh, 4.27vw);
 }
 
 .pricing--right--side {

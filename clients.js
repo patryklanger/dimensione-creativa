@@ -38,4 +38,6 @@ function insertDots() {
 function showFirstClient() {
   clientsDots = document.querySelectorAll('.clients--dot');
   clientsArray[0].classList.add('show');
+
+  countHeights();
 }

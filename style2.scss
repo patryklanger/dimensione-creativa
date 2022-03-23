@@ -440,10 +440,11 @@ html {
   font-size: #{'min(1.2500vw,2.000vh)'};
   line-height: #{'min(1.8750vw,3.000vh)'};
 }
-.round--button--mobile {
-  transform: translateX(-100vw);
-  transition: transform 0.5s ease-in;
-  transition-delay: 0.4s;
+.round--button-mobile {
+  width: #{'min(27.44vh, 48.8vw)'};
+  height: #{'min(7.2vh, 12.8vw)'};
+  border-radius: #{'min(1.5vh, 2.67vw)'};
+  font-size: #{'min(2.4vh, 4.27vw)'};
 }
 .pricing--right--side {
   width: #{'min(49.5833vw,79.333vh)'};
