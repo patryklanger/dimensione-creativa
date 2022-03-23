@@ -102,6 +102,9 @@ body {
   width: #{'min(32.7778vw,52.444vh)'};
   object-fit: scale-down;
 }
+.casestudy--icon p {
+  margin-bottom: 0;
+}
 @media (max-width: 600px) {
   html {
     font-size: #{'min(4.8000vw,2.217vh)'};
