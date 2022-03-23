@@ -177,8 +177,9 @@ html {
   overflow: hidden;
 }
 .casestudy--right--side img {
-  min-width: 100%;
+  width: 100%;
   min-height: 100%;
+  object-fit: cover;
 }
 .casestudy--content {
   padding: #{'min(84.0000vw,9.333vh)'} #{'min(10.7639vw,17.222vh)'} #{'min(9.6528vw,15.444vh)'}

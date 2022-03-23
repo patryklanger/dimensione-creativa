@@ -190,15 +190,18 @@ const historyState = {
   software: softwareDevelopmentArray,
   currentPage: '#main-page',
 };
+const menuLinksDeactivate = () => {
+  menuLinks.forEach((e) => {
+    e.classList.remove('activelink');
+  });
+};
 const deactivateAllAnimations = () => {
   whatWeDoAnimation.classList.remove('active');
   if (mainPageLeft.classList.contains('active'))
     mainPageLeft.classList.remove('active');
   blogSectionLeft.classList.remove('active');
   technologiesAnimation.classList.remove('active--technologies');
-  menuLinks.forEach((e) => {
-    e.classList.remove('activelink');
-  });
+  menuLinksDeactivate();
   softwareDevAnim.classList.remove('active');
   aboutUs2Animation.classList.remove('active');
   aboutUs3Animation.classList.remove('active');
@@ -219,7 +222,11 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#main-page';
     history.pushState(historyState, '', '/');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     mainPageLeft.classList.add('active');
     menuLinks[0].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 0;
@@ -231,7 +238,11 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#casestudy';
     history.pushState(historyState, '', '#casestudy');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     caseStudyAnimation.forEach((e) => e.classList.add('active'));
     menuLinks[1].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
@@ -243,7 +254,11 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#opinions';
     history.pushState(historyState, '', '#opinions');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     menuLinks[2].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
     resetCaseStudy();
@@ -254,7 +269,11 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#partners';
     history.pushState(historyState, '', '#partners');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     menuLinks[3].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
@@ -265,7 +284,11 @@ function checkAndAnimate(element, mobile = false) {
     historyState.currentPage = '#what-we-do';
     menuLinks[4].classList.add('activelink');
     history.pushState(historyState, '', '#what-we-do');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     whatWeDoAnimation.classList.add('active');
     menuLinks[4].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
@@ -276,7 +299,11 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#marketing-solutions';
     history.pushState(historyState, '', '#marketing-solutions');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     menuLinks[4].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
@@ -286,7 +313,11 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#software-development';
     history.pushState(historyState, '', '#software-development');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     softwareDevAnim.classList.add('active');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
@@ -296,7 +327,11 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#about-us';
     history.pushState(historyState, '', '#about-us');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     // menuLinks[2].classList.add('activelink');
     aboutUs2Animation.classList.add('active');
     document.querySelector('.header--background').style.opacity = 1;
@@ -308,7 +343,11 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#about-us2';
     history.pushState(historyState, '', '#about-us2');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     aboutUs3Animation.classList.add('active');
     // menuLinks[4].classList.add('activelink');
     aboutUs3AnimationTiles.classList.add('active');
@@ -320,7 +359,11 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#about-us3';
     history.pushState(historyState, '', '#about-us3');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     // menuLinks[2].classList.add('activelink');
     aboutUs4Animation.classList.add('active');
     document.querySelector('.header--background').style.opacity = 1;
@@ -331,7 +374,11 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#pricing';
     history.pushState(historyState, '', '#pricing');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     menuLinks[6].classList.add('activelink');
     pricingAnimation.forEach((e) => e.classList.add('active'));
     document.querySelector('.header--background').style.opacity = 1;
@@ -342,7 +389,10 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#technologies';
     history.pushState(historyState, '', '#technologies');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      menuLinksDeactivate();
+      deactivateAllAnimations();
+    }
     menuLinks[7].classList.add('activelink');
     technologiesAnimation.classList.add('active--technologies');
     document.querySelector('.header--background').style.opacity = 1;
@@ -353,7 +403,11 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#creator1';
     history.pushState(historyState, '', '#creator1');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     creator1Animation.forEach((e) => e.classList.add('active'));
     document.querySelector('.header--background').style.opacity = 1;
     menuLinks[7].classList.add('activelink');
@@ -364,7 +418,11 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#creator2';
     history.pushState(historyState, '', '#creator2');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     creator2Animation.forEach((e) => e.classList.add('active'));
     menuLinks[7].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
@@ -375,7 +433,11 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#team';
     history.pushState(historyState, '', '#team');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     teamAnimation.forEach((e) => e.classList.add('active'));
     menuLinks[8].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
@@ -386,7 +448,11 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#blog';
     history.pushState(historyState, '', '#blog');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     blogSectionLeft.classList.add('active');
     menuLinks[9].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
@@ -397,7 +463,11 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#contact_us';
     history.pushState(historyState, '', '#contact_us');
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
     menuLinks[10].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
@@ -408,7 +478,11 @@ function checkAndAnimate(element, mobile = false) {
     historyState.currentPage = '#footer';
     history.pushState(historyState, '', '#footer');
     document.querySelector('.header--background').style.opacity = 1;
-    if (!mobile) deactivateAllAnimations();
+    if (!mobile) {
+      deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
+    }
   }
 }
 
@@ -462,8 +536,6 @@ for (let [index, val] of menuLinks.entries()) {
       animationElementsArray[index - 1].classList.add('active');
     menu.classList.toggle('active');
     header.classList.toggle('menu--active');
-    menuLinks.forEach((e) => e.classList.remove('activelink'));
-    menuLinks[index].classList.add('activelink');
     menuSections[index].scrollIntoView({ behavior: 'smooth' });
   });
 }

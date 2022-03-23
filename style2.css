@@ -241,8 +241,10 @@ html {
 }
 
 .casestudy--right--side img {
-  min-width: 100%;
+  width: 100%;
   min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .casestudy--content {
