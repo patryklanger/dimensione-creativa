@@ -260,6 +260,7 @@ body {
   /* for older browsers */
   -ms-scroll-snap-type: y mandatory;
   scroll-snap-type: y mandatory;
+  z-index: 100000;
 }
 
 .menu--container {
@@ -3183,6 +3184,7 @@ h1 {
     /* for older browsers */
     scroll-snap-type: unset;
     overflow-x: hidden;
+    z-index: 1000;
   }
   @-webkit-keyframes bounce-2 {
     0% {

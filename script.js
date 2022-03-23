@@ -92,7 +92,6 @@ const animationElementsArray = [
   aboutUs2Animation,
   technologiesAnimation,
 ];
-console.log(menuLinks);
 const menuSections = document.querySelectorAll('.menu--child');
 portfolioLink.forEach((e) =>
   e.addEventListener('click', () => {
@@ -107,8 +106,8 @@ function caseStudyInit() {
     e.addEventListener('click', () => {
       if (currentCaseStudy <= caseStudySections.length) {
         currentCaseStudy++;
-        currentCaseStudyOffset = currentCaseStudyOffset.map((e) => e - 100);
-        console.log(currentCaseStudyOffset);
+        var tempOffsetArr = currentCaseStudyOffset.map((e) => e - 100);
+        currentCaseStudyOffset = tempOffsetArr;
         for (let i = 0; i < caseStudySections.length; i++) {
           caseStudySections[i].style.transform =
             'translateX(' + currentCaseStudyOffset[i] + 'vw)';
@@ -127,10 +126,12 @@ function caseStudyInit() {
 
 function resetCaseStudy() {
   currentCaseStudy = 0;
+  var tempOffsetArr = [];
   for (let i = 0; i < caseStudySections.length; i++) {
-    currentCaseStudyOffset.push(i * 100);
+    tempOffsetArr.push(i * 100);
     caseStudySections[i].style.transform = 'translateX(' + i * 100 + 'vw)';
   }
+  currentCaseStudyOffset = tempOffsetArr;
 }
 
 caseStudyInit();
@@ -171,6 +172,7 @@ linkedinLink.forEach((e) =>
 );
 let sectionHeights = [];
 function countHeights() {
+  sectionHeights = [];
   let tempMaxHeight = 0;
   sections.forEach((e) => {
     let actualSectionHeight = e.offsetHeight;
@@ -211,7 +213,6 @@ const deactivateAllAnimations = () => {
 };
 
 function checkAndAnimate(element, mobile = false) {
-  console.log('mobile działą');
   if (
     element < sectionHeights[0] - 10 &&
     historyState.currentPage != '#main-page'
@@ -221,6 +222,7 @@ function checkAndAnimate(element, mobile = false) {
     if (!mobile) deactivateAllAnimations();
     mainPageLeft.classList.add('active');
     menuLinks[0].classList.add('activelink');
+    document.querySelector('.header--background').style.opacity = 0;
     resetCaseStudy();
   } else if (
     element > sectionHeights[0] - 10 &&
@@ -232,6 +234,8 @@ function checkAndAnimate(element, mobile = false) {
     if (!mobile) deactivateAllAnimations();
     caseStudyAnimation.forEach((e) => e.classList.add('active'));
     menuLinks[1].classList.add('activelink');
+    document.querySelector('.header--background').style.opacity = 1;
+    countHeights();
   } else if (
     element > sectionHeights[1] - 10 &&
     element < sectionHeights[2] - 10 &&
@@ -241,6 +245,7 @@ function checkAndAnimate(element, mobile = false) {
     history.pushState(historyState, '', '#opinions');
     if (!mobile) deactivateAllAnimations();
     menuLinks[2].classList.add('activelink');
+    document.querySelector('.header--background').style.opacity = 1;
     resetCaseStudy();
   } else if (
     element > sectionHeights[2] - 10 &&
@@ -251,6 +256,7 @@ function checkAndAnimate(element, mobile = false) {
     history.pushState(historyState, '', '#partners');
     if (!mobile) deactivateAllAnimations();
     menuLinks[3].classList.add('activelink');
+    document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[3] - 10 &&
     element < sectionHeights[4] - 10 &&
@@ -262,6 +268,7 @@ function checkAndAnimate(element, mobile = false) {
     if (!mobile) deactivateAllAnimations();
     whatWeDoAnimation.classList.add('active');
     menuLinks[4].classList.add('activelink');
+    document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[4] - 10 &&
     element < sectionHeights[5] - 10 &&
@@ -271,6 +278,7 @@ function checkAndAnimate(element, mobile = false) {
     history.pushState(historyState, '', '#marketing-solutions');
     if (!mobile) deactivateAllAnimations();
     menuLinks[4].classList.add('activelink');
+    document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[5] - 10 &&
     element < sectionHeights[6] - 10 &&
@@ -280,6 +288,7 @@ function checkAndAnimate(element, mobile = false) {
     history.pushState(historyState, '', '#software-development');
     if (!mobile) deactivateAllAnimations();
     softwareDevAnim.classList.add('active');
+    document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[6] - 10 &&
     element < sectionHeights[7] - 10 &&
@@ -290,6 +299,7 @@ function checkAndAnimate(element, mobile = false) {
     if (!mobile) deactivateAllAnimations();
     // menuLinks[2].classList.add('activelink');
     aboutUs2Animation.classList.add('active');
+    document.querySelector('.header--background').style.opacity = 1;
     yellowBoxAnimation.classList.add('active');
   } else if (
     element > sectionHeights[7] - 10 &&
@@ -302,6 +312,7 @@ function checkAndAnimate(element, mobile = false) {
     aboutUs3Animation.classList.add('active');
     // menuLinks[4].classList.add('activelink');
     aboutUs3AnimationTiles.classList.add('active');
+    document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[8] - 10 &&
     element < sectionHeights[9] - 10 &&
@@ -312,6 +323,7 @@ function checkAndAnimate(element, mobile = false) {
     if (!mobile) deactivateAllAnimations();
     // menuLinks[2].classList.add('activelink');
     aboutUs4Animation.classList.add('active');
+    document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[9] - 10 &&
     element < sectionHeights[10] - 10 &&
@@ -322,6 +334,7 @@ function checkAndAnimate(element, mobile = false) {
     if (!mobile) deactivateAllAnimations();
     menuLinks[6].classList.add('activelink');
     pricingAnimation.forEach((e) => e.classList.add('active'));
+    document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[10] - 10 &&
     element < sectionHeights[11] - 10 &&
@@ -332,6 +345,7 @@ function checkAndAnimate(element, mobile = false) {
     if (!mobile) deactivateAllAnimations();
     menuLinks[7].classList.add('activelink');
     technologiesAnimation.classList.add('active--technologies');
+    document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[11] - 10 &&
     element < sectionHeights[12] - 10 &&
@@ -341,6 +355,7 @@ function checkAndAnimate(element, mobile = false) {
     history.pushState(historyState, '', '#creator1');
     if (!mobile) deactivateAllAnimations();
     creator1Animation.forEach((e) => e.classList.add('active'));
+    document.querySelector('.header--background').style.opacity = 1;
     menuLinks[7].classList.add('activelink');
   } else if (
     element > sectionHeights[12] - 10 &&
@@ -352,6 +367,7 @@ function checkAndAnimate(element, mobile = false) {
     if (!mobile) deactivateAllAnimations();
     creator2Animation.forEach((e) => e.classList.add('active'));
     menuLinks[7].classList.add('activelink');
+    document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[13] - 10 &&
     element < sectionHeights[14] - 10 &&
@@ -362,6 +378,7 @@ function checkAndAnimate(element, mobile = false) {
     if (!mobile) deactivateAllAnimations();
     teamAnimation.forEach((e) => e.classList.add('active'));
     menuLinks[8].classList.add('activelink');
+    document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[14] - 10 &&
     element < sectionHeights[15] - 10 &&
@@ -372,6 +389,7 @@ function checkAndAnimate(element, mobile = false) {
     if (!mobile) deactivateAllAnimations();
     blogSectionLeft.classList.add('active');
     menuLinks[9].classList.add('activelink');
+    document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[15] - 10 &&
     element < sectionHeights[16] - 10 &&
@@ -381,6 +399,7 @@ function checkAndAnimate(element, mobile = false) {
     history.pushState(historyState, '', '#contact_us');
     if (!mobile) deactivateAllAnimations();
     menuLinks[10].classList.add('activelink');
+    document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[16] - 10 &&
     element < sectionHeights[17] - 10 &&
@@ -388,6 +407,7 @@ function checkAndAnimate(element, mobile = false) {
   ) {
     historyState.currentPage = '#footer';
     history.pushState(historyState, '', '#footer');
+    document.querySelector('.header--background').style.opacity = 1;
     if (!mobile) deactivateAllAnimations();
   }
 }
@@ -421,10 +441,6 @@ if (queryStrings.includes(window.location.hash)) {
   queryString = window.location.hash;
 } else queryString = '#main-page';
 let currentPage = '';
-console.log(queryStrings);
-console.log(sections);
-console.log(queryString);
-console.log(queryStrings.indexOf(queryString));
 sections[queryStrings.indexOf(queryString)].scrollIntoView();
 
 checkAndAnimate(scrollManager.scrollTop);

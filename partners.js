@@ -1,5 +1,6 @@
 const partnersArray = document.querySelectorAll('.partners--box');
 const partnersDotsElement = document.querySelector('.partners--dots');
+const partnersSection = document.getElementById('partners');
 var partnersDots;
 
 insertDots();
@@ -20,6 +21,8 @@ partnersDotsElement.addEventListener('click', (e) => {
   });
   e.target.classList.add('checked');
   partnersArray[clientNo - 1].classList.add('show');
+  countHeights();
+  partnersSection.scrollIntoView({ behavior: 'smooth' });
 });
 
 function insertDots() {
@@ -34,6 +37,5 @@ function insertDots() {
 }
 function showFirstPartner() {
   partnersDots = document.querySelectorAll('.partners--dot');
-  console.log(clientsDots);
   partnersArray[0].classList.add('show');
 }

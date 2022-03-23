@@ -1,5 +1,6 @@
 const clientsArray = document.querySelectorAll('.clients--box');
 const clientsDotsElement = document.querySelector('.clients--dots');
+const opinionsSection = document.getElementById('opinions');
 var clientsDots;
 
 insertDots();
@@ -20,6 +21,8 @@ clientsDotsElement.addEventListener('click', (e) => {
   });
   e.target.classList.add('checked');
   clientsArray[clientNo - 1].classList.add('show');
+  opinionsSection.scrollIntoView({ behavior: 'smooth' });
+  countHeights();
 });
 
 function insertDots() {
@@ -34,6 +37,5 @@ function insertDots() {
 }
 function showFirstClient() {
   clientsDots = document.querySelectorAll('.clients--dot');
-  console.log(clientsDots);
   clientsArray[0].classList.add('show');
 }

@@ -9,6 +9,11 @@ section {
   overflow-x: hidden;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 #opinions,
 #partners {
   background-color: black;
@@ -935,6 +940,15 @@ section {
   .menu--social--links {
     gap: 1rem;
   }
+  .casestudy--role--absolute {
+    display: none;
+  }
+  .casestudy--rectangle {
+    display: unset;
+  }
+  .casestudy--role--description {
+    display: unset;
+  }
 }
 
 .menu--active {
@@ -943,5 +957,25 @@ section {
 
 .menu--active .menu--social--links {
   margin: 0 auto;
+}
+
+.casestudy--role--absolute {
+  position: absolute;
+  bottom: min(10.9722vw,17.556vh);
+  left: min(6.4583vw,10.333vh);
+}
+
+.header--background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 76px;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  z-index: -1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  overflow: hidden;
 }
 /*# sourceMappingURL=style2.css.map */

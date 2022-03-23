@@ -112,10 +112,54 @@ section {
   * {
     font-size: #{'min(4.8000vw,2.217vh)'};
   }
-  .pricing--main--screen {
+  .pricing--main--screen,
+  .pricing--what--can--we--give,
+  .pricing--process {
     background-image: none;
     height: unset;
     width: unset;
-    padding: 13.8889rem 23.6111rem 0 5.1667rem;
+    padding: 4.1667rem 2.2222rem;
+  }
+  .pricing--main--screen h1,
+  .pricing--what--can--we--give h2,
+  .pricing--container h2 {
+    font-size: 1.77rem;
+    line-height: 2.6667rem;
+    margin-bottom: 1.11rem;
+  }
+  .pricing--container--tile h3 {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .pricing--what--can--we--give--container {
+    flex-direction: column;
+  }
+  .pricing--container--tile {
+    flex-direction: column;
+  }
+  .pricing--container--tile {
+    width: 100%;
+  }
+  .mobile--hide {
+    display: none;
+  }
+  .pricing--container {
+    background-image: none;
+    height: unset;
+    width: unset;
+    padding: 4.1667rem 2.2222rem;
+    padding-top: 0;
+  }
+  .pricing--process p {
+    width: 100%;
+  }
+  .pricing--big--par,
+  .pricing--bold {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+  .vertical--line {
+    display: none;
   }
 }
