@@ -1783,25 +1783,25 @@ h1 {
   font-weight: normal;
 }
 
-#about-us3 {
+#process {
   background-image: url(content/backgrounds/about-us2-bg.png);
   background-size: min(177.1vh, 110.69vw)
     min(159.53vh, 99.71vw);
   background-position: center;
 }
 
-#about-us3 .page--primary {
+#process .page--primary {
   padding: min(20.22vh, 12.64vw) 0 0 0;
 }
 
-#about-us3 h1,
-#about-us3 h3 {
+#process h1,
+#process h3 {
   max-width: min(124.44vh, 77.78vw);
   width: calc(4 * min(36.44vh, 22.78vw));
 }
 
-#about-us3 h1,
-#about-us3 h3 {
+#process h1,
+#process h3 {
   margin-left: min(11.89vh, 7.43vw);
 }
 
@@ -3726,13 +3726,13 @@ h1 {
     line-height: min(5.1vh, 9.07vw);
   }
   #about-us h3,
-  #about-us3 h3 {
+  #process h3 {
     font-size: min(2.4vh, 4.27vw);
     line-height: min(3.6vh, 6.4vw);
     margin-top: min(3vh, 5.33vw);
   }
-  #about-us3 h1,
-  #about-us3 h3 {
+  #process h1,
+  #process h3 {
     margin-left: 0;
   }
   .active .yellow--box--who_we_are {
@@ -3754,7 +3754,7 @@ h1 {
     filter: blur(min(0.3vh, 0.53vw));
   }
   #about-us2 h1,
-  #about-us3 h1 {
+  #process h1 {
     font-size: min(4.8vh, 8.53vw);
     line-height: min(7.2vh, 12.8vw);
     width: 100%;
@@ -3762,10 +3762,10 @@ h1 {
   #about-us2 {
     height: fit-content;
   }
-  #about-us3 {
+  #process {
     height: 180%;
   }
-  #about-us3 .page--primary {
+  #process .page--primary {
     height: 100%;
   }
   #about-us2 .page--primary {
@@ -3779,7 +3779,7 @@ h1 {
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  #about-us3 .page--primary {
+  #process .page--primary {
     padding: min(15.59vh, 27.73vw) min(6.75vh, 12vw) 0
       min(6.75vh, 12vw);
   }

@@ -22,8 +22,8 @@ body {
 }
 
 .casestudy--content p {
-  font-size: min(1.1111vw,1.778vh);
-  line-height: min(1.8750vw,3.000vh);
+  font-size: min(1.8750vw,3.000vh);
+  line-height: min(2.8125vw,4.500vh);
   margin-bottom: min(5.1389vw,8.222vh);
 }
 

@@ -2,7 +2,7 @@
 const sections = document.querySelectorAll('.section--child');
 const aboutUs1 = document.getElementById('about-us');
 const aboutUs2 = document.getElementById('about-us2');
-const aboutUs3 = document.getElementById('about-us3');
+const aboutUs3 = document.getElementById('process');
 const caseStudySections = document.querySelectorAll('.casestudy--part');
 const linkedinLink = document.querySelectorAll('.linkedin--link');
 const facebookLink = document.querySelectorAll('.facebook--link');
@@ -541,10 +541,10 @@ function checkAndAnimate(element, mobile = false) {
   } else if (
     element > sectionHeights[8] - 10 &&
     element < sectionHeights[9] - 10 &&
-    historyState.currentPage != '#about-us3'
+    historyState.currentPage != '#process'
   ) {
-    historyState.currentPage = '#about-us3';
-    history.pushState(historyState, '', '#about-us3');
+    historyState.currentPage = '#process';
+    history.pushState(historyState, '', '#process');
     if (!mobile) {
       deactivateAllAnimations();
     } else {
@@ -683,7 +683,7 @@ const queryStrings = [
   '#software-development',
   '#about-us',
   '#about-us2',
-  '#about-us3',
+  '#process',
   '#pricing',
   '#technologies',
   '#creator1',
