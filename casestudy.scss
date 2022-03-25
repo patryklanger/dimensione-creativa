@@ -134,6 +134,11 @@ body {
   left: 50vw;
   transform: translateX(-50%);
 }
+.casestudy--welcoming {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 @media (max-width: 600px) {
   html {
     font-size: #{'min(4.8000vw,2.217vh)'};
