@@ -57,7 +57,9 @@
   display: flex;
   flex-direction: column;
 }
-.footer--with--links--content a {
+.footer--with--links--content a,
+.footer--second--part--content a,
+.footer--with--icon--content--part a {
   font-size: #{'min(0.97vw, 1.55vh)'};
   line-height: #{'min(1.66vw, 2.66vh)'};
   color: #000;

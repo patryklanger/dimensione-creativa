@@ -87,6 +87,137 @@ menuButton.addEventListener('click', () => {
   menu.classList.toggle('active');
   header.classList.toggle('menu--active');
 });
+const marketingSlideFromArr = (arr) => {
+  for (let i = 0; i < marketingSubpages.length; i++) {
+    marketingSubpages[i].style.transform = `translateX(${arr[i]}%)`;
+  }
+};
+const softwareSlideFromArr = (arr) => {
+  for (let i = 0; i < softwareDevelopmentSubpages.length; i++) {
+    softwareDevelopmentSubpages[i].style.transform = `translateX(${arr[i]}%)`;
+  }
+};
+const pushToHistoryMarketingTile = (array, subpage) => {
+  historyState.marketing = array;
+  history.pushState(historyState, '', subpage);
+};
+
+previousArrow.classList.add('hidden');
+
+const nextSlideTech = () => {
+  if (mobileTechCurrentSlide == 0) previousArrow.classList.remove('hidden');
+  mobileTechCurrentSlide++;
+  technologies.style.transform = `translateX(-${
+    mobileTechCurrentSlide * 100
+  }vw)`;
+  if (mobileTechCurrentSlide == 4) nextArrow.classList.add('hidden');
+};
+
+const previousSlideTech = () => {
+  if (mobileTechCurrentSlide == 4) nextArrow.classList.remove('hidden');
+  mobileTechCurrentSlide--;
+  technologies.style.transform = `translateX(-${
+    mobileTechCurrentSlide * 100
+  }vw)`;
+  if (mobileTechCurrentSlide == 0) previousArrow.classList.add('hidden');
+};
+
+const marketingSlideSetValues = (slideNo, update = true) => {
+  let subpageName = '#marketing-solutions';
+  switch (slideNo) {
+    case 0:
+      marketingSolutionsArray = [0, 100, 200, 300];
+      if (update) {
+        pushToHistoryMarketingTile(marketingSolutionsArray, subpageName);
+      }
+      marketingSlideFromArr(marketingSolutionsArray);
+      break;
+    case 1:
+      marketingSolutionsArray = [-100, 0, 100, 200];
+      if (update) {
+        pushToHistoryMarketingTile(marketingSolutionsArray, subpageName);
+      }
+      console.log('here');
+      marketingSlideFromArr(marketingSolutionsArray);
+      break;
+    case 2:
+      marketingSolutionsArray = [-200, -100, 0, 100];
+      if (update) {
+        pushToHistoryMarketingTile(marketingSolutionsArray, subpageName);
+      }
+      marketingSlideFromArr(marketingSolutionsArray);
+      break;
+    case 3:
+      marketingSolutionsArray = [-300, -200, -100, 0];
+      if (update) {
+        pushToHistoryMarketingTile(marketingSolutionsArray, subpageName);
+      }
+      marketingSlideFromArr(marketingSolutionsArray);
+      break;
+  }
+};
+
+const pushToHistorySoftwareTile = (array, subpage) => {
+  historyState.software = array;
+  history.pushState(historyState, '', subpage);
+};
+
+const softwareDevelopmentSlideSetValues = (slideNo, update = true) => {
+  let subpageName = '#software-development';
+  switch (slideNo) {
+    case 0:
+      softwareDevelopmentArray = [0, 100, 200, 300, 400];
+      if (update) {
+        pushToHistorySoftwareTile(softwareDevelopmentArray, subpageName);
+      }
+      softwareSlideFromArr(softwareDevelopmentArray);
+      break;
+    case 1:
+      softwareDevelopmentArray = [-100, 0, 100, 200, 300];
+      if (update) {
+        pushToHistorySoftwareTile(softwareDevelopmentArray, subpageName);
+      }
+      softwareSlideFromArr(softwareDevelopmentArray);
+      break;
+    case 2:
+      softwareDevelopmentArray = [-200, -100, 0, 100, 200];
+      if (update) {
+        pushToHistorySoftwareTile(softwareDevelopmentArray, subpageName);
+      }
+      softwareSlideFromArr(softwareDevelopmentArray);
+      break;
+    case 3:
+      softwareDevelopmentArray = [-300, -200, -100, 0, 100];
+      if (update) {
+        pushToHistorySoftwareTile(softwareDevelopmentArray, subpageName);
+      }
+      softwareSlideFromArr(softwareDevelopmentArray);
+      break;
+    case 4:
+      softwareDevelopmentArray = [-400, -300, -200, -100, 0];
+      if (update) {
+        pushToHistorySoftwareTile(softwareDevelopmentArray, subpageName);
+      }
+      softwareSlideFromArr(softwareDevelopmentArray);
+      break;
+  }
+};
+
+backButtonMarketing.forEach((e) =>
+  e.addEventListener('click', () => marketingSlideSetValues(0))
+);
+const checkIfMain = () => {
+  if (marketingSolutionsArray[0] != 0) {
+    marketingSlideSetValues(0);
+  } else if (softwareDevelopmentArray[0] != 0) {
+    softwareDevelopmentSlideSetValues(0);
+  } else if (mobileTechCurrentSlide != 0) {
+    mobileTechCurrentSlide = 0;
+    previousArrow.classList.add('hidden');
+    nextArrow.classList.remove('hidden');
+    technologies.style.transform = `translateX(0)`;
+  }
+};
 
 const animationElementsArray = [
   whatWeDoAnimation,
@@ -167,10 +298,36 @@ facebookLink.forEach((e) =>
       .focus();
   })
 );
+
 const strategyClicked = () => {
   marketingSoulutionsSection.scrollIntoView();
-  setTimeout(marketingSlideSetValues(1), 150);
+  setTimeout(marketingSlideSetValues, 1000, 1);
 };
+const designClicked = () => {
+  marketingSoulutionsSection.scrollIntoView();
+  setTimeout(marketingSlideSetValues, 1000, 2);
+};
+const productDesignClicked = () => {
+  marketingSoulutionsSection.scrollIntoView();
+  setTimeout(marketingSlideSetValues, 1000, 3);
+};
+const mobileAppClicked = () => {
+  softwareDevSection.scrollIntoView();
+  setTimeout(softwareDevelopmentSlideSetValues, 1000, 1);
+};
+const eShopClicked = () => {
+  softwareDevSection.scrollIntoView();
+  setTimeout(softwareDevelopmentSlideSetValues, 1000, 2);
+};
+const websitesClicked = () => {
+  softwareDevSection.scrollIntoView();
+  setTimeout(softwareDevelopmentSlideSetValues, 1000, 3);
+};
+const dedicatedClicked = () => {
+  softwareDevSection.scrollIntoView();
+  setTimeout(softwareDevelopmentSlideSetValues, 1000, 4);
+};
+
 linkedinLink.forEach((e) =>
   e.addEventListener('click', () => {
     window
@@ -518,7 +675,6 @@ const queryStrings = [
   '#casestudy',
   '#opinions',
   '#partners',
-  '#partners2',
   '#what-we-do',
   '#marketing-solutions',
   '#software-development',
@@ -534,17 +690,49 @@ const queryStrings = [
   '#contact_us',
   '#footer',
 ];
-let viewHeight = window.innerHeight;
-
 let queryString = '';
-if (window.location.hash == '' || window.location.hash == '#')
-  menuLinks[0].classList.add('activelink');
-if (queryStrings.includes(window.location.hash)) {
-  queryString = window.location.hash;
-} else queryString = '#main-page';
 let currentPage = '';
-sections[queryStrings.indexOf(queryString)].scrollIntoView();
-
+let viewHeight = window.innerHeight;
+const params = new URLSearchParams(window.location.search);
+if (params.has('marketing')) {
+  let num = params.get('marketing');
+  switch (num) {
+    case '1':
+      strategyClicked();
+      break;
+    case '2':
+      designClicked();
+      break;
+    case '3':
+      productDesignClicked();
+      break;
+    default:
+  }
+} else if (params.has('software')) {
+  let num = params.get('software');
+  switch (num) {
+    case '1':
+      mobileAppClicked();
+      break;
+    case '2':
+      eShopClicked();
+      break;
+    case '3':
+      websitesClicked();
+      break;
+    case '4':
+      dedicatedClicked();
+      break;
+    default:
+  }
+} else {
+  if (window.location.hash == '' || window.location.hash == '#')
+    menuLinks[0].classList.add('activelink');
+  if (queryStrings.includes(window.location.hash)) {
+    queryString = window.location.hash;
+  } else queryString = '#main-page';
+  sections[queryStrings.indexOf(queryString)].scrollIntoView();
+}
 checkAndAnimate(scrollManager.scrollTop);
 
 currentPage = queryString;
@@ -653,137 +841,6 @@ designDivClicker.addEventListener('click', () => {
 uxuiDivClicker.addEventListener('click', () => {
   marketingSlideSetValues(3);
 });
-
-const marketingSlideFromArr = (arr) => {
-  for (let i = 0; i < marketingSubpages.length; i++) {
-    marketingSubpages[i].style.transform = `translateX(${arr[i]}%)`;
-  }
-};
-const softwareSlideFromArr = (arr) => {
-  for (let i = 0; i < softwareDevelopmentSubpages.length; i++) {
-    softwareDevelopmentSubpages[i].style.transform = `translateX(${arr[i]}%)`;
-  }
-};
-const pushToHistoryMarketingTile = (array, subpage) => {
-  historyState.marketing = array;
-  history.pushState(historyState, '', subpage);
-};
-
-previousArrow.classList.add('hidden');
-
-const nextSlideTech = () => {
-  if (mobileTechCurrentSlide == 0) previousArrow.classList.remove('hidden');
-  mobileTechCurrentSlide++;
-  technologies.style.transform = `translateX(-${
-    mobileTechCurrentSlide * 100
-  }vw)`;
-  if (mobileTechCurrentSlide == 4) nextArrow.classList.add('hidden');
-};
-
-const previousSlideTech = () => {
-  if (mobileTechCurrentSlide == 4) nextArrow.classList.remove('hidden');
-  mobileTechCurrentSlide--;
-  technologies.style.transform = `translateX(-${
-    mobileTechCurrentSlide * 100
-  }vw)`;
-  if (mobileTechCurrentSlide == 0) previousArrow.classList.add('hidden');
-};
-
-const marketingSlideSetValues = (slideNo, update = true) => {
-  let subpageName = '#marketing-solutions';
-  switch (slideNo) {
-    case 0:
-      marketingSolutionsArray = [0, 100, 200, 300];
-      if (update) {
-        pushToHistoryMarketingTile(marketingSolutionsArray, subpageName);
-      }
-      marketingSlideFromArr(marketingSolutionsArray);
-      break;
-    case 1:
-      marketingSolutionsArray = [-100, 0, 100, 200];
-      if (update) {
-        pushToHistoryMarketingTile(marketingSolutionsArray, subpageName);
-      }
-      marketingSlideFromArr(marketingSolutionsArray);
-      break;
-    case 2:
-      marketingSolutionsArray = [-200, -100, 0, 100];
-      if (update) {
-        pushToHistoryMarketingTile(marketingSolutionsArray, subpageName);
-      }
-      marketingSlideFromArr(marketingSolutionsArray);
-      break;
-    case 3:
-      marketingSolutionsArray = [-300, -200, -100, 0];
-      if (update) {
-        pushToHistoryMarketingTile(marketingSolutionsArray, subpageName);
-      }
-      marketingSlideFromArr(marketingSolutionsArray);
-      break;
-  }
-};
-
-const pushToHistorySoftwareTile = (array, subpage) => {
-  historyState.software = array;
-  history.pushState(historyState, '', subpage);
-};
-
-const softwareDevelopmentSlideSetValues = (slideNo, update = true) => {
-  let subpageName = '#software-development';
-  switch (slideNo) {
-    case 0:
-      softwareDevelopmentArray = [0, 100, 200, 300, 400];
-      if (update) {
-        pushToHistorySoftwareTile(softwareDevelopmentArray, subpageName);
-      }
-      softwareSlideFromArr(softwareDevelopmentArray);
-      break;
-    case 1:
-      softwareDevelopmentArray = [-100, 0, 100, 200, 300];
-      if (update) {
-        pushToHistorySoftwareTile(softwareDevelopmentArray, subpageName);
-      }
-      softwareSlideFromArr(softwareDevelopmentArray);
-      break;
-    case 2:
-      softwareDevelopmentArray = [-200, -100, 0, 100, 200];
-      if (update) {
-        pushToHistorySoftwareTile(softwareDevelopmentArray, subpageName);
-      }
-      softwareSlideFromArr(softwareDevelopmentArray);
-      break;
-    case 3:
-      softwareDevelopmentArray = [-300, -200, -100, 0, 100];
-      if (update) {
-        pushToHistorySoftwareTile(softwareDevelopmentArray, subpageName);
-      }
-      softwareSlideFromArr(softwareDevelopmentArray);
-      break;
-    case 4:
-      softwareDevelopmentArray = [-400, -300, -200, -100, 0];
-      if (update) {
-        pushToHistorySoftwareTile(softwareDevelopmentArray, subpageName);
-      }
-      softwareSlideFromArr(softwareDevelopmentArray);
-      break;
-  }
-};
-
-backButtonMarketing.forEach((e) =>
-  e.addEventListener('click', () => marketingSlideSetValues(0))
-);
-const checkIfMain = () => {
-  if (marketingSolutionsArray[0] != 0) {
-    marketingSlideSetValues(0);
-  } else if (softwareDevelopmentArray[0] != 0) {
-    softwareDevelopmentSlideSetValues(0);
-  } else if (mobileTechCurrentSlide != 0) {
-    mobileTechCurrentSlide = 0;
-    previousArrow.classList.add('hidden');
-    nextArrow.classList.remove('hidden');
-    technologies.style.transform = `translateX(0)`;
-  }
-};
 
 setTimeout(() => mainPageLeft.classList.add('active'), 1000);
 mainPageLeft.classList.add('active');

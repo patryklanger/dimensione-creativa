@@ -10,6 +10,9 @@ body,
 html {
   overflow-x: hidden;
 }
+.scroll--manager {
+  overflow-x: hidden;
+}
 #opinions,
 #partners {
   background-color: black;
@@ -723,7 +726,9 @@ html {
     height: 2rem !important;
   }
   .footer--block--content p,
-  .footer--with--links--content a {
+  .footer--with--links--content a,
+  .footer--second--part--content a,
+  .footer--with--icon--content--part a {
     font-size: 0.7778rem !important;
     line-height: 1.3333rem !important;
   }
