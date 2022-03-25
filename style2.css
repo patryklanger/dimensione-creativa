@@ -354,6 +354,12 @@ html {
   margin-top: min(1.5278vw,2.444vh);
 }
 
+#casestudy .back--button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .casestudy--other--container {
   background-color: #fff;
   padding: min(2.9167vw,4.667vh) 0;
