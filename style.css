@@ -4099,7 +4099,8 @@ h1 {
   .contact--list--element img {
     height: min(4.5vh, 8vw);
   }
-  .contact--list--element p {
+  .contact--list--element p, 
+  .contact--list--element a {
     font-size: min(2.1vh, 3.73vw);
     line-height: min(3.6vh, 6.4vw);
   }
