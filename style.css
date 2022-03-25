@@ -2526,7 +2526,7 @@ h1 {
   color: #000;
   opacity: 0.5;
   -ms-grid-column: 3;
-  grid-column-start: 3;
+  grid-column-start: 3; 
 }
 
 .contact--form--right {
