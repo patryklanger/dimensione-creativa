@@ -2518,7 +2518,9 @@ h1 {
   height: min(3.33vh, 2.08vw);
 }
 
-.contact--list--element p {
+.contact--list--element p,
+.contact--list--element a {
+  text-decoration: none;
   font-size: min(1.56vh, 0.97vw);
   line-height: min(2.67vh, 1.67vw);
   color: #000;
