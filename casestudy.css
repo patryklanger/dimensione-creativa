@@ -146,21 +146,86 @@ body {
   margin-bottom: 0;
 }
 
+.welcoming--wc {
+  background-image: url("content/casestudy/thumbnails/wc-bg.png");
+  background-size: cover;
+}
+
+.casestudy--welcoming {
+  width: 100%;
+  height: 100vh;
+  padding-top: min(15.4861vw,24.778vh);
+  padding-left: min(5.8333vw,9.333vh);
+}
+
+.casestudy--welcoming--number {
+  font-size: min(0.9722vw,1.556vh);
+  line-height: min(1.4583vw,2.333vh);
+  font-weight: bold;
+  margin-bottom: min(2.5000vw,4.000vh);
+}
+
+.casestudy--welcoming h1 {
+  margin-bottom: min(0.9028vw,1.444vh);
+}
+
+.casestudy--welcoming--par {
+  margin-bottom: min(2.9861vw,4.778vh);
+}
+
+.casestudy--welcoming .casestudy--role {
+  margin-top: 0;
+}
+
+.scroll--down--center {
+  left: 50vw;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 @media (max-width: 600px) {
   html {
     font-size: min(4.8000vw,2.217vh);
   }
   .casestudy--content h1,
-  .casestudy--content h2 {
+  .casestudy--content h2,
+  .casestudy--welcoming h1 {
     font-size: 1.77rem;
     line-height: 2.6667rem;
     margin-bottom: 1.11rem;
   }
-  .casestudy--content p {
+  .casestudy--welcoming {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .casestudy--rectangle {
+    display: none;
+  }
+  .welcoming--wc {
+    background: none;
+  }
+  .casestudy--welcoming .scroll--down {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .casestudy--content p,
+  .casestudy--welcoming--number p {
     font-size: 0.8889rem;
     line-height: 1.3333rem;
     margin-bottom: 2rem;
     width: 100%;
+  }
+  .casestudy--welcoming--number p {
+    margin-bottom: 1rem;
   }
   .casestudy--others--element p {
     font-size: 0.6rem;
