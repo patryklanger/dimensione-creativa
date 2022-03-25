@@ -167,7 +167,10 @@ facebookLink.forEach((e) =>
       .focus();
   })
 );
-
+const strategyClicked = () => {
+  marketingSoulutionsSection.scrollIntoView();
+  setTimeout(marketingSlideSetValues(1), 150);
+};
 linkedinLink.forEach((e) =>
   e.addEventListener('click', () => {
     window
@@ -218,7 +221,7 @@ const deactivateAllAnimations = () => {
   teamAnimation.forEach((e) => e.classList.remove('active'));
   caseStudyAnimation.forEach((e) => e.classList.remove('active'));
   pricingAnimation.forEach((e) => e.classList.remove('active'));
-  trustedusAnimation.forEach((e) => e.classList.remove('active'));
+  // trustedusAnimation.forEach((e) => e.classList.remove('active'));
 };
 
 function checkAndAnimate(element, mobile = false) {
@@ -282,25 +285,27 @@ function checkAndAnimate(element, mobile = false) {
     }
     menuLinks[3].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
-  } else if (
+  }
+  // else if (
+  //   element > sectionHeights[3] - 10 &&
+  //   element < sectionHeights[4] - 10 &&
+  //   historyState.currentPage != '#partners2'
+  // ) {
+  //   historyState.currentPage = '#partners2';
+  //   history.pushState(historyState, '', '#partners2');
+  //   if (!mobile) {
+  //     deactivateAllAnimations();
+  //   } else {
+  //     menuLinksDeactivate();
+  //   }
+  //   menuLinks[3].classList.add('activelink');
+  //   trustedusAnimation.forEach((e) => {
+  //     e.classList.add('active');
+  //   });
+  // }
+  else if (
     element > sectionHeights[3] - 10 &&
     element < sectionHeights[4] - 10 &&
-    historyState.currentPage != '#partners2'
-  ) {
-    historyState.currentPage = '#partners2';
-    history.pushState(historyState, '', '#partners2');
-    if (!mobile) {
-      deactivateAllAnimations();
-    } else {
-      menuLinksDeactivate();
-    }
-    menuLinks[3].classList.add('activelink');
-    trustedusAnimation.forEach((e) => {
-      e.classList.add('active');
-    });
-  } else if (
-    element > sectionHeights[4] - 10 &&
-    element < sectionHeights[5] - 10 &&
     historyState.currentPage != '#what-we-do'
   ) {
     historyState.currentPage = '#what-we-do';
@@ -315,8 +320,8 @@ function checkAndAnimate(element, mobile = false) {
     menuLinks[4].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
-    element > sectionHeights[5] - 10 &&
-    element < sectionHeights[6] - 10 &&
+    element > sectionHeights[4] - 10 &&
+    element < sectionHeights[5] - 10 &&
     historyState.currentPage != '#marketing-solutions'
   ) {
     historyState.currentPage = '#marketing-solutions';
@@ -329,8 +334,8 @@ function checkAndAnimate(element, mobile = false) {
     menuLinks[4].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
-    element > sectionHeights[6] - 10 &&
-    element < sectionHeights[7] - 10 &&
+    element > sectionHeights[5] - 10 &&
+    element < sectionHeights[6] - 10 &&
     historyState.currentPage != '#software-development'
   ) {
     historyState.currentPage = '#software-development';
@@ -344,7 +349,7 @@ function checkAndAnimate(element, mobile = false) {
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[6] - 10 &&
-    element < sectionHeights[8] - 10 &&
+    element < sectionHeights[7] - 10 &&
     historyState.currentPage != '#about-us'
   ) {
     historyState.currentPage = '#about-us';
@@ -359,8 +364,8 @@ function checkAndAnimate(element, mobile = false) {
     document.querySelector('.header--background').style.opacity = 1;
     yellowBoxAnimation.classList.add('active');
   } else if (
-    element > sectionHeights[8] - 10 &&
-    element < sectionHeights[9] - 10 &&
+    element > sectionHeights[7] - 10 &&
+    element < sectionHeights[8] - 10 &&
     historyState.currentPage != '#about-us2'
   ) {
     historyState.currentPage = '#about-us2';
@@ -375,8 +380,8 @@ function checkAndAnimate(element, mobile = false) {
     aboutUs3AnimationTiles.classList.add('active');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
-    element > sectionHeights[9] - 10 &&
-    element < sectionHeights[10] - 10 &&
+    element > sectionHeights[8] - 10 &&
+    element < sectionHeights[9] - 10 &&
     historyState.currentPage != '#about-us3'
   ) {
     historyState.currentPage = '#about-us3';
@@ -390,8 +395,8 @@ function checkAndAnimate(element, mobile = false) {
     aboutUs4Animation.classList.add('active');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
-    element > sectionHeights[10] - 10 &&
-    element < sectionHeights[11] - 10 &&
+    element > sectionHeights[9] - 10 &&
+    element < sectionHeights[10] - 10 &&
     historyState.currentPage != '#pricing'
   ) {
     historyState.currentPage = '#pricing';
@@ -405,8 +410,8 @@ function checkAndAnimate(element, mobile = false) {
     pricingAnimation.forEach((e) => e.classList.add('active'));
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
-    element > sectionHeights[11] - 10 &&
-    element < sectionHeights[12] - 10 &&
+    element > sectionHeights[10] - 10 &&
+    element < sectionHeights[11] - 10 &&
     historyState.currentPage != '#technologies'
   ) {
     historyState.currentPage = '#technologies';
@@ -419,8 +424,8 @@ function checkAndAnimate(element, mobile = false) {
     technologiesAnimation.classList.add('active--technologies');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
-    element > sectionHeights[12] - 10 &&
-    element < sectionHeights[13] - 10 &&
+    element > sectionHeights[11] - 10 &&
+    element < sectionHeights[12] - 10 &&
     historyState.currentPage != '#creator1'
   ) {
     historyState.currentPage = '#creator1';
@@ -434,8 +439,8 @@ function checkAndAnimate(element, mobile = false) {
     document.querySelector('.header--background').style.opacity = 1;
     menuLinks[7].classList.add('activelink');
   } else if (
-    element > sectionHeights[13] - 10 &&
-    element < sectionHeights[14] - 10 &&
+    element > sectionHeights[12] - 10 &&
+    element < sectionHeights[13] - 10 &&
     historyState.currentPage != '#creator2'
   ) {
     historyState.currentPage = '#creator2';
@@ -449,8 +454,8 @@ function checkAndAnimate(element, mobile = false) {
     menuLinks[7].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
-    element > sectionHeights[14] - 10 &&
-    element < sectionHeights[15] - 10 &&
+    element > sectionHeights[13] - 10 &&
+    element < sectionHeights[14] - 10 &&
     historyState.currentPage != '#team'
   ) {
     historyState.currentPage = '#team';
@@ -464,8 +469,8 @@ function checkAndAnimate(element, mobile = false) {
     menuLinks[8].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
-    element > sectionHeights[15] - 10 &&
-    element < sectionHeights[16] - 10 &&
+    element > sectionHeights[14] - 10 &&
+    element < sectionHeights[15] - 10 &&
     historyState.currentPage != '#blog'
   ) {
     historyState.currentPage = '#blog';
@@ -479,8 +484,8 @@ function checkAndAnimate(element, mobile = false) {
     menuLinks[9].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
-    element > sectionHeights[16] - 10 &&
-    element < sectionHeights[17] - 10 &&
+    element > sectionHeights[15] - 10 &&
+    element < sectionHeights[16] - 10 &&
     historyState.currentPage != '#contact_us'
   ) {
     historyState.currentPage = '#contact_us';
@@ -493,8 +498,8 @@ function checkAndAnimate(element, mobile = false) {
     menuLinks[10].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
-    element > sectionHeights[17] - 10 &&
-    element < sectionHeights[18] - 10 &&
+    element > sectionHeights[16] - 10 &&
+    element < sectionHeights[17] - 10 &&
     historyState.currentPage != '#footer'
   ) {
     historyState.currentPage = '#footer';
