@@ -466,7 +466,6 @@ function checkAndAnimate(element, mobile = false) {
     historyState.currentPage != '#what-we-do'
   ) {
     historyState.currentPage = '#what-we-do';
-    menuLinks[4].classList.add('activelink');
     history.pushState(historyState, '', '#what-we-do');
     if (!mobile) {
       deactivateAllAnimations();
@@ -502,6 +501,7 @@ function checkAndAnimate(element, mobile = false) {
     } else {
       menuLinksDeactivate();
     }
+    menuLinks[4].classList.add('activelink');
     softwareDevAnim.classList.add('active');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
@@ -520,6 +520,7 @@ function checkAndAnimate(element, mobile = false) {
     aboutUs2Animation.classList.add('active');
     document.querySelector('.header--background').style.opacity = 1;
     yellowBoxAnimation.classList.add('active');
+    menuLinks[8].classList.add('activelink');
   } else if (
     element > sectionHeights[7] - 10 &&
     element < sectionHeights[8] - 10 &&
@@ -535,6 +536,7 @@ function checkAndAnimate(element, mobile = false) {
     aboutUs3Animation.classList.add('active');
     // menuLinks[4].classList.add('activelink');
     aboutUs3AnimationTiles.classList.add('active');
+    menuLinks[8].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[8] - 10 &&
@@ -550,6 +552,7 @@ function checkAndAnimate(element, mobile = false) {
     }
     // menuLinks[2].classList.add('activelink');
     aboutUs4Animation.classList.add('active');
+    menuLinks[8].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[9] - 10 &&
@@ -594,7 +597,7 @@ function checkAndAnimate(element, mobile = false) {
     }
     creator1Animation.forEach((e) => e.classList.add('active'));
     document.querySelector('.header--background').style.opacity = 1;
-    menuLinks[7].classList.add('activelink');
+    menuLinks[9].classList.add('activelink');
   } else if (
     element > sectionHeights[12] - 10 &&
     element < sectionHeights[13] - 10 &&
@@ -608,7 +611,7 @@ function checkAndAnimate(element, mobile = false) {
       menuLinksDeactivate();
     }
     creator2Animation.forEach((e) => e.classList.add('active'));
-    menuLinks[7].classList.add('activelink');
+    menuLinks[9].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[13] - 10 &&
@@ -623,7 +626,7 @@ function checkAndAnimate(element, mobile = false) {
       menuLinksDeactivate();
     }
     teamAnimation.forEach((e) => e.classList.add('active'));
-    menuLinks[8].classList.add('activelink');
+    menuLinks[10].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[14] - 10 &&
@@ -638,7 +641,7 @@ function checkAndAnimate(element, mobile = false) {
       menuLinksDeactivate();
     }
     blogSectionLeft.classList.add('active');
-    menuLinks[9].classList.add('activelink');
+    menuLinks[11].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[15] - 10 &&
@@ -652,7 +655,7 @@ function checkAndAnimate(element, mobile = false) {
     } else {
       menuLinksDeactivate();
     }
-    menuLinks[10].classList.add('activelink');
+    menuLinks[12].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[16] - 10 &&
@@ -752,7 +755,6 @@ for (let [index, val] of menuLinks.entries()) {
       animationElementsArray[index - 1].classList.add('active');
     menu.classList.toggle('active');
     header.classList.toggle('menu--active');
-    menuSections[index].scrollIntoView({ behavior: 'smooth' });
   });
 }
 setTimeout(() => {
