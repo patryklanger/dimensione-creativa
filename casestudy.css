@@ -156,6 +156,7 @@ body {
   height: 100vh;
   padding-top: min(15.4861vw,24.778vh);
   padding-left: min(5.8333vw,9.333vh);
+  padding-right: min(5.8333vw,9.333vh);
 }
 
 .casestudy--welcoming--number {
