@@ -41,6 +41,8 @@ body {
 
 .casestudy--two--column img {
   width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .casestudy--text--1--2--column {
@@ -262,8 +264,8 @@ body {
     margin-bottom: 1rem;
   }
   .casestudy--others--element p {
-    font-size: 0.6rem;
-    line-height: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   .casestudy--two--column {
     -webkit-box-orient: vertical;
@@ -274,6 +276,8 @@ body {
   }
   .casestudy--two--column img {
     width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .casestudy--text--1--2--column {
     width: 100%;
