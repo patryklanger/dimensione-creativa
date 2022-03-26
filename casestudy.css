@@ -323,5 +323,15 @@ body {
     text-align: center;
     margin-bottom: 0;
   }
+  .footer--social--links {
+    gap: 1.6111rem !important;
+  }
+}
+
+.footer--social--links {
+  -webkit-box-pack: unset !important;
+      -ms-flex-pack: unset !important;
+          justify-content: unset !important;
+  gap: min(2.0139vw,3.222vh);
 }
 /*# sourceMappingURL=casestudy.css.map */
