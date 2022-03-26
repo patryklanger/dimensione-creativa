@@ -269,7 +269,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   background: #000;
-  z-index: 30;
+  z-index: 99;
   -webkit-transform: translateX(-110%);
   transform: translateX(-110%);
 }
