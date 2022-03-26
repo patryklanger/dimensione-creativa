@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;700&display=swap");
 
 body {
   font-family: Poppins, Helvetica, sans-serif;
@@ -9,125 +9,125 @@ body {
 }
 
 .casestudy--content {
-  padding: #{'min(84.0000vw,9.333vh)'} #{'min(10.7639vw,17.222vh)'} #{'min(9.6528vw,15.444vh)'}
-    #{'min(10.7639vw,17.222vh)'};
+  padding: #{"min(84.0000vw,9.333vh)"} #{"min(10.7639vw,17.222vh)"} #{"min(9.6528vw,15.444vh)"}
+    #{"min(10.7639vw,17.222vh)"};
   background-color: #000;
   color: #fff;
 }
 .casestudy--content h1,
 .casestudy--content h2 {
-  font-size: #{'min(2.9167vw,4.667vh)'};
-  line-height: #{'min(4.3750vw,7.000vh)'};
+  font-size: #{"min(2.9167vw,4.667vh)"};
+  line-height: #{"min(4.3750vw,7.000vh)"};
   text-transform: uppercase;
-  margin-bottom: #{'min(2.0139vw,3.222vh)'};
+  margin-bottom: #{"min(2.0139vw,3.222vh)"};
 }
 .casestudy--content p {
-  font-size: #{'min(1.8750vw,3.000vh)'};
-  line-height: #{'min(2.8125vw,4.500vh)'};
-  margin-bottom: #{'min(5.1389vw,8.222vh)'};
+  font-size: #{"min(1.8750vw,3.000vh)"};
+  line-height: #{"min(2.8125vw,4.500vh)"};
+  margin-bottom: #{"min(5.1389vw,8.222vh)"};
 }
 .casestudy--full--width--photo {
   width: 100%;
-  margin-bottom: #{'min(5.3472vw,8.556vh)'};
+  margin-bottom: #{"min(5.3472vw,8.556vh)"};
 }
 .casestudy--two--column {
   display: flex;
-  margin-top: #{'min(4.3750vw,7.000vh)'};
+  margin-top: #{"min(4.3750vw,7.000vh)"};
 }
 .casestudy--two--column img {
   width: 50%;
 }
 .casestudy--text--1--2--column {
   width: 50%;
-  padding: 0 #{'min(2.4653vw,3.944vh)'};
+  padding: 0 #{"min(2.4653vw,3.944vh)"};
 }
 .casestudy--icon img {
-  width: #{'min(2.6389vw,4.222vh)'};
+  width: #{"min(2.6389vw,4.222vh)"};
 }
 .casestudy--icon p {
-  font-size: #{'min(1.3889vw,2.222vh)'};
-  line-height: #{'min(2.2222vw,3.556vh)'};
+  font-size: #{"min(1.3889vw,2.222vh)"};
+  line-height: #{"min(2.2222vw,3.556vh)"};
 }
 .casestudy--icon {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: #{'min(1.4583vw,2.333vh)'};
+  gap: #{"min(1.4583vw,2.333vh)"};
 }
 .casestudy--icons {
   display: flex;
   justify-content: center;
-  gap: #{'min(4.6528vw,7.444vh)'};
+  gap: #{"min(4.6528vw,7.444vh)"};
 }
 .casestudy--others {
   width: 100%;
   display: flex;
   overflow: hidden;
-  gap: #{'min(5.4167vw,8.667vh)'};
+  gap: #{"min(5.4167vw,8.667vh)"};
   justify-content: center;
   color: #000;
 }
 .casestudy--others--element {
-  width: #{'min(22.7778vw,36.444vh)'};
+  width: #{"min(22.7778vw,36.444vh)"};
   cursor: pointer;
 }
 .casestudy--others--element img {
-  width: #{'min(22.7778vw,36.444vh)'};
+  width: #{"min(22.7778vw,36.444vh)"};
 }
 .casestudy--others--element p {
-  font-size: #{'min(1.7361vw,2.778vh)'};
-  line-height: #{'min(1.8056vw,2.889vh)'};
+  font-size: #{"min(1.7361vw,2.778vh)"};
+  line-height: #{"min(1.8056vw,2.889vh)"};
   text-transform: uppercase;
   font-weight: bold;
-  margin-top: #{'min(1.5278vw,2.444vh)'};
+  margin-top: #{"min(1.5278vw,2.444vh)"};
 }
 .casestudy--other--container {
   background-color: #fff;
-  padding: #{'min(2.9167vw,4.667vh)'} 0;
+  padding: #{"min(2.9167vw,4.667vh)"} 0;
   color: black;
 }
 .casestudy--other--container h2,
 .casestudy--lowercase--h2 {
-  font-size: #{'min(3.4722vw,5.556vh)'};
-  line-height: #{'min(5.2083vw,8.333vh)'};
-  margin-bottom: #{'min(3.1250vw,5.000vh)'};
+  font-size: #{"min(3.4722vw,5.556vh)"};
+  line-height: #{"min(5.2083vw,8.333vh)"};
+  margin-bottom: #{"min(3.1250vw,5.000vh)"};
   text-align: center;
   text-transform: unset !important;
 }
 .casestudy--contact {
   display: flex;
-  gap: #{'min(7.2222vw,11.556vh)'};
+  gap: #{"min(7.2222vw,11.556vh)"};
   justify-content: center;
 }
 .casestudy--contact img {
-  width: #{'min(32.7778vw,52.444vh)'};
+  width: #{"min(32.7778vw,52.444vh)"};
   object-fit: scale-down;
 }
 .casestudy--icon p {
   margin-bottom: 0;
 }
 .welcoming--wc {
-  background-image: url('content/casestudy/thumbnails/wc-bg.png');
+  background-image: url("content/casestudy/thumbnails/wc-bg.png");
   background-size: cover;
 }
 .casestudy--welcoming {
   width: 100%;
   height: 100vh;
-  padding-top: #{'min(15.4861vw,24.778vh)'};
-  padding-left: #{'min(5.8333vw,9.333vh)'};
-  padding-right: #{'min(5.8333vw,9.333vh)'};
+  padding-top: #{"min(15.4861vw,24.778vh)"};
+  padding-left: #{"min(5.8333vw,9.333vh)"};
+  padding-right: #{"min(5.8333vw,9.333vh)"};
 }
 .casestudy--welcoming--number {
-  font-size: #{'min(0.9722vw,1.556vh)'};
-  line-height: #{'min(1.4583vw,2.333vh)'};
+  font-size: #{"min(0.9722vw,1.556vh)"};
+  line-height: #{"min(1.4583vw,2.333vh)"};
   font-weight: bold;
-  margin-bottom: #{'min(2.5000vw,4.000vh)'};
+  margin-bottom: #{"min(2.5000vw,4.000vh)"};
 }
 .casestudy--welcoming h1 {
-  margin-bottom: #{'min(0.9028vw,1.444vh)'};
+  margin-bottom: #{"min(0.9028vw,1.444vh)"};
 }
 .casestudy--welcoming--par {
-  margin-bottom: #{'min(2.9861vw,4.778vh)'};
+  margin-bottom: #{"min(2.9861vw,4.778vh)"};
 }
 .casestudy--welcoming .casestudy--role {
   margin-top: 0;
@@ -143,7 +143,7 @@ body {
 }
 @media (max-width: 600px) {
   html {
-    font-size: #{'min(4.8000vw,2.217vh)'};
+    font-size: #{"min(4.8000vw,2.217vh)"};
   }
   .casestudy--content h1,
   .casestudy--content h2,
