@@ -540,9 +540,10 @@ html {
   .marketing--sixth--div:hover > .subcategory--title_uxui {
     transform: none;
   }
-  #opinions {
+  #opinions,
+  #partners {
     height: unset;
-    padding-top: 10vh;
+    padding: 10vh 3.2222rem;
     padding-bottom: 15vh;
   }
   .page--primary--fit {
@@ -587,7 +588,8 @@ html {
   .team--header,
   .casestudy--content h1,
   .casestudy--content h2,
-  .trusted--us--left--side--inner h1 {
+  .trusted--us--left--side--inner h1,
+  .casestudy--other--container h2 {
     font-size: 1.77rem !important;
     line-height: 2.6667rem !important;
     margin-bottom: 1.11rem !important;
@@ -810,6 +812,33 @@ html {
     width: 20%;
     height: unset !important;
     object-fit: cover;
+  }
+  .menu--social--links img {
+    object-fit: cover;
+    cursor: pointer;
+    height: 1.3333rem;
+  }
+  .menu--social--links img:first-of-type {
+    height: 1.6667rem;
+  }
+  .clients--description,
+  .partners--description {
+    max-width: unset;
+    text-align: left;
+    width: 100%;
+  }
+  .casestudy--others {
+    flex-direction: column;
+  }
+  .casestudy--other--container {
+    padding: 2rem 3.33rem !important;
+  }
+  .casestudy--others--element,
+  .casestudy--others--element img {
+    width: 100% !important;
+  }
+  .footer--yellow--box {
+    display: none !important;
   }
 }
 .menu--active {
