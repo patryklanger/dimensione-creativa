@@ -41,6 +41,8 @@ body {
 
 .casestudy--two--column img {
   width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .casestudy--text--1--2--column {
@@ -274,6 +276,8 @@ body {
   }
   .casestudy--two--column img {
     width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .casestudy--text--1--2--column {
     width: 100%;
