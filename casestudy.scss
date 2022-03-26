@@ -22,6 +22,7 @@ body {
   margin-bottom: #{'min(2.0139vw,3.222vh)'};
 }
 .casestudy--content p {
+  font-weight: 200;
   font-size: #{'min(1.8750vw,3.000vh)'};
   line-height: #{'min(2.8125vw,4.500vh)'};
   margin-bottom: #{'min(5.1389vw,8.222vh)'};
@@ -149,6 +150,10 @@ body {
 }
 .casestudy--welcoming--par {
   margin-bottom: #{'min(2.9861vw,4.778vh)'};
+  font-size: #{'min(1.8750vw,3.000vh)'};
+  line-height: #{'min(2.8125vw,4.500vh)'};
+  margin-bottom: #{'min(5.1389vw,8.222vh)'};
+  font-weight: 200;
 }
 .casestudy--welcoming .casestudy--role {
   margin-top: 0;
@@ -192,7 +197,9 @@ body {
     display: flex;
   }
   .casestudy--content p,
-  .casestudy--welcoming--number p {
+  .casestudy--welcoming--number p,
+  .casestudy--welcoming--par {
+    font-weight: unset;
     font-size: 0.8889rem;
     line-height: 1.3333rem;
     margin-bottom: 2rem;
