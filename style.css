@@ -2426,6 +2426,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: min(2.0139vw,3.222vh);
 }
 
 .contact--linkedin p {
@@ -2434,9 +2435,8 @@ h1 {
 }
 
 .contact--linkedin img {
-  -o-object-fit: scale-down;
-  object-fit: scale-down;
-  margin-left: min(0.97vh, 0.6vw);
+  -o-object-fit: contain;
+  object-fit: contain;
   width: min(2.44vh, 1.53vw), !important;
 }
 
@@ -2472,8 +2472,8 @@ h1 {
   -ms-grid-row: 4;
   grid-row-start: 4;
   width: min(42.22vh, 26.39vw);
-  -webkit-transform: translateX(-5%);
-  transform: translateX(-5%);
+  -webkit-transform: translate(-5%, -10%);
+  transform: translate(-5%, -10%);
 }
 
 .contact--form--yellowbox--right {
