@@ -153,6 +153,11 @@ body {
   background-size: cover;
 }
 
+.welcoming--hp {
+  background-image: url("content/casestudy/thumbnails/hp-bg.png");
+  background-size: cover;
+}
+
 .welcoming--impel {
   background-image: url("content/casestudy/thumbnails/impel-bg.png");
   background-size: cover;
