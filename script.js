@@ -577,8 +577,9 @@ function checkAndAnimate(element, mobile = false) {
     historyState.currentPage = '#technologies';
     history.pushState(historyState, '', '#technologies');
     if (!mobile) {
-      menuLinksDeactivate();
       deactivateAllAnimations();
+    } else {
+      menuLinksDeactivate();
     }
     menuLinks[7].classList.add('activelink');
     technologiesAnimation.classList.add('active--technologies');
