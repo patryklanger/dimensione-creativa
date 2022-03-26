@@ -162,6 +162,9 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+.casestudy--icons {
+  margin-top: #{'min(3.4722vw,5.556vh)'};
+}
 @media (max-width: 600px) {
   html {
     font-size: #{'min(4.8000vw,2.217vh)'};
