@@ -78,11 +78,7 @@ body {
     min(4vh, 2.5vw);
 }
 
-.thank--you--modal img {
-  width: min(61.78vh, 38.61vw);
-  -o-object-fit: scale-down;
-  object-fit: scale-down;
-}
+
 
 .thank--you--message {
   margin-left: min(10.33vh, 6.46vw);
@@ -148,17 +144,12 @@ body {
   -ms-flex-direction: row;
   flex-direction: row;
   margin-top: min(3.78vh, 2.36vw);
+  gap: min(2.0139vw,3.222vh);
 }
 
 .thank--you--linkedin p {
   margin: 0;
   padding: 0;
-}
-
-.thank--you--linkedin img {
-  width: min(2.44vh, 1.53vw);
-  height: min(2.44vh, 1.53vw);
-  margin-left: min(0.96vh, 0.6vw);
 }
 
 .h1_animate {
@@ -1264,7 +1255,8 @@ h1 {
   align-self: end;
 }
 
-.back--button {
+.back--button,
+.go--up--button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1280,9 +1272,16 @@ h1 {
   justify-self: end;
 }
 
-.back--button img {
+.back--button img,
+.go--up--button img {
   margin-right: min(1.33vh, 0.83vw);
   width: min(2.37vh, 1.48vw);
+}
+.go--up--button {
+  position: absolute;
+  left: 50vw;
+  transform: translateX(-50%);
+  bottom: 5vh;
 }
 
 .marketing--sol--subpage_main_content {
@@ -3501,7 +3500,8 @@ h1 {
     width: 40%;
     margin-right: 5%;
   }
-  .back--button {
+  .back--button,
+  .go--up--button {
     -webkit-transform: none;
     transform: none;
     position: absolute;
@@ -3522,7 +3522,8 @@ h1 {
     -ms-flex-pack: center;
     justify-content: center;
   }
-  .back--button img {
+  .back--button img,
+  .go--up--button img {
     margin-right: min(0.75vh, 1.33vw);
     width: min(2.4vh, 4.27vw);
   }
