@@ -2396,7 +2396,7 @@ h1 {
 
 .linkedin--link {
   cursor: pointer;
-  width: 30px;
+  width: auto;
   height: auto;
 }
 
