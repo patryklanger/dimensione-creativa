@@ -358,6 +358,8 @@ html {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  left: 3.2222rem;
+  bottom: 3rem;
 }
 
 .casestudy--other--container {
@@ -582,6 +584,11 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
+  height: min(1.6667vw,2.667vh);
+}
+
+.menu--social--links img:first-of-type {
+  height: min(2.0833vw,3.333vh);
 }
 
 .creators--photo {
@@ -801,6 +808,12 @@ html {
 @media (max-width: 600px) {
   html {
     font-size: min(4.8000vw,2.217vh);
+  }
+  .marketing--second--div:hover > .subcategory--title_strategy,
+  .marketing--third--div:hover > .subcategory--title_design,
+  .marketing--sixth--div:hover > .subcategory--title_uxui {
+    -webkit-transform: none;
+            transform: none;
   }
   #opinions {
     height: unset;
@@ -1095,9 +1108,6 @@ html {
   .trusted--us--right--side {
     padding: 5vh 0;
   }
-  .back--button {
-    bottom: 3rem;
-  }
   .casestudy--number--container img {
     height: 1rem;
   }
@@ -1160,5 +1170,9 @@ html {
   z-index: 100;
   -webkit-transition: width 0.5s ease-in-out;
   transition: width 0.5s ease-in-out;
+}
+
+.impel--role {
+  bottom: 14vh;
 }
 /*# sourceMappingURL=style2.css.map */

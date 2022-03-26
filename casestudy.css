@@ -151,6 +151,26 @@ body {
   background-size: cover;
 }
 
+.welcoming--impel {
+  background-image: url("content/casestudy/thumbnails/impel-bg.png");
+  background-size: cover;
+}
+
+.welcoming--credit {
+  background-image: url("content/casestudy/thumbnails/credit-bg.png");
+  background-size: cover;
+}
+
+.welcoming--aldo {
+  background-image: url("content/casestudy/thumbnails/aldo-bg.png");
+  background-size: cover;
+}
+
+.welcoming--dro {
+  background-image: url("content/casestudy/thumbnails/dro-bg.png");
+  background-size: cover;
+}
+
 .casestudy--welcoming {
   width: 100%;
   height: 100vh;
@@ -223,7 +243,7 @@ body {
   .casestudy--rectangle {
     display: none;
   }
-  .welcoming--wc {
+  .casestudy--welcoming {
     background: none;
   }
   .casestudy--welcoming .scroll--down {
