@@ -112,3 +112,13 @@
   align-self: center;
   width: #{'min(31.04vw, 49.66vh)'};
 }
+
+.footer--social--links {
+  justify-content: unset !important;
+  gap: #{'min(2.0139vw,3.222vh)'};
+}
+@media (max-width: 600px) {
+  .footer--social--links {
+    gap: 1.6111rem !important;
+  }
+}

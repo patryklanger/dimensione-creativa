@@ -846,9 +846,6 @@ html {
   .go--up--button img {
     filter: invert(1);
   }
-  .footer--social--links {
-    gap: 1.6111rem !important;
-  }
 }
 .menu--active {
   width: 100%;
@@ -898,8 +895,4 @@ html {
 }
 .casestudy--others--element p {
   text-align: center;
-}
-.footer--social--links {
-  justify-content: unset !important;
-  gap: #{'min(2.0139vw,3.222vh)'};
 }

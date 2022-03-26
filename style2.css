@@ -1222,11 +1222,4 @@ html {
 .casestudy--others--element p {
   text-align: center;
 }
-
-.footer--social--links {
-  -webkit-box-pack: unset !important;
-      -ms-flex-pack: unset !important;
-          justify-content: unset !important;
-  gap: min(2.0139vw,3.222vh);
-}
 /*# sourceMappingURL=style2.css.map */
