@@ -5,7 +5,7 @@ const aboutUs2 = document.getElementById('about-us2');
 const aboutUs3 = document.getElementById('process');
 const caseStudySections = document.querySelectorAll('.casestudy--part');
 const linkedinLink = document.querySelectorAll('.linkedin--link');
-const facebookLink = document.querySelectorAll('.facebook--link');
+const facebookLink = document.querySelectorAll('.facebook--linkk');
 const portfolioLink = document.querySelectorAll('.portfolio--link');
 const scrollManager = document.querySelector('.scroll--manager');
 const portfolioLinkMobile = document.querySelectorAll(
@@ -288,7 +288,8 @@ blogLink.forEach((e) =>
   })
 );
 
-facebookLink.forEach((e) =>
+facebookLink.forEach((e) => {
+  console.log(e);
   e.addEventListener('click', () => {
     window
       .open(
@@ -296,8 +297,8 @@ facebookLink.forEach((e) =>
         '_blank'
       )
       .focus();
-  })
-);
+  });
+});
 
 const strategyClicked = () => {
   marketingSoulutionsSection.scrollIntoView();
