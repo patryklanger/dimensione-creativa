@@ -552,7 +552,7 @@ function checkAndAnimate(element, mobile = false) {
     }
     // menuLinks[2].classList.add('activelink');
     aboutUs4Animation.classList.add('active');
-    menuLinks[8].classList.add('activelink');
+    menuLinks[5].classList.add('activelink');
     document.querySelector('.header--background').style.opacity = 1;
   } else if (
     element > sectionHeights[9] - 10 &&
