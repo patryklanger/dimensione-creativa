@@ -840,6 +840,12 @@ html {
   .footer--yellow--box {
     display: none !important;
   }
+  .go--up--button {
+    color: black;
+  }
+  .go--up--button img {
+    filter: invert(1);
+  }
 }
 .menu--active {
   width: 100%;
